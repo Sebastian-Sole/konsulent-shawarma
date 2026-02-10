@@ -8,108 +8,1739 @@ export type Firm = {
 
 export const firms: Firm[] = [
 	{
-		id: "bekk",
-		name: "Bekk",
-		address: "Skur 39, Akershusstranda 21, 0150 Oslo",
-		latitude: 59.9075,
-		longitude: 10.7369,
+		"id": "3-step-it-as",
+		"name": "3 STEP IT AS",
+		"address": "Wergelandsveien 7, 0167 OSLO",
+		"latitude": 59.91891459573794,
+		"longitude": 10.731590024759551
 	},
 	{
-		id: "knowit",
-		name: "Knowit",
-		address: "Universitetsgata 1, 0164 Oslo",
-		latitude: 59.91742362266373,
-		longitude: 10.738956078221712,
+		"id": "99x-solutions-as",
+		"name": "99X SOLUTIONS AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
 	},
 	{
-		id: "netlight",
-		name: "Netlight",
-		address: "Youngstorget 3, 0181 Oslo",
-		latitude: 59.9148,
-		longitude: 10.7491,
+		"id": "abl-group-norway-as",
+		"name": "ABL GROUP NORWAY AS",
+		"address": "Karenslyst allé 4, 0278 OSLO",
+		"latitude": 59.91842305453154,
+		"longitude": 10.685663133998906
 	},
 	{
-		id: "bouvet",
-		name: "Bouvet",
-		address: "Sørkedalsveien 8, 0369 Oslo",
-		latitude: 59.9269,
-		longitude: 10.7138,
+		"id": "aboveit-as",
+		"name": "ABOVEIT AS",
+		"address": "Dronning Eufemias gate 8, 0191 OSLO",
+		"latitude": 59.90868173660676,
+		"longitude": 10.756796322473312
 	},
 	{
-		id: "capgemini",
-		name: "Capgemini",
-		address: "Schweigaards gate 16, 0185 Oslo",
-		latitude: 59.9105,
-		longitude: 10.7617,
+		"id": "accenture-as",
+		"name": "ACCENTURE AS",
+		"address": "Rådhusgata 27, 0158 OSLO",
+		"latitude": 59.91111003392044,
+		"longitude": 10.736142851630746
 	},
 	{
-		id: "accenture",
-		name: "Accenture",
-		address: "Drammensveien 131, 0277 Oslo",
-		latitude: 59.9214,
-		longitude: 10.6948,
+		"id": "adite-as",
+		"name": "ADITE AS",
+		"address": "Karenslyst allé 8, 0278 OSLO",
+		"latitude": 59.919021928518546,
+		"longitude": 10.683779442314984
 	},
 	{
-		id: "sopra-steria",
-		name: "Sopra Steria",
-		address: "Biskop Gunnerus' gate 14A, 0185 Oslo",
-		latitude: 59.9128,
-		longitude: 10.7531,
+		"id": "advania-norge-as",
+		"name": "ADVANIA NORGE AS",
+		"address": "Pilestredet 33, 0166 OSLO",
+		"latitude": 59.918726307894424,
+		"longitude": 10.735800121548957
 	},
 	{
-		id: "computas",
-		name: "Computas",
-		address: "Akersgata 35, 0158 Oslo",
-		latitude: 59.9158,
-		longitude: 10.7445,
+		"id": "aera-payment-identification-as",
+		"name": "AERA PAYMENT & IDENTIFICATION AS",
+		"address": "Askekroken 11, 0277 OSLO",
+		"latitude": 59.92262672643398,
+		"longitude": 10.682958446129518
 	},
 	{
-		id: "webstep",
-		name: "Webstep",
-		address: "Stortingsgata 4, 0158 Oslo",
-		latitude: 59.9133,
-		longitude: 10.7365,
+		"id": "afry-norway-as",
+		"name": "AFRY NORWAY AS",
+		"address": "Lilleakerveien 8, 0283 OSLO",
+		"latitude": 59.91612765202771,
+		"longitude": 10.636894598962405
 	},
 	{
-		id: "iterate",
-		name: "Iterate",
-		address: "Stenersgata 2, 0184 Oslo",
-		latitude: 59.9134,
-		longitude: 10.7515,
+		"id": "aider-as",
+		"name": "AIDER AS",
+		"address": "Karl Johans gate 37, 0162 OSLO",
+		"latitude": 59.91419703909273,
+		"longitude": 10.737908468704974
 	},
 	{
-		id: "kantega",
-		name: "Kantega",
-		address: "Møllergata 8, 0179 Oslo",
-		latitude: 59.9153,
-		longitude: 10.7476,
+		"id": "altro-as",
+		"name": "ALTRO AS",
+		"address": "Egnehjemveien 13, 0196 OSLO",
+		"latitude": 59.902016133113754,
+		"longitude": 10.779789737808926
 	},
 	{
-		id: "miles",
-		name: "Miles",
-		address: "Rosenkrantz' gate 7, 0159 Oslo",
-		latitude: 59.914,
-		longitude: 10.7395,
+		"id": "alv-as",
+		"name": "ALV AS",
+		"address": "Pløens gate 7, 0181 OSLO",
+		"latitude": 59.91392361549902,
+		"longitude": 10.749548693793624
 	},
 	{
-		id: "evidi",
-		name: "Evidi",
-		address: "Kongens gate 6, 0153 Oslo",
-		latitude: 59.9115,
-		longitude: 10.7412,
+		"id": "always-connecting-as",
+		"name": "ALWAYS CONNECTING AS",
+		"address": "Karoline Kristiansens vei 3, 0661 OSLO",
+		"latitude": 59.91392627710501,
+		"longitude": 10.797616068989838
 	},
 	{
-		id: "forte-digital",
-		name: "Forte Digital",
-		address: "Grensen 13, 0159 Oslo",
-		latitude: 59.914,
-		longitude: 10.743,
+		"id": "amedia-produkt-og-teknologi-as",
+		"name": "AMEDIA PRODUKT OG TEKNOLOGI AS",
+		"address": "Schweigaards gate 15, 0191 OSLO",
+		"latitude": 59.91100902898706,
+		"longitude": 10.759542963734678
 	},
 	{
-		id: "variant",
-		name: "Variant",
-		address: "Møllergata 6, 0179 Oslo",
-		latitude: 59.915,
-		longitude: 10.747,
+		"id": "amesto-clockwork-as",
+		"name": "AMESTO CLOCKWORK AS",
+		"address": "Smeltedigelen 1, 0195 OSLO",
+		"latitude": 59.9040455109969,
+		"longitude": 10.785799042658393
 	},
+	{
+		"id": "amesto-solutions-as",
+		"name": "AMESTO SOLUTIONS AS",
+		"address": "Smeltedigelen 1, 0195 OSLO",
+		"latitude": 59.9040455109969,
+		"longitude": 10.785799042658393
+	},
+	{
+		"id": "amidays-as",
+		"name": "AMIDAYS AS",
+		"address": "Bygdøy allé 1, 0257 OSLO",
+		"latitude": 59.91489128500399,
+		"longitude": 10.717142826794284
+	},
+	{
+		"id": "antire-as",
+		"name": "ANTIRE AS",
+		"address": "Øvre Vollgate 9, 0158 OSLO",
+		"latitude": 59.91143358022248,
+		"longitude": 10.737012845466474
+	},
+	{
+		"id": "append-consulting-as",
+		"name": "APPEND CONSULTING AS",
+		"address": "Møllergata 6, 0179 OSLO",
+		"latitude": 59.91401445853443,
+		"longitude": 10.74628747821273
+	},
+	{
+		"id": "apto-as",
+		"name": "APTO AS",
+		"address": "Maridalsveien 33L, 0175 OSLO",
+		"latitude": 59.92580152241197,
+		"longitude": 10.75077173352942
+	},
+	{
+		"id": "aptoma-as",
+		"name": "APTOMA AS",
+		"address": "Rådhusgata 23, 0158 OSLO",
+		"latitude": 59.91068418178307,
+		"longitude": 10.737993091283055
+	},
+	{
+		"id": "astrup-fearnley-code-as",
+		"name": "ASTRUP FEARNLEY CODE AS",
+		"address": "Dronning Eufemias gate 8, 0191 OSLO",
+		"latitude": 59.90868173660676,
+		"longitude": 10.756796322473312
+	},
+	{
+		"id": "atea-as",
+		"name": "ATEA AS",
+		"address": "Karvesvingen 5, 0579 OSLO",
+		"latitude": 59.927716392346625,
+		"longitude": 10.798551875055415
+	},
+	{
+		"id": "aurum-as",
+		"name": "AURUM AS",
+		"address": "Storgata 10A, 0155 OSLO",
+		"latitude": 59.91326936356708,
+		"longitude": 10.749646613321058
+	},
+	{
+		"id": "avella-as",
+		"name": "AVELLA AS",
+		"address": "Dronningens gate 6, 0152 OSLO",
+		"latitude": 59.9082375290435,
+		"longitude": 10.744392465628055
+	},
+	{
+		"id": "avinor-as",
+		"name": "AVINOR AS",
+		"address": "Dronning Eufemias gate 6A, 0191 OSLO",
+		"latitude": 59.90895693440493,
+		"longitude": 10.754611207273452
+	},
+	{
+		"id": "avoki-as",
+		"name": "AVOKI AS",
+		"address": "Alf Bjerckes vei 10, 0582 OSLO",
+		"latitude": 59.93173653371231,
+		"longitude": 10.833251458604497
+	},
+	{
+		"id": "avoki-it-as",
+		"name": "AVOKI IT AS",
+		"address": "Alf Bjerckes vei 10, 0582 OSLO",
+		"latitude": 59.93173653371231,
+		"longitude": 10.833251458604497
+	},
+	{
+		"id": "banqsoft-as",
+		"name": "BANQSOFT AS",
+		"address": "Østensjøveien 32, 0667 OSLO",
+		"latitude": 59.911349585688335,
+		"longitude": 10.811319655022562
+	},
+	{
+		"id": "bekk-consulting-as",
+		"name": "BEKK CONSULTING AS",
+		"address": "Skur 39, Akershusstranda 21, 0150 OSLO",
+		"latitude": 59.90379418049768,
+		"longitude": 10.73917607013236
+	},
+	{
+		"id": "blank-as",
+		"name": "BLANK AS",
+		"address": "Torggata 15, 0181 OSLO",
+		"latitude": 59.91532853923119,
+		"longitude": 10.7504114503739
+	},
+	{
+		"id": "blinq-as",
+		"name": "BLINQ AS",
+		"address": "Kongens gate 31, 0153 OSLO",
+		"latitude": 59.91213860101916,
+		"longitude": 10.743613489243122
+	},
+	{
+		"id": "boligmappa-as",
+		"name": "BOLIGMAPPA AS",
+		"address": "Dronning Mauds gate 10, 0250 OSLO",
+		"latitude": 59.912901138995196,
+		"longitude": 10.727375969347108
+	},
+	{
+		"id": "bravo-norge-as",
+		"name": "BRAVO NORGE AS",
+		"address": "Grev Wedels plass 9, 0151 OSLO",
+		"latitude": 59.907456306012314,
+		"longitude": 10.744380091280838
+	},
+	{
+		"id": "bredvid-as",
+		"name": "BREDVID AS",
+		"address": "Tordenskiolds gate 2, 0160 OSLO",
+		"latitude": 59.91302076047774,
+		"longitude": 10.736523445482975
+	},
+	{
+		"id": "bspoke-as",
+		"name": "BSPOKE AS",
+		"address": "Torggata 11, 0181 OSLO",
+		"latitude": 59.91412279016292,
+		"longitude": 10.748278529698313
+	},
+	{
+		"id": "byx-digital-as",
+		"name": "BYX DIGITAL AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "capgemini-norge-as",
+		"name": "CAPGEMINI NORGE AS",
+		"address": "Karenslyst allé 20, 0278 OSLO",
+		"latitude": 59.9201929506159,
+		"longitude": 10.683579381183621
+	},
+	{
+		"id": "capra-consulting-as",
+		"name": "CAPRA CONSULTING AS",
+		"address": "Torggata 2, 0181 OSLO",
+		"latitude": 59.91355056618319,
+		"longitude": 10.746728139210367
+	},
+	{
+		"id": "cartagena-as",
+		"name": "CARTAGENA AS",
+		"address": "Karl Johans gate 13, 0154 OSLO",
+		"latitude": 59.91241927274563,
+		"longitude": 10.744665552215912
+	},
+	{
+		"id": "cemasys-com-as",
+		"name": "CEMASYS.COM AS",
+		"address": "Hegdehaugsveien 31, 0352 OSLO",
+		"latitude": 59.92215563673165,
+		"longitude": 10.727234437666613
+	},
+	{
+		"id": "cence-as",
+		"name": "CENCE AS",
+		"address": "Kongens gate 14, 0153 OSLO",
+		"latitude": 59.910979244231925,
+		"longitude": 10.742855190432914
+	},
+	{
+		"id": "cepheo-norge-as",
+		"name": "CEPHEO NORGE AS",
+		"address": "Karenslyst allé 53, 0279 OSLO",
+		"latitude": 59.92165606483213,
+		"longitude": 10.679701632372167
+	},
+	{
+		"id": "cgi-norge-as",
+		"name": "CGI NORGE AS",
+		"address": "Lakkegata 53, 0187 OSLO",
+		"latitude": 59.916839522761244,
+		"longitude": 10.762724379582021
+	},
+	{
+		"id": "clarity-consulting-group-as",
+		"name": "CLARITY CONSULTING GROUP AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
+	},
+	{
+		"id": "cloud-connection-as",
+		"name": "CLOUD CONNECTION AS",
+		"address": "Grenseveien 82, 0663 OSLO",
+		"latitude": 59.91611327500949,
+		"longitude": 10.800907584722031
+	},
+	{
+		"id": "cloudberries-echo-as",
+		"name": "CLOUDBERRIES ECHO AS",
+		"address": "Arbins gate 2, 0253 OSLO",
+		"latitude": 59.914759822728,
+		"longitude": 10.727206052350857
+	},
+	{
+		"id": "cloudnorway-as",
+		"name": "CLOUDNORWAY AS",
+		"address": "Akersgata 20, 0158 OSLO",
+		"latitude": 59.912584863948545,
+		"longitude": 10.74097199008634
+	},
+	{
+		"id": "cloudworks-as",
+		"name": "CLOUDWORKS AS",
+		"address": "Karenslyst allé 2, 0278 OSLO",
+		"latitude": 59.91839710239752,
+		"longitude": 10.686287902755966
+	},
+	{
+		"id": "cognito-as",
+		"name": "COGNITO.AS",
+		"address": "Olaf Helsets vei 6, 0694 OSLO",
+		"latitude": 59.865203721511165,
+		"longitude": 10.841690057651759
+	},
+	{
+		"id": "columbus-norway-as",
+		"name": "COLUMBUS NORWAY AS",
+		"address": "Grev Wedels plass 9, 0151 OSLO",
+		"latitude": 59.907456306012314,
+		"longitude": 10.744380091280838
+	},
+	{
+		"id": "commit-as",
+		"name": "COMMIT AS",
+		"address": "Karl Johans gate 25, 0159 OSLO",
+		"latitude": 59.91331185797432,
+		"longitude": 10.741010065248897
+	},
+	{
+		"id": "compendia-as",
+		"name": "COMPENDIA AS",
+		"address": "Hetlandsgata 9, 4344 BRYNE",
+		"latitude": 58.7343253578738,
+		"longitude": 5.650307517914699
+	},
+	{
+		"id": "cowork-as",
+		"name": "COWORK AS",
+		"address": "Arbeidersamfunnets plass 1, 0181 OSLO",
+		"latitude": 59.91552200049789,
+		"longitude": 10.751804295846025
+	},
+	{
+		"id": "crayon-as",
+		"name": "CRAYON AS",
+		"address": "Gullhaug Torg 5, 0484 OSLO",
+		"latitude": 59.95188226055537,
+		"longitude": 10.765161792362282
+	},
+	{
+		"id": "crayon-consulting-as",
+		"name": "CRAYON CONSULTING AS",
+		"address": "Gullhaug Torg 5, 0484 OSLO",
+		"latitude": 59.95188226055537,
+		"longitude": 10.765161792362282
+	},
+	{
+		"id": "crayon-group-as",
+		"name": "CRAYON GROUP AS",
+		"address": "Gullhaug Torg 5, 0484 OSLO",
+		"latitude": 59.95188226055537,
+		"longitude": 10.765161792362282
+	},
+	{
+		"id": "cujo-norway-as",
+		"name": "CUJO NORWAY AS",
+		"address": "Gaustadalléen 21, 0349 OSLO",
+		"latitude": 59.94228605138968,
+		"longitude": 10.716744219060836
+	},
+	{
+		"id": "decens-as",
+		"name": "DECENS AS",
+		"address": "Apotekergata 10B, 0180 OSLO",
+		"latitude": 59.915160758889265,
+		"longitude": 10.742058477610277
+	},
+	{
+		"id": "decisions-as",
+		"name": "DECISIONS AS",
+		"address": "Gaustadalléen 21, 0349 OSLO",
+		"latitude": 59.94228605138968,
+		"longitude": 10.716744219060836
+	},
+	{
+		"id": "decisive-as",
+		"name": "DECISIVE AS",
+		"address": "Karoline Kristiansens vei 7, 0661 OSLO",
+		"latitude": 59.91431374108932,
+		"longitude": 10.796206105792884
+	},
+	{
+		"id": "defendable-as",
+		"name": "DEFENDABLE AS",
+		"address": "Munkedamsveien 45B, 0250 OSLO",
+		"latitude": 59.91148457550706,
+		"longitude": 10.723548384663736
+	},
+	{
+		"id": "delta-consulting-as",
+		"name": "DELTA CONSULTING AS",
+		"address": "Møllergata 6, 0179 OSLO",
+		"latitude": 59.91401445853443,
+		"longitude": 10.74628747821273
+	},
+	{
+		"id": "devoteam-as",
+		"name": "DEVOTEAM AS",
+		"address": "Tollbugata 24, 0157 OSLO",
+		"latitude": 59.91091311290161,
+		"longitude": 10.741742892068546
+	},
+	{
+		"id": "devoteam-m-cloud-as",
+		"name": "DEVOTEAM M CLOUD AS",
+		"address": "Tollbugata 24, 0157 OSLO",
+		"latitude": 59.91091311290161,
+		"longitude": 10.741742892068546
+	},
+	{
+		"id": "distribution-innovation-as",
+		"name": "DISTRIBUTION INNOVATION AS",
+		"address": "Nydalsveien 28, 0484 OSLO",
+		"latitude": 59.94964923973878,
+		"longitude": 10.764104799082405
+	},
+	{
+		"id": "documaster-as",
+		"name": "DOCUMASTER AS",
+		"address": "Sjølyst plass 2, 0278 OSLO",
+		"latitude": 59.920453179132906,
+		"longitude": 10.682190048374064
+	},
+	{
+		"id": "dogu-salesscreen-as",
+		"name": "DOGU SALESSCREEN AS",
+		"address": "Nedre Slottsgate 3B, 0157 OSLO",
+		"latitude": 59.91096530845834,
+		"longitude": 10.741191210234225
+	},
+	{
+		"id": "dynabyte-consulting-as",
+		"name": "DYNABYTE CONSULTING AS",
+		"address": "Storgata 10B, 0155 OSLO",
+		"latitude": 59.91320159445418,
+		"longitude": 10.74933899039403
+	},
+	{
+		"id": "edisys-holding-as",
+		"name": "EDISYS HOLDING AS",
+		"address": "Munkedamsveien 3B, 0161 OSLO",
+		"latitude": 59.914478227545125,
+		"longitude": 10.731555661575333
+	},
+	{
+		"id": "eg-norge-as",
+		"name": "EG NORGE AS",
+		"address": "Hoffsveien 4, 0275 OSLO",
+		"latitude": 59.92530560350307,
+		"longitude": 10.674865681082347
+	},
+	{
+		"id": "elate-as",
+		"name": "ELATE AS",
+		"address": "Karl Johans gate 1, 0154 OSLO",
+		"latitude": 59.91137749505985,
+		"longitude": 10.749403964838672
+	},
+	{
+		"id": "emagine-as",
+		"name": "EMAGINE AS",
+		"address": "Schweigaards gate 16B, 0191 OSLO",
+		"latitude": 59.91101916202637,
+		"longitude": 10.761877430185287
+	},
+	{
+		"id": "embriq-as",
+		"name": "EMBRIQ AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
+	},
+	{
+		"id": "enode-as",
+		"name": "ENODE AS",
+		"address": "Inkognitogata 24C, 0256 OSLO",
+		"latitude": 59.917297422263964,
+		"longitude": 10.722098607218003
+	},
+	{
+		"id": "erpkonsult-as",
+		"name": "ERPKONSULT AS",
+		"address": "Karenslyst allé 53, 0279 OSLO",
+		"latitude": 59.92165606483213,
+		"longitude": 10.679701632372167
+	},
+	{
+		"id": "evidi-as",
+		"name": "EVIDI AS",
+		"address": "Rådhusgata 5, 0151 OSLO",
+		"latitude": 59.908871298252535,
+		"longitude": 10.745502291762358
+	},
+	{
+		"id": "experis-as",
+		"name": "EXPERIS AS",
+		"address": "Lakkegata 53, 0187 OSLO",
+		"latitude": 59.916839522761244,
+		"longitude": 10.762724379582021
+	},
+	{
+		"id": "experis-services-as",
+		"name": "EXPERIS SERVICES AS",
+		"address": "Lakkegata 53, 0187 OSLO",
+		"latitude": 59.916839522761244,
+		"longitude": 10.762724379582021
+	},
+	{
+		"id": "expert-analytics-as",
+		"name": "EXPERT ANALYTICS AS",
+		"address": "Akersgata 32, 0180 OSLO",
+		"latitude": 59.914228039739406,
+		"longitude": 10.743043415386651
+	},
+	{
+		"id": "exsitec-as",
+		"name": "EXSITEC AS",
+		"address": "Hovfaret 17, 0275 OSLO",
+		"latitude": 59.92676293086002,
+		"longitude": 10.67679997669383
+	},
+	{
+		"id": "ey-skye-consulting-as",
+		"name": "EY SKYE CONSULTING AS",
+		"address": "Stortorvet 7, 0155 OSLO",
+		"latitude": 59.91289142408648,
+		"longitude": 10.744278967095692
+	},
+	{
+		"id": "feed-as",
+		"name": "FEED AS",
+		"address": "Hausmanns gate 16, 0182 OSLO",
+		"latitude": 59.91835685755886,
+		"longitude": 10.75340268322858
+	},
+	{
+		"id": "forte-digital-as",
+		"name": "FORTE DIGITAL AS",
+		"address": "Wergelandsveien 25, 0167 OSLO",
+		"latitude": 59.919978193117345,
+		"longitude": 10.729248290515171
+	},
+	{
+		"id": "fremra-as",
+		"name": "FREMRA AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
+	},
+	{
+		"id": "frend-digital-as",
+		"name": "FREND DIGITAL AS",
+		"address": "St. Olavs gate 27, 0166 OSLO",
+		"latitude": 59.91797577742299,
+		"longitude": 10.736048922064933
+	},
+	{
+		"id": "frend-ecommerce-as",
+		"name": "FREND ECOMMERCE AS",
+		"address": "Øvre Slottsgate 8, 0157 OSLO",
+		"latitude": 59.91206477645877,
+		"longitude": 10.741588612250686
+	},
+	{
+		"id": "funkweb-kompetanse-as",
+		"name": "FUNKWEB KOMPETANSE AS",
+		"address": "Trondheimsveien 184, 0570 OSLO",
+		"latitude": 59.93247839316395,
+		"longitude": 10.778021486890275
+	},
+	{
+		"id": "garnes-data-as",
+		"name": "GARNES DATA AS",
+		"address": "Drammensveien 167, 0277 OSLO",
+		"latitude": 59.92159006684404,
+		"longitude": 10.673944930013876
+	},
+	{
+		"id": "gartner-norge-as",
+		"name": "GARTNER NORGE AS",
+		"address": "Karenslyst allé 57, 0277 OSLO",
+		"latitude": 59.92138533732946,
+		"longitude": 10.677333661276554
+	},
+	{
+		"id": "geodata-as",
+		"name": "GEODATA AS",
+		"address": "Grev Wedels plass 9, 0151 OSLO",
+		"latitude": 59.907456306012314,
+		"longitude": 10.744380091280838
+	},
+	{
+		"id": "geomatikk-as",
+		"name": "GEOMATIKK AS",
+		"address": "Økernveien 94, 0579 OSLO",
+		"latitude": 59.92468921863055,
+		"longitude": 10.792578458095527
+	},
+	{
+		"id": "getaround-norway-as",
+		"name": "GETAROUND NORWAY AS",
+		"address": "Tordenskiolds gate 2, 0160 OSLO",
+		"latitude": 59.91302076047774,
+		"longitude": 10.736523445482975
+	},
+	{
+		"id": "globeteam-as",
+		"name": "GLOBETEAM AS",
+		"address": "Rådhusgata 23B, 0158 OSLO",
+		"latitude": 59.91085539548882,
+		"longitude": 10.73726878480766
+	},
+	{
+		"id": "gnist-consulting-as",
+		"name": "GNIST CONSULTING AS",
+		"address": "Rådhusgata 20, 0151 OSLO",
+		"latitude": 59.90951628354778,
+		"longitude": 10.74209892031479
+	},
+	{
+		"id": "gren-utvikling-as",
+		"name": "GREN UTVIKLING AS",
+		"address": "Rådhusgata 27, 0158 OSLO",
+		"latitude": 59.91111003392044,
+		"longitude": 10.736142851630746
+	},
+	{
+		"id": "gritera-advisory-as",
+		"name": "GRITERA ADVISORY AS",
+		"address": "Øvre Slottsgate 27, 0157 OSLO",
+		"latitude": 59.91341554777056,
+		"longitude": 10.742678868148028
+	},
+	{
+		"id": "gritera-security-as",
+		"name": "GRITERA SECURITY AS",
+		"address": "Øvre Slottsgate 27, 0157 OSLO",
+		"latitude": 59.91341554777056,
+		"longitude": 10.742678868148028
+	},
+	{
+		"id": "graakammen-consulting-as",
+		"name": "GRAAKAMMEN CONSULTING AS",
+		"address": "Ullevålseterveien 60, 0890 OSLO",
+		"latitude": 60.00246133783691,
+		"longitude": 10.691229359899568
+	},
+	{
+		"id": "gsg-handyman-as",
+		"name": "GSG HANDYMAN AS",
+		"address": "Lilleakerveien 2C, 0283 OSLO",
+		"latitude": 59.91472630107456,
+		"longitude": 10.638941498790496
+	},
+	{
+		"id": "gture-as",
+		"name": "GTURE AS",
+		"address": "Rådhusgata 17, 0158 OSLO",
+		"latitude": 59.9099817152299,
+		"longitude": 10.74092866640025
+	},
+	{
+		"id": "hawk-infinity-as",
+		"name": "HAWK INFINITY AS",
+		"address": "Bygdøy allé 23, 0262 OSLO",
+		"latitude": 59.91653425694673,
+		"longitude": 10.712357002359875
+	},
+	{
+		"id": "hcl-technologies-norway-as",
+		"name": "HCL TECHNOLOGIES NORWAY AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
+	},
+	{
+		"id": "heimstaden-services-norway-as",
+		"name": "HEIMSTADEN SERVICES NORWAY AS",
+		"address": "Henrik Ibsens gate 48, 0255 OSLO",
+		"latitude": 59.91515026780776,
+		"longitude": 10.723793906560745
+	},
+	{
+		"id": "house-of-agile-as",
+		"name": "HOUSE OF AGILE AS",
+		"address": "Kongens gate 6, 0153 OSLO",
+		"latitude": 59.90991497265444,
+		"longitude": 10.741833670297687
+	},
+	{
+		"id": "hovedkvarteret-it-as",
+		"name": "HOVEDKVARTERET IT AS",
+		"address": "Maridalsveien 91, 0461 OSLO",
+		"latitude": 59.93317201107084,
+		"longitude": 10.756421770272041
+	},
+	{
+		"id": "ibm-norge-as",
+		"name": "IBM NORGE AS",
+		"address": "Lakkegata 53, 0187 OSLO",
+		"latitude": 59.916839522761244,
+		"longitude": 10.762724379582021
+	},
+	{
+		"id": "industri-matematik-international-as",
+		"name": "INDUSTRI-MATEMATIK INTERNATIONAL AS",
+		"address": "Dronning Eufemias gate 16, 0191 OSLO",
+		"latitude": 59.907917518940124,
+		"longitude": 10.758606816066001
+	},
+	{
+		"id": "inevo-as",
+		"name": "INEVO AS",
+		"address": "Haakon VIIs gate 5, 0161 OSLO",
+		"latitude": 59.91384567767234,
+		"longitude": 10.731164993047344
+	},
+	{
+		"id": "inspirit365-as",
+		"name": "INSPIRIT365 AS",
+		"address": "Karvesvingen 5, 0579 OSLO",
+		"latitude": 59.927716392346625,
+		"longitude": 10.798551875055415
+	},
+	{
+		"id": "intelligence-as",
+		"name": "INTELLIGENCE AS",
+		"address": "Kongens gate 6, 0153 OSLO",
+		"latitude": 59.90991497265444,
+		"longitude": 10.741833670297687
+	},
+	{
+		"id": "interago-as",
+		"name": "INTERAGO AS",
+		"address": "Innspurten 13A, 0663 OSLO",
+		"latitude": 59.916576953671175,
+		"longitude": 10.806470747441606
+	},
+	{
+		"id": "intility-as",
+		"name": "INTILITY AS",
+		"address": "Schweigaards gate 39, 0191 OSLO",
+		"latitude": 59.90925716128438,
+		"longitude": 10.7657577868636
+	},
+	{
+		"id": "it-consult-as",
+		"name": "IT CONSULT AS",
+		"address": "Pilestredet 19, 0164 OSLO",
+		"latitude": 59.91667590340587,
+		"longitude": 10.739952041715492
+	},
+	{
+		"id": "itera-norge-as",
+		"name": "ITERA NORGE AS",
+		"address": "Stortingsgata 6, 0161 OSLO",
+		"latitude": 59.912989407133935,
+		"longitude": 10.738220927419603
+	},
+	{
+		"id": "itverket-as",
+		"name": "ITVERKET AS",
+		"address": "Lille Grensen 5, 0159 OSLO",
+		"latitude": 59.913819905170634,
+		"longitude": 10.741304963621902
+	},
+	{
+		"id": "iver-accelerate-develop-as",
+		"name": "IVER ACCELERATE DEVELOP AS",
+		"address": "Pilestredet 28, 0166 OSLO",
+		"latitude": 59.91803964970274,
+		"longitude": 10.738154120607131
+	},
+	{
+		"id": "iver-accelerate-innovation-as",
+		"name": "IVER ACCELERATE INNOVATION AS",
+		"address": "Pilestredet 28, 0166 OSLO",
+		"latitude": 59.91803964970274,
+		"longitude": 10.738154120607131
+	},
+	{
+		"id": "jprofessionals-as",
+		"name": "JPROFESSIONALS AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "junglemap-as",
+		"name": "JUNGLEMAP AS",
+		"address": "Pilestredet 7A, 0180 OSLO",
+		"latitude": 59.91493684727501,
+		"longitude": 10.74105940547007
+	},
+	{
+		"id": "kantega-as",
+		"name": "KANTEGA AS",
+		"address": "Kirkegata 5, 0153 OSLO",
+		"latitude": 59.90929426367078,
+		"longitude": 10.742588024864189
+	},
+	{
+		"id": "kapitalkontroll-as",
+		"name": "KAPITALKONTROLL AS",
+		"address": "Hovfaret 10, 0275 OSLO",
+		"latitude": 59.926393722385264,
+		"longitude": 10.676240992540063
+	},
+	{
+		"id": "karrierehuset-as",
+		"name": "KARRIEREHUSET AS",
+		"address": "Stenersgata 2A, 0184 OSLO",
+		"latitude": 59.912961851903205,
+		"longitude": 10.751363534505096
+	},
+	{
+		"id": "kirkepartner-as",
+		"name": "KIRKEPARTNER AS",
+		"address": "Fred. Olsens gate 1, 0152 OSLO",
+		"latitude": 59.9088947762588,
+		"longitude": 10.746984262473049
+	},
+	{
+		"id": "knirkefritt-as",
+		"name": "KNIRKEFRITT AS",
+		"address": "Tordenskiolds gate 2, 0160 OSLO",
+		"latitude": 59.91302076047774,
+		"longitude": 10.736523445482975
+	},
+	{
+		"id": "knowit-cybersecurity-law-as",
+		"name": "KNOWIT CYBERSECURITY & LAW AS",
+		"address": "Universitetsgata 1, 0164 OSLO",
+		"latitude": 59.917211163356725,
+		"longitude": 10.739001602978082
+	},
+	{
+		"id": "knowit-experience-oslo-as",
+		"name": "KNOWIT EXPERIENCE OSLO AS",
+		"address": "Universitetsgata 1, 0164 OSLO",
+		"latitude": 59.917211163356725,
+		"longitude": 10.739001602978082
+	},
+	{
+		"id": "knowit-insight-business-solution-as",
+		"name": "KNOWIT INSIGHT BUSINESS SOLUTION AS",
+		"address": "Universitetsgata 1, 0164 OSLO",
+		"latitude": 59.917211163356725,
+		"longitude": 10.739001602978082
+	},
+	{
+		"id": "knowit-solutions-consulting-as",
+		"name": "KNOWIT SOLUTIONS CONSULTING AS",
+		"address": "Universitetsgata 1, 0164 OSLO",
+		"latitude": 59.917211163356725,
+		"longitude": 10.739001602978082
+	},
+	{
+		"id": "knowit-solutions-data-tech-as",
+		"name": "KNOWIT SOLUTIONS DATA & TECH AS",
+		"address": "Universitetsgata 1, 0164 OSLO",
+		"latitude": 59.917211163356725,
+		"longitude": 10.739001602978082
+	},
+	{
+		"id": "kodio-as",
+		"name": "KODIO AS",
+		"address": "Storgata 17, 0184 OSLO",
+		"latitude": 59.913740130191826,
+		"longitude": 10.749771553595936
+	},
+	{
+		"id": "kommando-as",
+		"name": "KOMMANDO AS",
+		"address": "Karenslyst allé 9, 0278 OSLO",
+		"latitude": 59.92052357560676,
+		"longitude": 10.68364085407519
+	},
+	{
+		"id": "konik-as",
+		"name": "KONIK AS",
+		"address": "Tollbugata 8A, 0152 OSLO",
+		"latitude": 59.90976817828019,
+		"longitude": 10.746479336487718
+	},
+	{
+		"id": "konsilito-as",
+		"name": "KONSILITO AS",
+		"address": "Tordenskiolds gate 2, 0160 OSLO",
+		"latitude": 59.91302076047774,
+		"longitude": 10.736523445482975
+	},
+	{
+		"id": "konsulentselskapet-enso-as",
+		"name": "KONSULENTSELSKAPET ENSO AS",
+		"address": "Kristian Augusts gate 12, 0164 OSLO",
+		"latitude": 59.916240584753176,
+		"longitude": 10.738909680958436
+	},
+	{
+		"id": "kyndryl-norway-as",
+		"name": "KYNDRYL NORWAY AS",
+		"address": "Øvre Vollgate 13, 0158 OSLO",
+		"latitude": 59.9118124498193,
+		"longitude": 10.737569186987713
+	},
+	{
+		"id": "kyndryl-services-as",
+		"name": "KYNDRYL SERVICES AS",
+		"address": "Øvre Vollgate 13, 0158 OSLO",
+		"latitude": 59.9118124498193,
+		"longitude": 10.737569186987713
+	},
+	{
+		"id": "leaddesk-solutions-as",
+		"name": "LEADDESK SOLUTIONS AS",
+		"address": "Nedre Vollgate 5, 0158 OSLO",
+		"latitude": 59.911153251179556,
+		"longitude": 10.737838769024707
+	},
+	{
+		"id": "lendo-as",
+		"name": "LENDO AS",
+		"address": "Hagegata 22, 0653 OSLO",
+		"latitude": 59.914420834487764,
+		"longitude": 10.775438542801346
+	},
+	{
+		"id": "lighthouse-consulting-as",
+		"name": "LIGHTHOUSE CONSULTING AS",
+		"address": "Prinsens gate 18, 0152 OSLO",
+		"latitude": 59.91128581437992,
+		"longitude": 10.74344356929049
+	},
+	{
+		"id": "loop-academy-as",
+		"name": "LOOP ACADEMY AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "manyone-norway-as",
+		"name": "MANYONE NORWAY AS",
+		"address": "Tollbugata 24, 0157 OSLO",
+		"latitude": 59.91091311290161,
+		"longitude": 10.741742892068546
+	},
+	{
+		"id": "mastercard-payment-services-infrastructure-norway-as",
+		"name": "MASTERCARD PAYMENT SERVICES INFRASTRUCTURE (NORWAY) AS",
+		"address": "Haavard Martinsens vei 54, 0978 OSLO",
+		"latitude": 59.96388256691142,
+		"longitude": 10.913353033151857
+	},
+	{
+		"id": "mazeppa-norge-as",
+		"name": "MAZEPPA NORGE AS",
+		"address": "Drammensveien 288, 0283 OSLO",
+		"latitude": 59.91362880606163,
+		"longitude": 10.644853950779742
+	},
+	{
+		"id": "microsoft-norge-as",
+		"name": "MICROSOFT NORGE AS",
+		"address": "Dronning Eufemias gate 71, 0194 OSLO",
+		"latitude": 59.90686290674437,
+		"longitude": 10.760907921284815
+	},
+	{
+		"id": "miles-as",
+		"name": "MILES AS",
+		"address": "Bislettgata 4, 0170 OSLO",
+		"latitude": 59.92461130671246,
+		"longitude": 10.732083708673589
+	},
+	{
+		"id": "milient-software-as",
+		"name": "MILIENT SOFTWARE AS",
+		"address": "Wergelandsveien 1, 0167 OSLO",
+		"latitude": 59.91783856548757,
+		"longitude": 10.732619767540774
+	},
+	{
+		"id": "minus-1-as",
+		"name": "MINUS 1 AS",
+		"address": "Osterhaus' gate 27, 0183 OSLO",
+		"latitude": 59.91792905997159,
+		"longitude": 10.751126200312914
+	},
+	{
+		"id": "mnemonic-as",
+		"name": "MNEMONIC AS",
+		"address": "Henrik Ibsens gate 100, 0255 OSLO",
+		"latitude": 59.91439136564372,
+		"longitude": 10.718977159707656
+	},
+	{
+		"id": "morescope-as",
+		"name": "MORESCOPE AS",
+		"address": "Wergelandsveien 7, 0167 OSLO",
+		"latitude": 59.91891459573794,
+		"longitude": 10.731590024759551
+	},
+	{
+		"id": "move-as",
+		"name": "MOVE AS",
+		"address": "Christian Krohgs gate 16, 0186 OSLO",
+		"latitude": 59.91497923344238,
+		"longitude": 10.75884090801201
+	},
+	{
+		"id": "mysoft-as",
+		"name": "MYSOFT AS",
+		"address": "Østensjøveien 27, 0661 OSLO",
+		"latitude": 59.91137025974262,
+		"longitude": 10.808832984965557
+	},
+	{
+		"id": "moller-digital-as",
+		"name": "MØLLER DIGITAL AS",
+		"address": "Frysjaveien 31, 0884 OSLO",
+		"latitude": 59.96485608198254,
+		"longitude": 10.774060120685949
+	},
+	{
+		"id": "nagarro-as",
+		"name": "NAGARRO AS",
+		"address": "Kongens gate 14, 0153 OSLO",
+		"latitude": 59.910979244231925,
+		"longitude": 10.742855190432914
+	},
+	{
+		"id": "netcompany-norway-as",
+		"name": "NETCOMPANY NORWAY AS",
+		"address": "Øvre Vollgate 15, 0158 OSLO",
+		"latitude": 59.91195918165682,
+		"longitude": 10.737884477016392
+	},
+	{
+		"id": "netlife-design-as",
+		"name": "NETLIFE DESIGN AS",
+		"address": "Youngstorget 3, 0181 OSLO",
+		"latitude": 59.914277403126505,
+		"longitude": 10.749148777379158
+	},
+	{
+		"id": "netlight-as",
+		"name": "NETLIGHT AS",
+		"address": "Grubbegata 4, 0179 OSLO",
+		"latitude": 59.913854568092546,
+		"longitude": 10.745068197796277
+	},
+	{
+		"id": "netsecurity-as",
+		"name": "NETSECURITY AS",
+		"address": "Drammensveien 288, 0283 OSLO",
+		"latitude": 59.91362880606163,
+		"longitude": 10.644853950779742
+	},
+	{
+		"id": "nettrafikk-as",
+		"name": "NETTRAFIKK AS",
+		"address": "Nedre gate 5, 0551 OSLO",
+		"latitude": 59.91989630620814,
+		"longitude": 10.75380591348286
+	},
+	{
+		"id": "nimtech-consult-as",
+		"name": "NIMTECH CONSULT AS",
+		"address": "Lilletorget 1, 0184 OSLO",
+		"latitude": 59.91350079395475,
+		"longitude": 10.75588305992045
+	},
+	{
+		"id": "nlogic-as",
+		"name": "NLOGIC AS",
+		"address": "Karenslyst allé 20, 0278 OSLO",
+		"latitude": 59.9201929506159,
+		"longitude": 10.683579381183621
+	},
+	{
+		"id": "noa-ignite-as",
+		"name": "NOA IGNITE AS",
+		"address": "Nedre Vollgate 11, 0158 OSLO",
+		"latitude": 59.911561399854875,
+		"longitude": 10.73821779932757
+	},
+	{
+		"id": "nordic-maritime-cyber-resilience-centre-as",
+		"name": "NORDIC MARITIME CYBER RESILIENCE CENTRE AS",
+		"address": "Rådhusgata 25, 0158 OSLO",
+		"latitude": 59.91092199061303,
+		"longitude": 10.736986115146083
+	},
+	{
+		"id": "nordlo-ost-as",
+		"name": "NORDLO ØST AS",
+		"address": "Innspurten 11C, 0663 OSLO",
+		"latitude": 59.91615653587722,
+		"longitude": 10.806476517054117
+	},
+	{
+		"id": "norgesgruppen-data-as",
+		"name": "NORGESGRUPPEN DATA AS",
+		"address": "Bedriftsveien 9, 0950 OSLO",
+		"latitude": 59.944060892362934,
+		"longitude": 10.86733136058785
+	},
+	{
+		"id": "noria-as",
+		"name": "NORIA AS",
+		"address": "Prinsens gate 22, 0157 OSLO",
+		"latitude": 59.91175040715969,
+		"longitude": 10.74159002759501
+	},
+	{
+		"id": "noria-consulting-as",
+		"name": "NORIA CONSULTING AS",
+		"address": "Prinsens gate 22, 0157 OSLO",
+		"latitude": 59.91175040715969,
+		"longitude": 10.74159002759501
+	},
+	{
+		"id": "norkart-as",
+		"name": "NORKART AS",
+		"address": "Hoffsveien 4, 0275 OSLO",
+		"latitude": 59.92530560350307,
+		"longitude": 10.674865681082347
+	},
+	{
+		"id": "norse-digital-as",
+		"name": "NORSE DIGITAL AS",
+		"address": "Lilleakerveien 4C, 0283 OSLO",
+		"latitude": 59.91526407640769,
+		"longitude": 10.636209956363384
+	},
+	{
+		"id": "northern-beat-as",
+		"name": "NORTHERN BEAT AS",
+		"address": "Karl Johans gate 16, 0154 OSLO",
+		"latitude": 59.91227898064241,
+		"longitude": 10.744407797591176
+	},
+	{
+		"id": "northern-tech-as",
+		"name": "NORTHERN.TECH AS",
+		"address": "Gaustadalléen 21, 0349 OSLO",
+		"latitude": 59.94228605138968,
+		"longitude": 10.716744219060836
+	},
+	{
+		"id": "nova-aerospace-as",
+		"name": "NOVA AEROSPACE AS",
+		"address": "Sigurd Syrs gate 4, 0273 OSLO",
+		"latitude": 59.91957300292027,
+		"longitude": 10.691876993374398
+	},
+	{
+		"id": "nova-consulting-group-as",
+		"name": "NOVA CONSULTING GROUP AS",
+		"address": "Karl Johans gate 16, 0154 OSLO",
+		"latitude": 59.91227898064241,
+		"longitude": 10.744407797591176
+	},
+	{
+		"id": "novacare-as",
+		"name": "NOVACARE AS",
+		"address": "Karl Johans gate 16, 0154 OSLO",
+		"latitude": 59.91227898064241,
+		"longitude": 10.744407797591176
+	},
+	{
+		"id": "novanet-as",
+		"name": "NOVANET AS",
+		"address": "Karl Johans gate 16, 0154 OSLO",
+		"latitude": 59.91227898064241,
+		"longitude": 10.744407797591176
+	},
+	{
+		"id": "open-pos-norway-as",
+		"name": "OPEN POS NORWAY AS",
+		"address": "Østensjøveien 14A, 0661 OSLO",
+		"latitude": 59.911843624958,
+		"longitude": 10.808699563948046
+	},
+	{
+		"id": "orange-business-digital-norway-as",
+		"name": "ORANGE BUSINESS DIGITAL NORWAY AS",
+		"address": "Lørenfaret 1E, 0585 OSLO",
+		"latitude": 59.93056819293833,
+		"longitude": 10.80071233837898
+	},
+	{
+		"id": "papirfly-as",
+		"name": "PAPIRFLY AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "plyo-as",
+		"name": "PLYO AS",
+		"address": "Sagveien 23C, 0459 OSLO",
+		"latitude": 59.931217336940584,
+		"longitude": 10.756175249189576
+	},
+	{
+		"id": "portalone-as",
+		"name": "PORTALONE AS",
+		"address": "Fjordalléen 16, 0250 OSLO",
+		"latitude": 59.909149540459666,
+		"longitude": 10.724911651504836
+	},
+	{
+		"id": "precis-digital-as",
+		"name": "PRECIS DIGITAL AS",
+		"address": "Møllergata 12, 0179 OSLO",
+		"latitude": 59.914583873083515,
+		"longitude": 10.747372689158949
+	},
+	{
+		"id": "pressworks-as",
+		"name": "PRESSWORKS AS",
+		"address": "Grensen 8, 0159 OSLO",
+		"latitude": 59.913573550786076,
+		"longitude": 10.743635099640127
+	},
+	{
+		"id": "procano-as",
+		"name": "PROCANO AS",
+		"address": "Hoffsveien 21, 0275 OSLO",
+		"latitude": 59.92811675075491,
+		"longitude": 10.675783970392985
+	},
+	{
+		"id": "progit-consulting-as",
+		"name": "PROGIT CONSULTING AS",
+		"address": "Torggata 9A, 0181 OSLO",
+		"latitude": 59.91394802646695,
+		"longitude": 10.747911617247832
+	},
+	{
+		"id": "racom-as",
+		"name": "RACOM AS",
+		"address": "Østre Aker vei 19, 0581 OSLO",
+		"latitude": 59.927590390082,
+		"longitude": 10.806586458038927
+	},
+	{
+		"id": "randstad-digital-as",
+		"name": "RANDSTAD DIGITAL AS",
+		"address": "Kristian Augusts gate 15C, 0164 OSLO",
+		"latitude": 59.917104622196725,
+		"longitude": 10.737477363569875
+	},
+	{
+		"id": "redpill-linpro-cloudops-as",
+		"name": "REDPILL LINPRO CLOUDOPS AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "redpill-linpro-development-services-as",
+		"name": "REDPILL LINPRO DEVELOPMENT SERVICES AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "redpill-linpro-devops-as",
+		"name": "REDPILL LINPRO DEVOPS AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "relato-code-as",
+		"name": "RELATO CODE AS",
+		"address": "Fjordalléen 16, 0250 OSLO",
+		"latitude": 59.909149540459666,
+		"longitude": 10.724911651504836
+	},
+	{
+		"id": "relato-conduct-as",
+		"name": "RELATO CONDUCT AS",
+		"address": "Fjordalléen 16, 0250 OSLO",
+		"latitude": 59.909149540459666,
+		"longitude": 10.724911651504836
+	},
+	{
+		"id": "relex-solutions-as",
+		"name": "RELEX SOLUTIONS AS",
+		"address": "Rådhusgata 17, 0158 OSLO",
+		"latitude": 59.9099817152299,
+		"longitude": 10.74092866640025
+	},
+	{
+		"id": "river-security-as",
+		"name": "RIVER SECURITY AS",
+		"address": "Fridtjof Nansens plass 4, 0160 OSLO",
+		"latitude": 59.91321454837157,
+		"longitude": 10.734083243973915
+	},
+	{
+		"id": "rokea-gruppen-as",
+		"name": "ROKEA GRUPPEN AS",
+		"address": "Gjerdrums vei 8, 0484 OSLO",
+		"latitude": 59.95405851104556,
+		"longitude": 10.76509130355415
+	},
+	{
+		"id": "s5-consulting-as",
+		"name": "S5 CONSULTING AS",
+		"address": "Karenslyst allé 18, 0278 OSLO",
+		"latitude": 59.91982097579557,
+		"longitude": 10.683802037286924
+	},
+	{
+		"id": "sariba-as",
+		"name": "SARIBA AS",
+		"address": "Skippergata 33, 0154 OSLO",
+		"latitude": 59.91274362232842,
+		"longitude": 10.749332775285508
+	},
+	{
+		"id": "sariba-consulting-as",
+		"name": "SARIBA CONSULTING AS",
+		"address": "Skippergata 33, 0154 OSLO",
+		"latitude": 59.91274362232842,
+		"longitude": 10.749332775285508
+	},
+	{
+		"id": "scandic-fusion-epm-as",
+		"name": "SCANDIC FUSION EPM AS",
+		"address": "Fridtjof Nansens plass 8, 0160 OSLO",
+		"latitude": 59.91240187404701,
+		"longitude": 10.735096074574418
+	},
+	{
+		"id": "scelto-as",
+		"name": "SCELTO AS",
+		"address": "Rådhusgata 20, 0151 OSLO",
+		"latitude": 59.90951628354778,
+		"longitude": 10.74209892031479
+	},
+	{
+		"id": "scienta-as",
+		"name": "SCIENTA AS",
+		"address": "Nedre Vollgate 11, 0158 OSLO",
+		"latitude": 59.911561399854875,
+		"longitude": 10.73821779932757
+	},
+	{
+		"id": "scoville-consulting-as",
+		"name": "SCOVILLE CONSULTING AS",
+		"address": "Nedre Slottsgate 25, 0157 OSLO",
+		"latitude": 59.91327052080689,
+		"longitude": 10.743458233706903
+	},
+	{
+		"id": "sd-worx-norway-as",
+		"name": "SD WORX NORWAY AS",
+		"address": "Trelastgata 3, 0191 OSLO",
+		"latitude": 59.90878646162344,
+		"longitude": 10.757833722852576
+	},
+	{
+		"id": "seebrite-retail-as",
+		"name": "SEEBRITE RETAIL AS",
+		"address": "Universitetsgata 2, 0164 OSLO",
+		"latitude": 59.91759326460087,
+		"longitude": 10.739856963447636
+	},
+	{
+		"id": "sensio-as",
+		"name": "SENSIO AS",
+		"address": "Møllergata 4, 0179 OSLO",
+		"latitude": 59.913771905711535,
+		"longitude": 10.745816855880937
+	},
+	{
+		"id": "sfty-as",
+		"name": "SFTY AS",
+		"address": "Lilleakerveien 31, 0283 OSLO",
+		"latitude": 59.92008473160133,
+		"longitude": 10.636463389332693
+	},
+	{
+		"id": "sicra-as",
+		"name": "SICRA AS",
+		"address": "Biskop Gunnerus' gate 14A, 0185 OSLO",
+		"latitude": 59.9116402862746,
+		"longitude": 10.754634794438054
+	},
+	{
+		"id": "simpleness-as",
+		"name": "SIMPLENESS AS",
+		"address": "Waldemar Thranes gate 98, 0175 OSLO",
+		"latitude": 59.92835583510039,
+		"longitude": 10.754556684381336
+	},
+	{
+		"id": "sitecom-as",
+		"name": "SITECOM AS",
+		"address": "Strømsveien 344, 1081 OSLO",
+		"latitude": 59.93547684648086,
+		"longitude": 10.877909792706788
+	},
+	{
+		"id": "skarpe-as",
+		"name": "SKARPE AS",
+		"address": "Drammensveien 123, 0277 OSLO",
+		"latitude": 59.92154032316201,
+		"longitude": 10.689112987907713
+	},
+	{
+		"id": "skrastrek-as",
+		"name": "SKRÅSTREK AS",
+		"address": "Stortorvet 5, 0155 OSLO",
+		"latitude": 59.91259216724211,
+		"longitude": 10.744495773357713
+	},
+	{
+		"id": "skyetec-as",
+		"name": "SKYETEC AS",
+		"address": "Biskop Gunnerus' gate 14A, 0185 OSLO",
+		"latitude": 59.9116402862746,
+		"longitude": 10.754634794438054
+	},
+	{
+		"id": "skygard-as",
+		"name": "SKYGARD AS",
+		"address": "Karenslyst allé 10, 0278 OSLO",
+		"latitude": 59.91909820900454,
+		"longitude": 10.68483872927654
+	},
+	{
+		"id": "skykontoret-as",
+		"name": "SKYKONTORET AS",
+		"address": "Grensen 16, 0159 OSLO",
+		"latitude": 59.91423796319264,
+		"longitude": 10.741613042398525
+	},
+	{
+		"id": "smallworld-nordic-norway-as",
+		"name": "SMALLWORLD NORDIC NORWAY AS",
+		"address": "Thunes vei 2, 0274 OSLO",
+		"latitude": 59.92209977940362,
+		"longitude": 10.688908853380513
+	},
+	{
+		"id": "snokam-as",
+		"name": "SNØKAM AS",
+		"address": "Kristian Augusts gate 12, 0164 OSLO",
+		"latitude": 59.916240584753176,
+		"longitude": 10.738909680958436
+	},
+	{
+		"id": "sopra-steria-as",
+		"name": "SOPRA STERIA AS",
+		"address": "Biskop Gunnerus' gate 14A, 0185 OSLO",
+		"latitude": 59.9116402862746,
+		"longitude": 10.754634794438054
+	},
+	{
+		"id": "stacq-as",
+		"name": "STACQ AS",
+		"address": "Øvre Slottsgate 27, 0157 OSLO",
+		"latitude": 59.91341554777056,
+		"longitude": 10.742678868148028
+	},
+	{
+		"id": "standards-digital-as",
+		"name": "STANDARDS DIGITAL AS",
+		"address": "Lilleakerveien 2A, 0283 OSLO",
+		"latitude": 59.915412471997,
+		"longitude": 10.638435164492119
+	},
+	{
+		"id": "sunstone-institute-as",
+		"name": "SUNSTONE INSTITUTE AS",
+		"address": "Apotekergata 10B, 0180 OSLO",
+		"latitude": 59.915160758889265,
+		"longitude": 10.742058477610277
+	},
+	{
+		"id": "superoffice-norge-as",
+		"name": "SUPEROFFICE NORGE AS",
+		"address": "Wergelandsveien 27, 0167 OSLO",
+		"latitude": 59.92017159747216,
+		"longitude": 10.728882679053903
+	},
+	{
+		"id": "sysint-as",
+		"name": "SYSINT AS",
+		"address": "Grev Wedels plass 9, 0151 OSLO",
+		"latitude": 59.907456306012314,
+		"longitude": 10.744380091280838
+	},
+	{
+		"id": "systek-as",
+		"name": "SYSTEK AS",
+		"address": "Pilestredet 28, 0166 OSLO",
+		"latitude": 59.91803964970274,
+		"longitude": 10.738154120607131
+	},
+	{
+		"id": "tallmaker-as",
+		"name": "TALLMAKER AS",
+		"address": "Stenersgata 2A, 0184 OSLO",
+		"latitude": 59.912961851903205,
+		"longitude": 10.751363534505096
+	},
+	{
+		"id": "tech-mahindra-norway-as",
+		"name": "TECH MAHINDRA NORWAY AS",
+		"address": "Drammensveien 167, 0277 OSLO",
+		"latitude": 59.92159006684404,
+		"longitude": 10.673944930013876
+	},
+	{
+		"id": "techpros-as",
+		"name": "TECHPROS AS",
+		"address": "Tullins gate 4C, 0166 OSLO",
+		"latitude": 59.91850363809939,
+		"longitude": 10.735521954114876
+	},
+	{
+		"id": "telecomy-as",
+		"name": "TELECOMY AS",
+		"address": "Sandakerveien 140, 0484 OSLO",
+		"latitude": 59.95209663313671,
+		"longitude": 10.767128603454708
+	},
+	{
+		"id": "the-cloud-people-as",
+		"name": "THE CLOUD PEOPLE AS",
+		"address": "Drammensveien 126A, 0277 OSLO",
+		"latitude": 59.921074144194385,
+		"longitude": 10.688976588184135
+	},
+	{
+		"id": "tind-it-as",
+		"name": "TIND IT AS",
+		"address": "Sofies gate 1A, 0170 OSLO",
+		"latitude": 59.9214232500122,
+		"longitude": 10.737041229886543
+	},
+	{
+		"id": "tradesolution-as",
+		"name": "TRADESOLUTION AS",
+		"address": "Ole Deviks vei 6C, 0666 OSLO",
+		"latitude": 59.91335004754958,
+		"longitude": 10.826402870146264
+	},
+	{
+		"id": "trifid-norge-as",
+		"name": "TRIFID NORGE AS",
+		"address": "Akersgata 35, 0158 OSLO",
+		"latitude": 59.91329698066861,
+		"longitude": 10.741456427437729
+	},
+	{
+		"id": "twoday-as",
+		"name": "TWODAY AS",
+		"address": "Karenslyst allé 57, 0277 OSLO",
+		"latitude": 59.92138533732946,
+		"longitude": 10.677333661276554
+	},
+	{
+		"id": "unacast-as",
+		"name": "UNACAST AS",
+		"address": "Karl Johans gate 21, 0159 OSLO",
+		"latitude": 59.91280263320205,
+		"longitude": 10.742843476026213
+	},
+	{
+		"id": "uptime-consulting-as",
+		"name": "UPTIME CONSULTING AS",
+		"address": "Munchs gate 7, 0165 OSLO",
+		"latitude": 59.917533049423305,
+		"longitude": 10.741016526792992
+	},
+	{
+		"id": "vali-as",
+		"name": "VALI AS",
+		"address": "Grensen 13, 0159 OSLO",
+		"latitude": 59.91393846918655,
+		"longitude": 10.743207091163121
+	},
+	{
+		"id": "varde-hartmark-as",
+		"name": "VARDE HARTMARK AS",
+		"address": "Drammensveien 151, 0277 OSLO",
+		"latitude": 59.92252817504643,
+		"longitude": 10.681883611852223
+	},
+	{
+		"id": "variant-oslo-as",
+		"name": "VARIANT OSLO AS",
+		"address": "Tollbugata 24, 0157 OSLO",
+		"latitude": 59.91091311290161,
+		"longitude": 10.741742892068546
+	},
+	{
+		"id": "varnish-software-as",
+		"name": "VARNISH SOFTWARE AS",
+		"address": "Gjerdrums vei 14, 0484 OSLO",
+		"latitude": 59.95604711577821,
+		"longitude": 10.765888359084856
+	},
+	{
+		"id": "verifone-norway-as",
+		"name": "VERIFONE NORWAY AS",
+		"address": "Østre Aker vei 24, 0581 OSLO",
+		"latitude": 59.92846398732718,
+		"longitude": 10.813544687886925
+	},
+	{
+		"id": "vieri-as",
+		"name": "VIERI AS",
+		"address": "Freserveien 1, 0195 OSLO",
+		"latitude": 59.9029231904096,
+		"longitude": 10.784776813796888
+	},
+	{
+		"id": "visma-software-as",
+		"name": "VISMA SOFTWARE AS",
+		"address": "Karenslyst allé 56, 0277 OSLO",
+		"latitude": 59.92119854763914,
+		"longitude": 10.67789670086022
+	},
+	{
+		"id": "vitec-autosystemer-as",
+		"name": "VITEC AUTOSYSTEMER AS",
+		"address": "Biskop Gunnerus' gate 14A, 0185 OSLO",
+		"latitude": 59.9116402862746,
+		"longitude": 10.754634794438054
+	},
+	{
+		"id": "vivende-init-as",
+		"name": "VIVENDE INIT AS",
+		"address": "Møllergata 6, 0179 OSLO",
+		"latitude": 59.91401445853443,
+		"longitude": 10.74628747821273
+	},
+	{
+		"id": "vivicta-as",
+		"name": "VIVICTA AS",
+		"address": "Verkstedveien 3, 0277 OSLO",
+		"latitude": 59.92126620886706,
+		"longitude": 10.68428314998321
+	},
+	{
+		"id": "wingmen-norge-as",
+		"name": "WINGMEN NORGE AS",
+		"address": "Karoline Kristiansens vei 2, 0661 OSLO",
+		"latitude": 59.91384164521477,
+		"longitude": 10.797235881527458
+	},
+	{
+		"id": "witted-megacorp-as",
+		"name": "WITTED MEGACORP AS",
+		"address": "Hegdehaugsveien 24, 0352 OSLO",
+		"latitude": 59.920996479950354,
+		"longitude": 10.727619643133753
+	},
+	{
+		"id": "xlent-oslo-as",
+		"name": "XLENT OSLO AS",
+		"address": "Wergelandsveien 7, 0167 OSLO",
+		"latitude": 59.91891459573794,
+		"longitude": 10.731590024759551
+	},
+	{
+		"id": "y-story-as",
+		"name": "Y STORY AS",
+		"address": "Pilestredet 27, 0164 OSLO",
+		"latitude": 59.917595121712495,
+		"longitude": 10.738354472138559
+	},
+	{
+		"id": "zebra-consulting-as",
+		"name": "ZEBRA CONSULTING AS",
+		"address": "Torggata 35, 0183 OSLO",
+		"latitude": 59.91729772713344,
+		"longitude": 10.754026546112721
+	}
 ];

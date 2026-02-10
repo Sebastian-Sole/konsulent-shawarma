@@ -7,140 +7,214 @@ export type ShawarmaPlace = {
 };
 
 export const shawarmaPlaces: ShawarmaPlace[] = [
-	// Grønland/Tøyen
 	{
-		id: "shawarma-house",
-		name: "Shawarma House",
-		address: "Smalgangen 1, 0188 Oslo",
-		latitude: 59.9131,
-		longitude: 10.76,
+		"id": "osm-3664306365",
+		"name": "Asia kebab grill & pizzahus",
+		"address": "Oslo",
+		"latitude": 59.9123743,
+		"longitude": 10.7651236
 	},
 	{
-		id: "sultan-oslo",
-		name: "Sultan Oslo",
-		address: "Grønlandsleiret 16a, 0190 Oslo",
-		latitude: 59.9126,
-		longitude: 10.7622,
+		"id": "osm-12041482104",
+		"name": "Azadi",
+		"address": "Oslo",
+		"latitude": 59.9123072,
+		"longitude": 10.7639223
 	},
 	{
-		id: "oslo-kebab-pizza-hus",
-		name: "Oslo Kebab & Pizza Hus",
-		address: "Tøyengata 1, 0190 Oslo",
-		latitude: 59.914,
-		longitude: 10.763,
-	},
-	// Sentrum
-	{
-		id: "dronningens-kebab",
-		name: "Dronningens Kebab",
-		address: "Dronningens gate 27, 0154 Oslo",
-		latitude: 59.9117,
-		longitude: 10.7442,
+		"id": "osm-2192390537",
+		"name": "Balkan Pizza & Kebab House",
+		"address": "Oslo",
+		"latitude": 59.921512,
+		"longitude": 10.732212
 	},
 	{
-		id: "gazakjokken",
-		name: "Gazakjøkken",
-		address: "Møllergata 10, 0179 Oslo",
-		latitude: 59.9155,
-		longitude: 10.748,
+		"id": "osm-3397094877",
+		"name": "Beirut Kebab",
+		"address": "Oslo",
+		"latitude": 59.9125472,
+		"longitude": 10.7610756
 	},
 	{
-		id: "new-beirut-kebab",
-		name: "New Beirut Kebab",
-		address: "Møllergata 8, 0179 Oslo",
-		latitude: 59.9153,
-		longitude: 10.7477,
+		"id": "osm-383996262",
+		"name": "Bislett Kebab House",
+		"address": "Oslo",
+		"latitude": 59.920424,
+		"longitude": 10.733452
 	},
 	{
-		id: "king-falafel",
-		name: "King Falafel",
-		address: "Brugata 3A, 0186 Oslo",
-		latitude: 59.9138,
-		longitude: 10.7535,
-	},
-	// Torggata/Storgata
-	{
-		id: "mediterranean-grill",
-		name: "Mediterranean Grill",
-		address: "Torggata 34, 0183 Oslo",
-		latitude: 59.9175,
-		longitude: 10.7523,
+		"id": "osm-8075696968",
+		"name": "Bislett Kebab House",
+		"address": "Oslo",
+		"latitude": 59.922649,
+		"longitude": 10.73188
 	},
 	{
-		id: "falafel-me",
-		name: "Falafel Me",
-		address: "Storgata 13, 0155 Oslo",
-		latitude: 59.9138,
-		longitude: 10.7498,
+		"id": "osm-9731781890",
+		"name": "Carl Berner Grill",
+		"address": "Oslo",
+		"latitude": 59.9263529,
+		"longitude": 10.7752068
 	},
 	{
-		id: "parthenon",
-		name: "Parthenon Pizza & Grillbar",
-		address: "Osterhaus' gate 14A, 0183 Oslo",
-		latitude: 59.9193,
-		longitude: 10.7547,
-	},
-	// Bislett
-	{
-		id: "bislett-kebab",
-		name: "Bislett Kebab House",
-		address: "Hegdehaugsveien 2, 0167 Oslo",
-		latitude: 59.92,
-		longitude: 10.734,
+		"id": "osm-1930503853",
+		"name": "Charlies Kebab",
+		"address": "Oslo",
+		"latitude": 59.933443,
+		"longitude": 10.763307
 	},
 	{
-		id: "habibi-pilestredet",
-		name: "Habibi Pilestredet",
-		address: "Pilestredet 55, 0350 Oslo",
-		latitude: 59.9225,
-		longitude: 10.7365,
+		"id": "osm-11533572438",
+		"name": "Charlies Kebab House",
+		"address": "Oslo",
+		"latitude": 59.9184028,
+		"longitude": 10.6368624
 	},
-	// Majorstuen
 	{
-		id: "majorstuen-grill",
-		name: "Majorstuen Grill & Kebab",
-		address: "Bogstadveien 53B, 0366 Oslo",
-		latitude: 59.929,
-		longitude: 10.716,
+		"id": "osm-10709309325",
+		"name": "Dronningens kebab",
+		"address": "Oslo",
+		"latitude": 59.9465416,
+		"longitude": 10.7726783
 	},
-	// Grünerløkka
 	{
-		id: "falafel-n-juice",
-		name: "Falafel n' Juice",
-		address: "Thorvald Meyers gate 33D, 0555 Oslo",
-		latitude: 59.9223,
-		longitude: 10.7585,
+		"id": "osm-10674613153",
+		"name": "Gaza Kjøkken",
+		"address": "Oslo",
+		"latitude": 59.9144701,
+		"longitude": 10.7471407
 	},
-	// Nydalen
 	{
-		id: "nydalen-kebab",
-		name: "Nydalen Kebab og Pizza",
-		address: "Maridalsveien 256, 0872 Oslo",
-		latitude: 59.9495,
-		longitude: 10.7665,
+		"id": "osm-3768066724",
+		"name": "Grorud Kebab Og Pizza",
+		"address": "Oslo",
+		"latitude": 59.9613511,
+		"longitude": 10.8819053
 	},
-	// Carl Berner
 	{
-		id: "damaskus-huset",
-		name: "Damaskus Huset",
-		address: "Trondheimsveien 12C, 0560 Oslo",
-		latitude: 59.9265,
-		longitude: 10.772,
+		"id": "osm-3664306360",
+		"name": "Grønland pizza & kebab",
+		"address": "Oslo",
+		"latitude": 59.9123509,
+		"longitude": 10.7652227
 	},
-	// Sagene
 	{
-		id: "san-remo",
-		name: "San Remo Pizza & Grill",
-		address: "Torshovgata 7, 0476 Oslo",
-		latitude: 59.928,
-		longitude: 10.756,
+		"id": "osm-12031991169",
+		"name": "Happy Ending",
+		"address": "Oslo",
+		"latitude": 59.919319,
+		"longitude": 10.7511998
 	},
-	// Grefsen
 	{
-		id: "new-winny-kebab",
-		name: "New Winny Kebab",
-		address: "Grefsenveien 57, 0487 Oslo",
-		latitude: 59.944,
-		longitude: 10.779,
+		"id": "osm-7111734043",
+		"name": "Haugerud Pizza og Burger",
+		"address": "Oslo",
+		"latitude": 59.9225956,
+		"longitude": 10.8568056
 	},
+	{
+		"id": "osm-9447113185",
+		"name": "Jamals Falafel",
+		"address": "Oslo",
+		"latitude": 59.9185581,
+		"longitude": 10.7620099
+	},
+	{
+		"id": "osm-12669709316",
+		"name": "Kebab Biten",
+		"address": "Oslo",
+		"latitude": 59.9289607,
+		"longitude": 10.77766
+	},
+	{
+		"id": "osm-2192394366",
+		"name": "Kebabbiten",
+		"address": "Oslo",
+		"latitude": 59.92018,
+		"longitude": 10.734619
+	},
+	{
+		"id": "osm-5094785554",
+		"name": "Lett & Mett",
+		"address": "Oslo",
+		"latitude": 59.9140861,
+		"longitude": 10.7542781
+	},
+	{
+		"id": "osm-7904813107",
+		"name": "Lett og God",
+		"address": "Oslo",
+		"latitude": 59.9120748,
+		"longitude": 10.7520208
+	},
+	{
+		"id": "osm-4736654460",
+		"name": "Mela Café",
+		"address": "Oslo",
+		"latitude": 59.9167832,
+		"longitude": 10.7505866
+	},
+	{
+		"id": "osm-860579095",
+		"name": "New Beirut Kebab",
+		"address": "Oslo",
+		"latitude": 59.9141041,
+		"longitude": 10.7469809
+	},
+	{
+		"id": "osm-1229981429",
+		"name": "New Winny Kebab",
+		"address": "Oslo",
+		"latitude": 59.9453322,
+		"longitude": 10.7804383
+	},
+	{
+		"id": "osm-3655282215",
+		"name": "Oslo kebab og pizzahus",
+		"address": "Oslo",
+		"latitude": 59.9126076,
+		"longitude": 10.7640047
+	},
+	{
+		"id": "osm-1616628466",
+		"name": "Papa Rosa",
+		"address": "Oslo",
+		"latitude": 59.9066851,
+		"longitude": 10.8192878
+	},
+	{
+		"id": "osm-1531963131",
+		"name": "Rustad Pizza og Kebab",
+		"address": "Oslo",
+		"latitude": 59.873899,
+		"longitude": 10.8433773
+	},
+	{
+		"id": "osm-3397094878",
+		"name": "Shawarma House",
+		"address": "Oslo",
+		"latitude": 59.9124062,
+		"longitude": 10.7589167
+	},
+	{
+		"id": "osm-1769606908",
+		"name": "Sonny's kebab",
+		"address": "Oslo",
+		"latitude": 59.9187015,
+		"longitude": 10.7401277
+	},
+	{
+		"id": "osm-6374708172",
+		"name": "Vinderen Kebab og Pizza",
+		"address": "Oslo",
+		"latitude": 59.9433554,
+		"longitude": 10.6996176
+	},
+	{
+		"id": "osm-1421832781",
+		"name": "Vinny's Kebab",
+		"address": "Oslo",
+		"latitude": 59.9134696,
+		"longitude": 10.7538702
+	}
 ];
