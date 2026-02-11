@@ -35,7 +35,7 @@ export function ResultsPanel({ firm, results, onClear }: ResultsPanelProps) {
 					variant="ghost"
 					size="icon"
 					onClick={onClear}
-					className="shrink-0 ml-2"
+					className="shrink-0 ml-2 text-slate-700"
 					aria-label="Lukk"
 				>
 					<X className="size-4" />

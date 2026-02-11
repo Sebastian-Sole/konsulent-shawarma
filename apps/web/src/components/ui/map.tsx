@@ -629,17 +629,29 @@ function MarkerTooltip({
 
 		tooltip.setDOMContent(container);
 
-		const handleMouseEnter = () => {
+		const handlePointerEnter = (e: PointerEvent) => {
+			if (e.pointerType === "touch") return;
 			tooltip.setLngLat(marker.getLngLat()).addTo(map);
 		};
-		const handleMouseLeave = () => tooltip.remove();
+		const handlePointerLeave = (e: PointerEvent) => {
+			if (e.pointerType === "touch") return;
+			tooltip.remove();
+		};
 
-		marker.getElement()?.addEventListener("mouseenter", handleMouseEnter);
-		marker.getElement()?.addEventListener("mouseleave", handleMouseLeave);
+		marker
+			.getElement()
+			?.addEventListener("pointerenter", handlePointerEnter);
+		marker
+			.getElement()
+			?.addEventListener("pointerleave", handlePointerLeave);
 
 		return () => {
-			marker.getElement()?.removeEventListener("mouseenter", handleMouseEnter);
-			marker.getElement()?.removeEventListener("mouseleave", handleMouseLeave);
+			marker
+				.getElement()
+				?.removeEventListener("pointerenter", handlePointerEnter);
+			marker
+				.getElement()
+				?.removeEventListener("pointerleave", handlePointerLeave);
 			tooltip.remove();
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
