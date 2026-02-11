@@ -11,6 +11,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+[data-slot="scroll-area-viewport"] {
+  overscroll-behavior: contain;
 }
 
 code {

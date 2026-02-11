@@ -5,13 +5,26 @@ import type { NearestResult } from "@/lib/geo";
 type ShawarmaResultCardProps = {
 	result: NearestResult;
 	rank: number;
+	onClick?: () => void;
 };
 
-export function ShawarmaResultCard({ result, rank }: ShawarmaResultCardProps) {
+export function ShawarmaResultCard({
+	result,
+	rank,
+	onClick,
+}: ShawarmaResultCardProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
 
 	return (
-		<div className="flex gap-3 rounded-lg border border-border/50 bg-white/80 p-3 backdrop-blur-sm">
+		<div
+			className="flex gap-3 rounded-lg border border-border/50 bg-white/80 p-3 backdrop-blur-sm cursor-pointer transition-colors hover:bg-white/95 active:bg-white"
+			onClick={onClick}
+			onKeyDown={(e) => {
+				if (e.key === "Enter" || e.key === " ") onClick?.();
+			}}
+			role="button"
+			tabIndex={0}
+		>
 			<div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">
 				{rank}
 			</div>
@@ -32,6 +45,7 @@ export function ShawarmaResultCard({ result, rank }: ShawarmaResultCardProps) {
 						target="_blank"
 						rel="noopener noreferrer"
 						className="ml-auto flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+						onClick={(e) => e.stopPropagation()}
 					>
 						Google Maps
 						<ExternalLink className="size-3" />

@@ -11,20 +11,26 @@ type ResultsPanelProps = {
 	firm: Firm;
 	results: NearestResult[];
 	onClear: () => void;
+	onResultClick: (result: NearestResult) => void;
 };
 
-export function ResultsPanel({ firm, results, onClear }: ResultsPanelProps) {
+export function ResultsPanel({
+	firm,
+	results,
+	onClear,
+	onResultClick,
+}: ResultsPanelProps) {
 	return (
 		<div
 			className={cn(
-				"absolute z-10 bg-white/90 backdrop-blur-md shadow-2xl border border-border/50",
+				"absolute z-10 bg-white/90 backdrop-blur-md shadow-2xl border border-border/50 overflow-hidden",
 				// Desktop: right side panel
-				"right-0 top-0 h-full w-[360px] hidden md:flex flex-col",
-				// Override for mobile: bottom sheet
-				"max-md:flex max-md:flex-col max-md:right-0 max-md:bottom-0 max-md:left-0 max-md:top-auto max-md:h-[45vh] max-md:w-full max-md:rounded-t-2xl max-md:block",
+				"right-0 top-0 h-full w-[360px] hidden md:flex md:flex-col",
+				// Mobile: bottom sheet
+				"max-md:flex max-md:flex-col max-md:right-0 max-md:bottom-0 max-md:left-0 max-md:top-auto max-md:h-[45vh] max-md:w-full max-md:rounded-t-2xl",
 			)}
 		>
-			<div className="flex items-center justify-between p-4 pb-2">
+			<div className="flex items-center justify-between p-4 pb-2 shrink-0">
 				<div className="min-w-0 flex-1">
 					<h2 className="text-lg font-bold text-slate-900 truncate">
 						{firm.name}
@@ -41,19 +47,20 @@ export function ResultsPanel({ firm, results, onClear }: ResultsPanelProps) {
 					<X className="size-4" />
 				</Button>
 			</div>
-			<Separator />
-			<div className="px-4 pt-2 pb-1">
+			<Separator className="shrink-0" />
+			<div className="px-4 pt-2 pb-1 shrink-0">
 				<p className="text-sm font-medium text-slate-700">
 					Nærmeste shawarma-steder
 				</p>
 			</div>
-			<ScrollArea className="flex-1 px-4 pb-4">
+			<ScrollArea className="flex-1 min-h-0 px-4 pb-4 overscroll-contain">
 				<div className="flex flex-col gap-2 pt-1">
 					{results.map((result, i) => (
 						<ShawarmaResultCard
 							key={result.place.id}
 							result={result}
 							rank={i + 1}
+							onClick={() => onResultClick(result)}
 						/>
 					))}
 				</div>

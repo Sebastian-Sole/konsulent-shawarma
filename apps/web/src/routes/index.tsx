@@ -7,11 +7,20 @@ import { ShawarmaMarker } from "@/components/shawarma-marker";
 import { type MapRef, Map as MapView } from "@/components/ui/map";
 import type { Firm } from "@/data/firms";
 import { firms } from "@/data/firms";
+import type { NearestResult } from "@/lib/geo";
 import { useNearestShawarma } from "@/hooks/use-nearest-shawarma";
 
 const OSLO_CENTER: [number, number] = [10.7522, 59.9139];
 const OSLO_ZOOM = 13;
 const SELECTED_ZOOM = 15;
+
+const MD_BREAKPOINT = 768;
+
+function getMobilePadding() {
+	if (typeof window === "undefined" || window.innerWidth >= MD_BREAKPOINT)
+		return undefined;
+	return { bottom: window.innerHeight * 0.45 + 20 };
+}
 
 export const Route = createFileRoute("/")({
 	component: App,
@@ -30,6 +39,7 @@ function App() {
 				center: [firm.longitude, firm.latitude],
 				zoom: SELECTED_ZOOM,
 				duration: 1200,
+				padding: getMobilePadding(),
 			});
 		} else if (mapRef.current) {
 			mapRef.current.flyTo({
@@ -47,6 +57,17 @@ function App() {
 				center: OSLO_CENTER,
 				zoom: OSLO_ZOOM,
 				duration: 1200,
+			});
+		}
+	}, []);
+
+	const handleResultClick = useCallback((result: NearestResult) => {
+		if (mapRef.current) {
+			mapRef.current.flyTo({
+				center: [result.place.longitude, result.place.latitude],
+				zoom: 16,
+				duration: 800,
+				padding: getMobilePadding(),
 			});
 		}
 	}, []);
@@ -89,6 +110,7 @@ function App() {
 					firm={selectedFirm}
 					results={results}
 					onClear={handleClear}
+					onResultClick={handleResultClick}
 				/>
 			)}
 		</div>
