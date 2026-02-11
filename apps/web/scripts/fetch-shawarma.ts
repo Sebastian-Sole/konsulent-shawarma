@@ -13,7 +13,7 @@ const OVERPASS_ENDPOINTS = [
 // Oslo bounding box: south, west, north, east
 const OSLO_BBOX = "59.85,10.60,59.98,10.90";
 
-const CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyros"];
+const CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
 const AMENITIES = ["restaurant", "fast_food"];
 
 const QUERY = `[out:json][timeout:60];(${AMENITIES.flatMap((a) =>

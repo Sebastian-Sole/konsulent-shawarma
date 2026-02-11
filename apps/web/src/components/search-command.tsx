@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Check, ChevronsUpDown, Search } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -35,6 +36,12 @@ export function SearchCommand({
 			<h1 className="text-lg font-bold text-white drop-shadow-lg hidden sm:block">
 				Konsulent Shawarma
 			</h1>
+			<Link
+				to="/jobs"
+				className="text-sm font-medium text-white drop-shadow-lg hover:underline hidden sm:block"
+			>
+				Ledige stillinger →
+			</Link>
 			<Popover open={open} onOpenChange={setOpen}>
 				<PopoverTrigger asChild>
 					<Button

@@ -1,0 +1,22 @@
+{
+  "name": "@konsulent-shawarma/studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev --port 3333",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "^3.87.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sanity": "^3.87.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.7.2"
+  }
+}
