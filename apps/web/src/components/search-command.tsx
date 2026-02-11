@@ -33,12 +33,12 @@ export function SearchCommand({
 
 	return (
 		<div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-			<h1 className="text-lg font-bold text-white drop-shadow-lg hidden sm:block">
+			<h1 className="text-lg font-bold text-white drop-shadow-lg">
 				Konsulent Shawarma
 			</h1>
 			<Link
 				to="/jobs"
-				className="text-sm font-medium text-white drop-shadow-lg hover:underline hidden sm:block"
+				className="text-sm font-medium text-white drop-shadow-lg hover:underline"
 			>
 				Ledige stillinger →
 			</Link>
