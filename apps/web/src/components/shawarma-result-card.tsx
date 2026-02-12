@@ -1,6 +1,8 @@
 import { ExternalLink, Footprints } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { NearestResult } from "@/lib/geo";
+import { getPlaceCategory } from "@/lib/cuisine-categories";
+import { cn } from "@/lib/utils";
 
 type ShawarmaResultCardProps = {
 	result: NearestResult;
@@ -14,6 +16,7 @@ export function ShawarmaResultCard({
 	onClick,
 }: ShawarmaResultCardProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
+	const cat = getPlaceCategory(place.cuisines);
 
 	return (
 		<div
@@ -25,7 +28,14 @@ export function ShawarmaResultCard({
 			role="button"
 			tabIndex={0}
 		>
-			<div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">
+			<div
+				className={cn(
+					"flex size-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold",
+					cat.border,
+					cat.color,
+					cat.text,
+				)}
+			>
 				{rank}
 			</div>
 			<div className="min-w-0 flex-1">

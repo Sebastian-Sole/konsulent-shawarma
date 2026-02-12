@@ -13,14 +13,8 @@ const OVERPASS_ENDPOINTS = [
 // Oslo bounding box: south, west, north, east
 const OSLO_BBOX = "59.85,10.60,59.98,10.90";
 
-const CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
-const AMENITIES = ["restaurant", "fast_food"];
-
-const QUERY = `[out:json][timeout:60];(${AMENITIES.flatMap((a) =>
-	CUISINES.map(
-		(c) => `nw["amenity"="${a}"]["cuisine"="${c}"](${OSLO_BBOX});`,
-	),
-).join("")});out center;`;
+// Fetch all restaurants and fast_food that have any cuisine tag
+const QUERY = `[out:json][timeout:60];(nw["amenity"="restaurant"]["cuisine"](${OSLO_BBOX});nw["amenity"="fast_food"]["cuisine"](${OSLO_BBOX}););out center;`;
 
 type OverpassElement = {
 	type: "node" | "way";
@@ -41,6 +35,7 @@ type ShawarmaPlace = {
 	address: string;
 	latitude: number;
 	longitude: number;
+	cuisines: string[];
 };
 
 async function queryOverpass(): Promise<OverpassResponse> {
@@ -71,6 +66,15 @@ async function queryOverpass(): Promise<OverpassResponse> {
 	throw lastError!;
 }
 
+function parseCuisines(raw: string | undefined): string[] {
+	if (!raw) return [];
+	// OSM uses semicolons, but some entries use commas
+	return raw
+		.split(/[;,]/)
+		.map((c) => c.trim().toLowerCase().replace(/\s+/g, "_"))
+		.filter(Boolean);
+}
+
 function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (!el.tags?.name) return null;
 	const lat = el.lat ?? el.center?.lat;
@@ -78,6 +82,9 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (lat == null || lon == null) return null;
 
 	const tags = el.tags;
+	const cuisines = parseCuisines(tags.cuisine);
+	if (cuisines.length === 0) return null;
+
 	const parts = [
 		[tags["addr:street"], tags["addr:housenumber"]]
 			.filter(Boolean)
@@ -91,11 +98,12 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 		address: parts.join(", "),
 		latitude: lat,
 		longitude: lon,
+		cuisines,
 	};
 }
 
 async function main() {
-	console.log("Fetching shawarma/kebab places from Overpass (OpenStreetMap)...");
+	console.log("Fetching food places from Overpass (OpenStreetMap)...");
 	const data = await queryOverpass();
 	console.log(`Got ${data.elements.length} raw elements.`);
 
@@ -114,7 +122,17 @@ async function main() {
 
 	unique.sort((a, b) => a.name.localeCompare(b.name, "nb"));
 
+	// Collect all unique cuisines
+	const cuisineSet = new Set<string>();
+	for (const place of unique) {
+		for (const c of place.cuisines) {
+			cuisineSet.add(c);
+		}
+	}
+	const allCuisines = [...cuisineSet].sort();
+
 	console.log(`\nDone! ${unique.length} places (${places.length - unique.length} duplicates removed).`);
+	console.log(`Found ${allCuisines.length} unique cuisines: ${allCuisines.join(", ")}`);
 
 	const ts = `export type ShawarmaPlace = {
 \tid: string;
@@ -122,7 +140,12 @@ async function main() {
 \taddress: string;
 \tlatitude: number;
 \tlongitude: number;
+\tcuisines: string[];
 };
+
+export const DEFAULT_CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
+
+export const allCuisines: string[] = ${JSON.stringify(allCuisines)};
 
 export const shawarmaPlaces: ShawarmaPlace[] = ${JSON.stringify(unique, null, "\t")};
 `;

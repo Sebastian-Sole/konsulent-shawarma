@@ -7,6 +7,8 @@ import {
 	MarkerTooltip,
 } from "@/components/ui/map";
 import type { NearestResult } from "@/lib/geo";
+import { getPlaceCategory } from "@/lib/cuisine-categories";
+import { cn } from "@/lib/utils";
 
 type ShawarmaMarkerProps = {
 	result: NearestResult;
@@ -15,11 +17,19 @@ type ShawarmaMarkerProps = {
 
 export function ShawarmaMarker({ result, rank }: ShawarmaMarkerProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
+	const cat = getPlaceCategory(place.cuisines);
 
 	return (
 		<MapMarker longitude={place.longitude} latitude={place.latitude}>
 			<MarkerContent>
-				<div className="flex size-7 items-center justify-center rounded-full border-2 border-white bg-amber-500 text-xs font-bold text-white shadow-lg">
+				<div
+					className={cn(
+						"flex size-7 items-center justify-center rounded-full border-2 text-xs font-bold shadow-lg",
+						cat.border,
+						cat.color,
+						cat.text,
+					)}
+				>
 					{rank}
 				</div>
 			</MarkerContent>

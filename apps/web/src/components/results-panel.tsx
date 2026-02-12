@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import type { Firm } from "@/data/firms";
 import type { NearestResult } from "@/lib/geo";
 import { cn } from "@/lib/utils";
+import { FilterControls } from "./filter-controls";
 import { ShawarmaResultCard } from "./shawarma-result-card";
 
 type ResultsPanelProps = {
@@ -12,6 +13,12 @@ type ResultsPanelProps = {
 	results: NearestResult[];
 	onClear: () => void;
 	onResultClick: (result: NearestResult) => void;
+	enabledCategories: Set<string>;
+	onToggleCategory: (category: string) => void;
+	resultCount: number;
+	onResultCountChange: (count: number) => void;
+	maxDistance: number | undefined;
+	onMaxDistanceChange: (distance: number | undefined) => void;
 };
 
 export function ResultsPanel({
@@ -19,6 +26,12 @@ export function ResultsPanel({
 	results,
 	onClear,
 	onResultClick,
+	enabledCategories,
+	onToggleCategory,
+	resultCount,
+	onResultCountChange,
+	maxDistance,
+	onMaxDistanceChange,
 }: ResultsPanelProps) {
 	return (
 		<div
@@ -48,21 +61,36 @@ export function ResultsPanel({
 				</Button>
 			</div>
 			<Separator className="shrink-0" />
+			<FilterControls
+				enabledCategories={enabledCategories}
+				onToggleCategory={onToggleCategory}
+				resultCount={resultCount}
+				onResultCountChange={onResultCountChange}
+				maxDistance={maxDistance}
+				onMaxDistanceChange={onMaxDistanceChange}
+			/>
+			<Separator className="shrink-0" />
 			<div className="px-4 pt-2 pb-1 shrink-0">
 				<p className="text-sm font-medium text-slate-700">
-					Nærmeste shawarma-steder
+					Nærmeste matsteder ({results.length})
 				</p>
 			</div>
 			<ScrollArea className="flex-1 min-h-0 px-4 pb-4 overscroll-contain">
 				<div className="flex flex-col gap-2 pt-1">
-					{results.map((result, i) => (
-						<ShawarmaResultCard
-							key={result.place.id}
-							result={result}
-							rank={i + 1}
-							onClick={() => onResultClick(result)}
-						/>
-					))}
+					{results.length === 0 ? (
+						<p className="text-xs text-slate-400 py-4 text-center">
+							Ingen steder funnet med valgte filtre
+						</p>
+					) : (
+						results.map((result, i) => (
+							<ShawarmaResultCard
+								key={result.place.id}
+								result={result}
+								rank={i + 1}
+								onClick={() => onResultClick(result)}
+							/>
+						))
+					)}
 				</div>
 			</ScrollArea>
 		</div>

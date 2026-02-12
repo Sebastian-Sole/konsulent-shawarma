@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { FirmMarker } from "@/components/firm-marker";
 import { ResultsPanel } from "@/components/results-panel";
 import { SearchCommand } from "@/components/search-command";
@@ -8,6 +8,10 @@ import { type MapRef, Map as MapView } from "@/components/ui/map";
 import type { Firm } from "@/data/firms";
 import { firms } from "@/data/firms";
 import type { NearestResult } from "@/lib/geo";
+import {
+	DEFAULT_CATEGORIES,
+	categoriesToCuisines,
+} from "@/lib/cuisine-categories";
 import { useNearestShawarma } from "@/hooks/use-nearest-shawarma";
 
 const OSLO_CENTER: [number, number] = [10.7522, 59.9139];
@@ -30,7 +34,39 @@ export const Route = createFileRoute("/")({
 function App() {
 	const mapRef = useRef<MapRef>(null);
 	const [selectedFirm, setSelectedFirm] = useState<Firm | null>(null);
-	const results = useNearestShawarma(selectedFirm);
+	const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
+		() => new Set(DEFAULT_CATEGORIES),
+	);
+	const [resultCount, setResultCount] = useState(5);
+	const [maxDistance, setMaxDistance] = useState<number | undefined>(undefined);
+
+	const enabledCuisines = useMemo(
+		() => categoriesToCuisines(enabledCategories),
+		[enabledCategories],
+	);
+
+	const filterOptions = useMemo(
+		() => ({
+			count: resultCount,
+			maxDistanceMeters: maxDistance,
+			cuisines: enabledCuisines,
+		}),
+		[resultCount, maxDistance, enabledCuisines],
+	);
+
+	const results = useNearestShawarma(selectedFirm, filterOptions);
+
+	const handleToggleCategory = useCallback((category: string) => {
+		setEnabledCategories((prev) => {
+			const next = new Set(prev);
+			if (next.has(category)) {
+				next.delete(category);
+			} else {
+				next.add(category);
+			}
+			return next;
+		});
+	}, []);
 
 	const handleSelect = useCallback((firm: Firm | null) => {
 		setSelectedFirm(firm);
@@ -111,6 +147,12 @@ function App() {
 					results={results}
 					onClear={handleClear}
 					onResultClick={handleResultClick}
+					enabledCategories={enabledCategories}
+					onToggleCategory={handleToggleCategory}
+					resultCount={resultCount}
+					onResultCountChange={setResultCount}
+					maxDistance={maxDistance}
+					onMaxDistanceChange={setMaxDistance}
 				/>
 			)}
 
