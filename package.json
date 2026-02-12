@@ -9,7 +9,8 @@
     "lint": "biome lint",
     "check": "biome check",
     "fetch-firms": "pnpm --filter @konsulent-shawarma/web fetch-firms",
-    "fetch-shawarma": "pnpm --filter @konsulent-shawarma/web fetch-shawarma"
+    "fetch-shawarma": "pnpm --filter @konsulent-shawarma/web fetch-shawarma",
+    "enrich-google": "pnpm --filter @konsulent-shawarma/web enrich-google"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4"

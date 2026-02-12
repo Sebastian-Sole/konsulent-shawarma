@@ -1,5 +1,6 @@
 import type { Firm } from "@/data/firms";
 import type { ShawarmaPlace } from "@/data/shawarma-places";
+import { isOpenNow } from "@/lib/opening-hours";
 
 const EARTH_RADIUS_M = 6_371_000;
 
@@ -45,8 +46,37 @@ export function findNearestPlaces(
 	firm: Firm,
 	places: ShawarmaPlace[],
 	count: number,
+	options?: {
+		maxDistanceMeters?: number;
+		cuisines?: Set<string>;
+		minRating?: number;
+		openNow?: boolean;
+	},
 ): NearestResult[] {
-	return places
+	let filtered = places;
+
+	if (options?.cuisines && options.cuisines.size > 0) {
+		filtered = filtered.filter((place) =>
+			place.cuisines.some((c) => options.cuisines!.has(c)),
+		);
+	}
+
+	if (options?.minRating != null) {
+		filtered = filtered.filter(
+			(place) =>
+				place.googleRating != null &&
+				place.googleRating >= options.minRating!,
+		);
+	}
+
+	if (options?.openNow) {
+		filtered = filtered.filter((place) => {
+			if (!place.openingHours) return false;
+			return isOpenNow(place.openingHours) === true;
+		});
+	}
+
+	const results = filtered
 		.map((place) => {
 			const distanceMeters = haversineDistance(
 				firm.latitude,
@@ -66,6 +96,12 @@ export function findNearestPlaces(
 				),
 			};
 		})
-		.sort((a, b) => a.distanceMeters - b.distanceMeters)
-		.slice(0, count);
+		.sort((a, b) => a.distanceMeters - b.distanceMeters);
+
+	const maxDist = options?.maxDistanceMeters;
+	const distFiltered = maxDist
+		? results.filter((r) => r.distanceMeters <= maxDist)
+		: results;
+
+	return distFiltered.slice(0, count);
 }

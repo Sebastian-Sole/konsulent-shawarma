@@ -1,6 +1,9 @@
-import { ExternalLink, Footprints } from "lucide-react";
+import { ExternalLink, Footprints, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { OpeningHoursDisplay } from "@/components/opening-hours-display";
 import type { NearestResult } from "@/lib/geo";
+import { getPlaceCategory } from "@/lib/cuisine-categories";
+import { cn } from "@/lib/utils";
 
 type ShawarmaResultCardProps = {
 	result: NearestResult;
@@ -14,6 +17,7 @@ export function ShawarmaResultCard({
 	onClick,
 }: ShawarmaResultCardProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
+	const cat = getPlaceCategory(place.cuisines);
 
 	return (
 		<div
@@ -25,13 +29,20 @@ export function ShawarmaResultCard({
 			role="button"
 			tabIndex={0}
 		>
-			<div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">
+			<div
+				className={cn(
+					"flex size-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold",
+					cat.border,
+					cat.color,
+					cat.text,
+				)}
+			>
 				{rank}
 			</div>
 			<div className="min-w-0 flex-1">
 				<p className="font-semibold text-slate-900 truncate">{place.name}</p>
 				<p className="text-xs text-slate-500 truncate">{place.address}</p>
-				<div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+				<div className="mt-1.5 flex items-center gap-1.5">
 					<Badge variant="secondary" className="text-xs">
 						{distanceMeters < 1000
 							? `${Math.round(distanceMeters)} m`
@@ -40,11 +51,20 @@ export function ShawarmaResultCard({
 					<Badge variant="secondary" className="text-xs">
 						<Footprints className="mr-1 size-3" />~{walkingMinutes} min
 					</Badge>
+					{place.googleRating != null && (
+						<Badge variant="secondary" className="text-xs">
+							<Star className="mr-1 size-3 fill-amber-400 text-amber-400" />
+							{place.googleRating}
+						</Badge>
+					)}
+				</div>
+				<div className="mt-1 flex items-center justify-between gap-2">
+					<OpeningHoursDisplay openingHours={place.openingHours} compact />
 					<a
 						href={googleMapsUrl}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="ml-auto flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+						className="flex shrink-0 items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
 						onClick={(e) => e.stopPropagation()}
 					>
 						Google Maps

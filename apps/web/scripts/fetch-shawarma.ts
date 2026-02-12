@@ -1,9 +1,10 @@
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, "../src/data/shawarma-places.ts");
+const GOOGLE_CACHE_PATH = resolve(__dirname, ".google-cache.json");
 
 const OVERPASS_ENDPOINTS = [
 	"https://overpass-api.de/api/interpreter",
@@ -13,14 +14,8 @@ const OVERPASS_ENDPOINTS = [
 // Oslo bounding box: south, west, north, east
 const OSLO_BBOX = "59.85,10.60,59.98,10.90";
 
-const CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
-const AMENITIES = ["restaurant", "fast_food"];
-
-const QUERY = `[out:json][timeout:60];(${AMENITIES.flatMap((a) =>
-	CUISINES.map(
-		(c) => `nw["amenity"="${a}"]["cuisine"="${c}"](${OSLO_BBOX});`,
-	),
-).join("")});out center;`;
+// Fetch all restaurants and fast_food that have any cuisine tag
+const QUERY = `[out:json][timeout:60];(nw["amenity"="restaurant"]["cuisine"](${OSLO_BBOX});nw["amenity"="fast_food"]["cuisine"](${OSLO_BBOX}););out center;`;
 
 type OverpassElement = {
 	type: "node" | "way";
@@ -41,7 +36,20 @@ type ShawarmaPlace = {
 	address: string;
 	latitude: number;
 	longitude: number;
+	cuisines: string[];
+	openingHours?: string;
+	googleRating?: number;
+	googleRatingCount?: number;
 };
+
+type GoogleCacheEntry = {
+	googleRating?: number;
+	googleRatingCount?: number;
+	openingHours?: string;
+	fetchedAt: string;
+};
+
+type GoogleCache = Record<string, GoogleCacheEntry>;
 
 async function queryOverpass(): Promise<OverpassResponse> {
 	let lastError: Error | undefined;
@@ -71,6 +79,15 @@ async function queryOverpass(): Promise<OverpassResponse> {
 	throw lastError!;
 }
 
+function parseCuisines(raw: string | undefined): string[] {
+	if (!raw) return [];
+	// OSM uses semicolons, but some entries use commas
+	return raw
+		.split(/[;,]/)
+		.map((c) => c.trim().toLowerCase().replace(/\s+/g, "_"))
+		.filter(Boolean);
+}
+
 function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (!el.tags?.name) return null;
 	const lat = el.lat ?? el.center?.lat;
@@ -78,6 +95,9 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (lat == null || lon == null) return null;
 
 	const tags = el.tags;
+	const cuisines = parseCuisines(tags.cuisine);
+	if (cuisines.length === 0) return null;
+
 	const parts = [
 		[tags["addr:street"], tags["addr:housenumber"]]
 			.filter(Boolean)
@@ -85,17 +105,24 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 		tags["addr:city"] ?? "Oslo",
 	].filter(Boolean);
 
-	return {
+	const place: ShawarmaPlace = {
 		id: `osm-${el.id}`,
 		name: tags.name,
 		address: parts.join(", "),
 		latitude: lat,
 		longitude: lon,
+		cuisines,
 	};
+
+	if (tags.opening_hours) {
+		place.openingHours = tags.opening_hours;
+	}
+
+	return place;
 }
 
 async function main() {
-	console.log("Fetching shawarma/kebab places from Overpass (OpenStreetMap)...");
+	console.log("Fetching food places from Overpass (OpenStreetMap)...");
 	const data = await queryOverpass();
 	console.log(`Got ${data.elements.length} raw elements.`);
 
@@ -114,7 +141,37 @@ async function main() {
 
 	unique.sort((a, b) => a.name.localeCompare(b.name, "nb"));
 
+	// Collect all unique cuisines
+	const cuisineSet = new Set<string>();
+	for (const place of unique) {
+		for (const c of place.cuisines) {
+			cuisineSet.add(c);
+		}
+	}
+	const allCuisines = [...cuisineSet].sort();
+
 	console.log(`\nDone! ${unique.length} places (${places.length - unique.length} duplicates removed).`);
+	console.log(`Found ${allCuisines.length} unique cuisines: ${allCuisines.join(", ")}`);
+
+	// Merge Google cache data if available
+	let googleCache: GoogleCache = {};
+	if (existsSync(GOOGLE_CACHE_PATH)) {
+		googleCache = JSON.parse(readFileSync(GOOGLE_CACHE_PATH, "utf-8"));
+		console.log(`Found Google cache with ${Object.keys(googleCache).length} entries.`);
+	}
+
+	for (const place of unique) {
+		const cached = googleCache[place.id];
+		if (!cached) continue;
+		if (cached.googleRating != null) place.googleRating = cached.googleRating;
+		if (cached.googleRatingCount != null) place.googleRatingCount = cached.googleRatingCount;
+		if (!place.openingHours && cached.openingHours) place.openingHours = cached.openingHours;
+	}
+
+	const withHours = unique.filter((p) => p.openingHours).length;
+	const withRating = unique.filter((p) => p.googleRating).length;
+	console.log(`Opening hours: ${withHours}/${unique.length} places have data.`);
+	console.log(`Google ratings: ${withRating}/${unique.length} places have data.`);
 
 	const ts = `export type ShawarmaPlace = {
 \tid: string;
@@ -122,7 +179,15 @@ async function main() {
 \taddress: string;
 \tlatitude: number;
 \tlongitude: number;
+\tcuisines: string[];
+\topeningHours?: string;
+\tgoogleRating?: number;
+\tgoogleRatingCount?: number;
 };
+
+export const DEFAULT_CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
+
+export const allCuisines: string[] = ${JSON.stringify(allCuisines)};
 
 export const shawarmaPlaces: ShawarmaPlace[] = ${JSON.stringify(unique, null, "\t")};
 `;
