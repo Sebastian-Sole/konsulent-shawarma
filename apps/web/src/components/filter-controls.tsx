@@ -8,6 +8,7 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
 import {
 	CUISINE_CATEGORIES,
 	CATEGORY_KEYS,
@@ -18,6 +19,8 @@ const RESULT_COUNT_OPTIONS = [3, 5, 10, 15, 20];
 const DISTANCE_MAX = 5000;
 const DISTANCE_MIN = 500;
 const DISTANCE_STEP = 250;
+const RATING_MIN = 30; // 3.0 in integer form
+const RATING_MAX = 50; // 5.0 in integer form
 
 function formatDistance(meters: number | undefined): string {
 	if (meters == null) return "Ingen grense";
@@ -32,6 +35,10 @@ type FilterControlsProps = {
 	onResultCountChange: (count: number) => void;
 	maxDistance: number | undefined;
 	onMaxDistanceChange: (distance: number | undefined) => void;
+	minRating: number | undefined;
+	onMinRatingChange: (rating: number | undefined) => void;
+	openNow: boolean;
+	onOpenNowChange: (open: boolean) => void;
 };
 
 export function FilterControls({
@@ -41,6 +48,10 @@ export function FilterControls({
 	onResultCountChange,
 	maxDistance,
 	onMaxDistanceChange,
+	minRating,
+	onMinRatingChange,
+	openNow,
+	onOpenNowChange,
 }: FilterControlsProps) {
 	const [open, setOpen] = useState(false);
 
@@ -106,6 +117,45 @@ export function FilterControls({
 						<span className="text-xs text-slate-500 tabular-nums whitespace-nowrap min-w-14 text-right">
 							{formatDistance(maxDistance)}
 						</span>
+					</div>
+
+					{/* Minimum rating */}
+					<div className="flex items-center gap-2">
+						<label className="text-xs font-medium text-slate-600 whitespace-nowrap">
+							Vurdering
+						</label>
+						<Slider
+							min={RATING_MIN}
+							max={RATING_MAX}
+							step={1}
+							value={[
+								minRating != null
+									? Math.round(minRating * 10)
+									: RATING_MIN,
+							]}
+							onValueChange={([v]) =>
+								onMinRatingChange(
+									v <= RATING_MIN ? undefined : v / 10,
+								)
+							}
+							className="flex-1"
+						/>
+						<span className="text-xs text-slate-500 tabular-nums whitespace-nowrap min-w-14 text-right">
+							{minRating != null
+								? `${minRating.toFixed(1)}+`
+								: "Alle"}
+						</span>
+					</div>
+
+					{/* Open now */}
+					<div className="flex items-center gap-2">
+						<label className="text-xs font-medium text-slate-600 whitespace-nowrap">
+							Åpent nå
+						</label>
+						<Switch
+							checked={openNow}
+							onCheckedChange={onOpenNowChange}
+						/>
 					</div>
 
 					{/* Cuisine category chips */}

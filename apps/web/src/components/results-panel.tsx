@@ -19,6 +19,10 @@ type ResultsPanelProps = {
 	onResultCountChange: (count: number) => void;
 	maxDistance: number | undefined;
 	onMaxDistanceChange: (distance: number | undefined) => void;
+	minRating: number | undefined;
+	onMinRatingChange: (rating: number | undefined) => void;
+	openNow: boolean;
+	onOpenNowChange: (open: boolean) => void;
 };
 
 export function ResultsPanel({
@@ -32,6 +36,10 @@ export function ResultsPanel({
 	onResultCountChange,
 	maxDistance,
 	onMaxDistanceChange,
+	minRating,
+	onMinRatingChange,
+	openNow,
+	onOpenNowChange,
 }: ResultsPanelProps) {
 	return (
 		<div
@@ -68,6 +76,10 @@ export function ResultsPanel({
 				onResultCountChange={onResultCountChange}
 				maxDistance={maxDistance}
 				onMaxDistanceChange={onMaxDistanceChange}
+				minRating={minRating}
+				onMinRatingChange={onMinRatingChange}
+				openNow={openNow}
+				onOpenNowChange={onOpenNowChange}
 			/>
 			<Separator className="shrink-0" />
 			<div className="px-4 pt-2 pb-1 shrink-0">

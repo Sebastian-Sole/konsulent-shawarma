@@ -520,12 +520,15 @@ type MarkerPopupProps = {
 	className?: string;
 	/** Show a close button in the popup (default: false) */
 	closeButton?: boolean;
+	/** Programmatically open/close the popup. undefined = default click behavior only. */
+	open?: boolean;
 } & Omit<PopupOptions, "className" | "closeButton">;
 
 function MarkerPopup({
 	children,
 	className,
 	closeButton = false,
+	open: openProp,
 	...popupOptions
 }: MarkerPopupProps) {
 	const { marker, map } = useMarkerContext();
@@ -556,6 +559,16 @@ function MarkerPopup({
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map]);
+
+	// Programmatic open/close via `open` prop
+	useEffect(() => {
+		if (!map || openProp == null) return;
+		if (openProp && !popup.isOpen()) {
+			popup.setLngLat(marker.getLngLat()).addTo(map);
+		} else if (!openProp && popup.isOpen()) {
+			popup.remove();
+		}
+	}, [openProp, map, popup, marker]);
 
 	if (popup.isOpen()) {
 		const prev = prevPopupOptions.current;

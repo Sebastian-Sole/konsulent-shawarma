@@ -20,9 +20,15 @@ const SELECTED_ZOOM = 15;
 
 const MD_BREAKPOINT = 768;
 
-function getMobilePadding() {
-	if (typeof window === "undefined" || window.innerWidth >= MD_BREAKPOINT)
-		return undefined;
+const PANEL_WIDTH = 360;
+
+function getPanelPadding() {
+	if (typeof window === "undefined") return undefined;
+	if (window.innerWidth >= MD_BREAKPOINT) {
+		// Desktop: 360px panel on the right
+		return { right: PANEL_WIDTH + 20 };
+	}
+	// Mobile: bottom sheet is 45vh
 	return { bottom: window.innerHeight * 0.45 + 20 };
 }
 
@@ -37,8 +43,11 @@ function App() {
 	const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
 		() => new Set(DEFAULT_CATEGORIES),
 	);
-	const [resultCount, setResultCount] = useState(5);
+	const [resultCount, setResultCount] = useState(10);
 	const [maxDistance, setMaxDistance] = useState<number | undefined>(undefined);
+	const [minRating, setMinRating] = useState<number | undefined>(undefined);
+	const [openNow, setOpenNow] = useState(true);
+	const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
 
 	const enabledCuisines = useMemo(
 		() => categoriesToCuisines(enabledCategories),
@@ -50,8 +59,10 @@ function App() {
 			count: resultCount,
 			maxDistanceMeters: maxDistance,
 			cuisines: enabledCuisines,
+			minRating,
+			openNow: openNow || undefined,
 		}),
-		[resultCount, maxDistance, enabledCuisines],
+		[resultCount, maxDistance, enabledCuisines, minRating, openNow],
 	);
 
 	const results = useNearestShawarma(selectedFirm, filterOptions);
@@ -75,7 +86,7 @@ function App() {
 				center: [firm.longitude, firm.latitude],
 				zoom: SELECTED_ZOOM,
 				duration: 1200,
-				padding: getMobilePadding(),
+				padding: getPanelPadding(),
 			});
 		} else if (mapRef.current) {
 			mapRef.current.flyTo({
@@ -98,12 +109,13 @@ function App() {
 	}, []);
 
 	const handleResultClick = useCallback((result: NearestResult) => {
+		setFocusedPlaceId(result.place.id);
 		if (mapRef.current) {
 			mapRef.current.flyTo({
 				center: [result.place.longitude, result.place.latitude],
 				zoom: 16,
 				duration: 800,
-				padding: getMobilePadding(),
+				padding: getPanelPadding(),
 			});
 		}
 	}, []);
@@ -131,6 +143,7 @@ function App() {
 							key={result.place.id}
 							result={result}
 							rank={i + 1}
+							focused={focusedPlaceId === result.place.id}
 						/>
 					))}
 			</MapView>
@@ -153,6 +166,10 @@ function App() {
 					onResultCountChange={setResultCount}
 					maxDistance={maxDistance}
 					onMaxDistanceChange={setMaxDistance}
+					minRating={minRating}
+					onMinRatingChange={setMinRating}
+					openNow={openNow}
+					onOpenNowChange={setOpenNow}
 				/>
 			)}
 

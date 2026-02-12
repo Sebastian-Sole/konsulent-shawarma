@@ -1,5 +1,6 @@
-import { ExternalLink, Footprints } from "lucide-react";
+import { ExternalLink, Footprints, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { OpeningHoursDisplay } from "@/components/opening-hours-display";
 import {
 	MapMarker,
 	MarkerContent,
@@ -13,9 +14,10 @@ import { cn } from "@/lib/utils";
 type ShawarmaMarkerProps = {
 	result: NearestResult;
 	rank: number;
+	focused?: boolean;
 };
 
-export function ShawarmaMarker({ result, rank }: ShawarmaMarkerProps) {
+export function ShawarmaMarker({ result, rank, focused }: ShawarmaMarkerProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
 	const cat = getPlaceCategory(place.cuisines);
 
@@ -38,11 +40,11 @@ export function ShawarmaMarker({ result, rank }: ShawarmaMarkerProps) {
 					{place.name}
 				</div>
 			</MarkerTooltip>
-			<MarkerPopup>
+			<MarkerPopup open={focused}>
 				<div className="w-56 rounded-lg bg-white p-3 shadow-xl">
 					<p className="font-semibold text-slate-900">{place.name}</p>
 					<p className="mt-0.5 text-xs text-slate-500">{place.address}</p>
-					<div className="mt-2 flex items-center gap-2">
+					<div className="mt-2 flex flex-wrap items-center gap-2">
 						<Badge variant="secondary" className="text-xs">
 							{distanceMeters < 1000
 								? `${Math.round(distanceMeters)} m`
@@ -51,6 +53,18 @@ export function ShawarmaMarker({ result, rank }: ShawarmaMarkerProps) {
 						<Badge variant="secondary" className="text-xs">
 							<Footprints className="mr-1 size-3" />~{walkingMinutes} min
 						</Badge>
+						{place.googleRating != null && (
+							<Badge variant="secondary" className="text-xs">
+								<Star className="mr-1 size-3 fill-amber-400 text-amber-400" />
+								{place.googleRating}
+							</Badge>
+						)}
+					</div>
+					<div className="mt-1.5">
+						<OpeningHoursDisplay
+							openingHours={place.openingHours}
+							compact
+						/>
 					</div>
 					<a
 						href={googleMapsUrl}
