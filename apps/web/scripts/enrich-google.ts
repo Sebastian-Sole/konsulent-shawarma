@@ -20,6 +20,7 @@ type GoogleCacheEntry = {
 	googleRating?: number;
 	googleRatingCount?: number;
 	openingHours?: string;
+	googleTypes?: string[];
 	fetchedAt: string;
 };
 
@@ -108,7 +109,7 @@ async function searchPlace(
 				"Content-Type": "application/json",
 				"X-Goog-Api-Key": apiKey,
 				"X-Goog-FieldMask":
-					"places.rating,places.userRatingCount,places.regularOpeningHours",
+					"places.rating,places.userRatingCount,places.regularOpeningHours,places.types",
 			},
 			body: JSON.stringify({
 				textQuery: `${name} Oslo`,
@@ -141,8 +142,56 @@ async function searchPlace(
 		entry.openingHours =
 			place.regularOpeningHours.weekdayDescriptions.join("; ");
 	}
+	if (Array.isArray(place.types) && place.types.length > 0) {
+		entry.googleTypes = place.types;
+	}
 
 	return entry;
+}
+
+// ── Google type → cuisine mapping ──────────────────────────────────
+
+const GOOGLE_TYPE_TO_CUISINE: Record<string, string> = {
+	italian_restaurant: "italian",
+	pizza_restaurant: "pizza",
+	chinese_restaurant: "chinese",
+	japanese_restaurant: "japanese",
+	korean_restaurant: "korean",
+	thai_restaurant: "thai",
+	vietnamese_restaurant: "vietnamese",
+	indian_restaurant: "indian",
+	mexican_restaurant: "mexican",
+	turkish_restaurant: "turkish",
+	lebanese_restaurant: "lebanese",
+	middle_eastern_restaurant: "middle_eastern",
+	mediterranean_restaurant: "mediterranean",
+	french_restaurant: "french",
+	spanish_restaurant: "spanish",
+	american_restaurant: "american",
+	brazilian_restaurant: "international",
+	greek_restaurant: "mediterranean",
+	indonesian_restaurant: "indonesian",
+	seafood_restaurant: "seafood",
+	steak_house: "steak_house",
+	sushi_restaurant: "sushi",
+	ramen_restaurant: "ramen",
+	barbecue_restaurant: "barbecue",
+	hamburger_restaurant: "burger",
+	sandwich_shop: "sandwich",
+	coffee_shop: "coffee",
+	cafe: "coffee",
+	bakery: "bagel",
+	ice_cream_shop: "dessert",
+	bar_and_grill: "grill",
+};
+
+function mapGoogleTypesToCuisines(types: string[]): string[] {
+	const cuisines: string[] = [];
+	for (const t of types) {
+		const c = GOOGLE_TYPE_TO_CUISINE[t];
+		if (c && !cuisines.includes(c)) cuisines.push(c);
+	}
+	return cuisines;
 }
 
 // ── Main ───────────────────────────────────────────────────────────
@@ -234,6 +283,7 @@ async function main() {
 	}
 
 	// Apply cache to all places
+	let cuisinesFilled = 0;
 	const enriched = places.map((place) => {
 		const cached = cache[place.id];
 		if (!cached) return place;
@@ -244,6 +294,13 @@ async function main() {
 			result.googleRatingCount = cached.googleRatingCount;
 		if (!result.openingHours && cached.openingHours) {
 			result.openingHours = cached.openingHours;
+		}
+		if (result.cuisines.length === 0 && cached.googleTypes) {
+			const mapped = mapGoogleTypesToCuisines(cached.googleTypes);
+			if (mapped.length > 0) {
+				result.cuisines = mapped;
+				cuisinesFilled++;
+			}
 		}
 		return result;
 	});
@@ -262,6 +319,7 @@ async function main() {
 	}
 	console.log(`  Ratings: ${withRating}/${enriched.length} places`);
 	console.log(`  Opening hours: ${withHours}/${enriched.length} places`);
+	console.log(`  Cuisines filled from Google types: ${cuisinesFilled}`);
 }
 
 main().catch((err) => {

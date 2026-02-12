@@ -10,7 +10,7 @@ export type ShawarmaPlace = {
 	googleRatingCount?: number;
 };
 
-export const DEFAULT_CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro"];
+export const DEFAULT_CUISINES = ["kebab", "shawarma", "middle_eastern", "arab", "gyro", "doner"];
 
 export const allCuisines: string[] = ["african","american","arab","asian","asian_fusion","bagel","balkan","barbecue","basque","bistro","bubble_tea","buffet","burger","cake","caribbean","chicken","chinese","coffee","coffee_shop","colombian","confectionery","dessert","doner","ethiopian","european","falafel","fast_food","filipino","fish","fish_and_chips","french","fried_chicken","grill","gyro","hamburger","hawaiian","indian","indonesian","international","italian","italian_pizza","japanese","juice","kaffe","kebab","korean","lebanese","local","meat","mediterranean","mexican","middle_eastern","nepalese","noodle","nordic","norwegian","pakistani","palestinian","pasta","persian","peruvian","pizza","polish","ramen","regional","salad","sandwich","sausage","scandinavian","seafood","shawarma","soup","spanish","steak","steak_house","sushi","syrian","tacos","tapas","tea","tex-mex","thai","toast","turkish","udon","vietnamese","wine"];
 
@@ -40,6 +40,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 15:00-23:00; Su 14:00-22:00",
 		"googleRating": 4.3,
 		"googleRatingCount": 508
+	},
+	{
+		"id": "osm-12566284967",
+		"name": "200",
+		"address": "Oslo",
+		"latitude": 59.9222279,
+		"longitude": 10.7613806,
+		"cuisines": [
+			"bistro",
+			"wine"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 167,
+		"openingHours": "Monday: 4:00 – 11:30 PM; Tuesday: 4:00 PM – 1:00 AM; Wednesday: 4:00 PM – 1:00 AM; Thursday: 4:00 PM – 1:00 AM; Friday: 4:00 PM – 1:00 AM; Saturday: 1:00 PM – 1:00 AM; Sunday: 4:00 – 11:30 PM"
 	},
 	{
 		"id": "osm-9154065119",
@@ -79,6 +93,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.6,
 		"googleRatingCount": 880,
 		"openingHours": "Monday: 10:00 AM – 9:00 PM; Tuesday: 10:00 AM – 9:00 PM; Wednesday: 10:00 AM – 9:00 PM; Thursday: 10:00 AM – 9:00 PM; Friday: 10:00 AM – 9:00 PM; Saturday: 10:00 AM – 9:00 PM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-11017648539",
+		"name": "Africano Resturant",
+		"address": "Oslo",
+		"latitude": 59.9161881,
+		"longitude": 10.7544736,
+		"cuisines": [
+			"african"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 240,
+		"openingHours": "Monday: 2:00 – 10:00 PM; Tuesday: 2:00 – 10:00 PM; Wednesday: 2:00 – 10:00 PM; Thursday: 2:00 – 10:00 PM; Friday: 2:00 – 10:00 PM; Saturday: 2:00 – 10:00 PM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-5094785552",
@@ -132,6 +159,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 73
 	},
 	{
+		"id": "osm-12787796977",
+		"name": "Aleppo",
+		"address": "Oslo",
+		"latitude": 59.9110846,
+		"longitude": 10.7669309,
+		"cuisines": [
+			"syrian",
+			"middle_eastern"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 92,
+		"openingHours": "Monday: 2:00 – 9:00 PM; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 12:00 – 9:00 PM; Friday: 12:00 – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 6:00 PM"
+	},
+	{
 		"id": "osm-1137765624",
 		"name": "Alex Sushi",
 		"address": "Oslo",
@@ -156,6 +197,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 705,
 		"openingHours": "Monday: 2:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 2:00 PM – 12:00 AM; Saturday: 2:00 PM – 12:00 AM; Sunday: 2:00 – 11:00 PM"
+	},
+	{
+		"id": "osm-6435602252",
+		"name": "Allora",
+		"address": "Oslo",
+		"latitude": 59.9172988,
+		"longitude": 10.7922399,
+		"cuisines": [
+			"italian"
+		],
+		"openingHours": "Mo-Th 12:00-22:00, Fr,Sa 12:00-24:00, Su 13:00-22:00"
+	},
+	{
+		"id": "osm-1272498362",
+		"name": "Amazonia by BAR",
+		"address": "Oslo",
+		"latitude": 59.908688,
+		"longitude": 10.722053,
+		"cuisines": [
+			"peruvian",
+			"mexican",
+			"mediterranean"
+		],
+		"googleRating": 3.3,
+		"googleRatingCount": 246,
+		"openingHours": "Monday: Closed; Tuesday: 5:00 – 10:00 PM; Wednesday: 5:00 – 10:00 PM; Thursday: 5:00 – 10:00 PM; Friday: 5:00 PM – 3:00 AM; Saturday: 12:00 PM – 3:00 AM; Sunday: Closed"
 	},
 	{
 		"id": "osm-120083044",
@@ -183,6 +250,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 14:00-22:00; Su 12:30-22:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 597
+	},
+	{
+		"id": "osm-12012852112",
+		"name": "Aperitivo",
+		"address": "Oslo",
+		"latitude": 59.9203767,
+		"longitude": 10.7297207,
+		"cuisines": [
+			"italian",
+			"wine"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 221
 	},
 	{
 		"id": "osm-6757226532",
@@ -262,6 +342,35 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 372
 	},
 	{
+		"id": "osm-5159248589",
+		"name": "Arte Pazza",
+		"address": "Oslo",
+		"latitude": 59.920927,
+		"longitude": 10.729231,
+		"cuisines": [
+			"italian",
+			"pizza"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 372,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 3:00 – 11:00 PM; Sunday: 2:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-11917417527",
+		"name": "Arts",
+		"address": "Oslo",
+		"latitude": 59.9094732,
+		"longitude": 10.723149,
+		"cuisines": [
+			"mediterranean",
+			"italian",
+			"french"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 126,
+		"openingHours": "Monday: Closed; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 10:00 PM; Saturday: 1:00 – 10:00 PM; Sunday: 12:00 – 6:00 PM"
+	},
+	{
 		"id": "osm-3441434853",
 		"name": "Asia Aker Brygge",
 		"address": "Oslo",
@@ -286,6 +395,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.9,
 		"googleRatingCount": 310,
 		"openingHours": "Monday: 11:00 AM – 1:00 AM; Tuesday: 11:00 AM – 1:00 AM; Wednesday: 11:00 AM – 1:00 AM; Thursday: 11:00 AM – 1:00 AM; Friday: 11:00 AM – 3:30 AM; Saturday: 11:00 AM – 3:30 AM; Sunday: 11:00 AM – 12:00 AM"
+	},
+	{
+		"id": "osm-7964132261",
+		"name": "Asia Mix",
+		"address": "Oslo",
+		"latitude": 59.9098668,
+		"longitude": 10.775681,
+		"cuisines": [
+			"asian",
+			"asian_fusion"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 99,
+		"openingHours": "Monday: 1:00 – 8:00 PM; Tuesday: 1:00 – 8:00 PM; Wednesday: 1:00 – 8:00 PM; Thursday: 1:00 – 8:00 PM; Friday: 1:00 – 8:00 PM; Saturday: 2:00 – 8:00 PM; Sunday: 2:00 – 8:00 PM"
 	},
 	{
 		"id": "osm-11898560391",
@@ -338,6 +461,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 11:00 AM – 8:00 PM; Friday: 11:00 AM – 8:00 PM; Saturday: 11:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
 	},
 	{
+		"id": "osm-4793877621",
+		"name": "Atlas",
+		"address": "Oslo",
+		"latitude": 59.9107776,
+		"longitude": 10.7493662,
+		"cuisines": [
+			"american",
+			"international"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 246,
+		"openingHours": "Monday: 11:30 AM – 3:00 PM, 5:00 – 10:00 PM; Tuesday: 11:30 AM – 3:00 PM, 5:00 – 10:00 PM; Wednesday: 11:30 AM – 3:00 PM, 5:00 – 10:00 PM; Thursday: 11:30 AM – 3:00 PM, 5:00 – 10:00 PM; Friday: 11:30 AM – 3:00 PM, 5:00 – 10:00 PM; Saturday: 12:30 – 3:30 PM, 5:00 – 10:00 PM; Sunday: 12:00 – 3:00 PM"
+	},
+	{
 		"id": "osm-12749770523",
 		"name": "Aura by Jewel of India",
 		"address": "Oslo",
@@ -349,6 +486,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.9,
 		"googleRatingCount": 40,
 		"openingHours": "Monday: Closed; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 4:00 – 11:00 PM; Sunday: 3:00 – 9:30 PM"
+	},
+	{
+		"id": "osm-10258987092",
+		"name": "Avalon",
+		"address": "Oslo",
+		"latitude": 59.9120748,
+		"longitude": 10.7264389,
+		"cuisines": [
+			"european",
+			"mediterranean",
+			"steak"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 110
 	},
 	{
 		"id": "osm-2628797720",
@@ -364,6 +515,18 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 293
 	},
 	{
+		"id": "osm-10204324976",
+		"name": "Ay Caramba",
+		"address": "Oslo",
+		"latitude": 59.921389,
+		"longitude": 10.7522243,
+		"cuisines": [
+			"mexican"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 34
+	},
+	{
 		"id": "osm-12041482104",
 		"name": "Azadi",
 		"address": "Oslo",
@@ -375,6 +538,100 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 10:00-22:00",
 		"googleRating": 3.8,
 		"googleRatingCount": 560
+	},
+	{
+		"id": "osm-12265963602",
+		"name": "B Vin",
+		"address": "Oslo",
+		"latitude": 59.918584,
+		"longitude": 10.7603372,
+		"cuisines": [
+			"wine"
+		],
+		"openingHours": "Tu-Sa 17:00-23:00",
+		"googleRating": 4.9,
+		"googleRatingCount": 39
+	},
+	{
+		"id": "osm-10727602012",
+		"name": "BA3",
+		"address": "Oslo",
+		"latitude": 59.9151662,
+		"longitude": 10.7169681,
+		"cuisines": [
+			"japanese",
+			"sushi",
+			"international"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 495,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 6:00 PM – 2:00 AM; Thursday: 6:00 PM – 3:00 AM; Friday: 5:00 PM – 3:00 AM; Saturday: 5:00 PM – 3:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-1154277568",
+		"name": "Babbo Collective",
+		"address": "Oslo",
+		"latitude": 59.9273323,
+		"longitude": 10.7567921,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 202,
+		"openingHours": "Monday: 8:00 AM – 11:30 PM; Tuesday: 8:00 AM – 11:30 PM; Wednesday: 8:00 AM – 11:30 PM; Thursday: 8:00 AM – 11:30 PM; Friday: 8:00 AM – 11:30 PM; Saturday: 9:00 AM – 11:30 PM; Sunday: 9:00 AM – 11:30 PM"
+	},
+	{
+		"id": "osm-13246591283",
+		"name": "Babbo Collective",
+		"address": "Oslo",
+		"latitude": 59.9158536,
+		"longitude": 10.7139649,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 202,
+		"openingHours": "Monday: 8:00 AM – 11:30 PM; Tuesday: 8:00 AM – 11:30 PM; Wednesday: 8:00 AM – 11:30 PM; Thursday: 8:00 AM – 11:30 PM; Friday: 8:00 AM – 11:30 PM; Saturday: 9:00 AM – 11:30 PM; Sunday: 9:00 AM – 11:30 PM"
+	},
+	{
+		"id": "osm-11884847914",
+		"name": "Baby Babbo",
+		"address": "Oslo",
+		"latitude": 59.9658128,
+		"longitude": 10.7715989,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 202,
+		"openingHours": "Monday: 8:00 AM – 11:30 PM; Tuesday: 8:00 AM – 11:30 PM; Wednesday: 8:00 AM – 11:30 PM; Thursday: 8:00 AM – 11:30 PM; Friday: 8:00 AM – 11:30 PM; Saturday: 9:00 AM – 11:30 PM; Sunday: 9:00 AM – 11:30 PM"
+	},
+	{
+		"id": "osm-12966057217",
+		"name": "Bake Me Up",
+		"address": "Oslo",
+		"latitude": 59.9337102,
+		"longitude": 10.7639344,
+		"cuisines": [
+			"bagel",
+			"cake"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 119,
+		"openingHours": "Monday: 7:30 AM – 8:00 PM; Tuesday: 7:30 AM – 8:00 PM; Wednesday: 7:30 AM – 8:00 PM; Thursday: 7:30 AM – 8:00 PM; Friday: 7:30 AM – 8:00 PM; Saturday: 8:00 AM – 7:00 PM; Sunday: 8:00 AM – 7:00 PM"
+	},
+	{
+		"id": "osm-973811158",
+		"name": "Bakkekroen",
+		"address": "Oslo",
+		"latitude": 59.9379168,
+		"longitude": 10.6827938,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 306,
+		"openingHours": "Monday: Closed; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 3:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-2192390537",
@@ -471,6 +728,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 10:00 AM – 6:45 PM; Tuesday: 10:00 AM – 6:45 PM; Wednesday: 10:00 AM – 6:45 PM; Thursday: 10:00 AM – 6:45 PM; Friday: 10:00 AM – 6:45 PM; Saturday: 11:00 AM – 6:45 PM; Sunday: 11:00 AM – 6:45 PM"
 	},
 	{
+		"id": "osm-11699815201",
+		"name": "Bar Amour",
+		"address": "Oslo",
+		"latitude": 59.9281133,
+		"longitude": 10.7491222,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 67,
+		"openingHours": "Monday: Closed; Tuesday: 5:15 – 11:30 PM; Wednesday: 5:15 – 11:30 PM; Thursday: 5:15 – 11:30 PM; Friday: 5:15 – 11:30 PM; Saturday: 5:15 – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-7926334886",
+		"name": "Bar Lupo",
+		"address": "Oslo",
+		"latitude": 59.9221072,
+		"longitude": 10.7574858,
+		"cuisines": [
+			"italian",
+			"wine"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 297,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 PM – 12:00 AM; Saturday: 2:00 PM – 12:00 AM; Sunday: Closed"
+	},
+	{
 		"id": "osm-11860401922",
 		"name": "Barish",
 		"address": "Oslo",
@@ -482,6 +766,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.7,
 		"googleRatingCount": 125,
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:30 PM; Saturday: 4:00 – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-11039584823",
+		"name": "Barramon Pintxos y Vinos",
+		"address": "Oslo",
+		"latitude": 59.922283,
+		"longitude": 10.7521542,
+		"cuisines": [
+			"spanish",
+			"basque",
+			"tapas"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 160,
+		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 7:00 PM"
 	},
 	{
 		"id": "osm-12587782141",
@@ -562,6 +861,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 541
 	},
 	{
+		"id": "osm-12967109570",
+		"name": "Bella Bistro",
+		"address": "Oslo",
+		"latitude": 59.9559219,
+		"longitude": 10.7854363,
+		"cuisines": [
+			"bistro"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 202,
+		"openingHours": "Monday: 1:00 – 11:00 PM; Tuesday: 1:00 – 11:00 PM; Wednesday: 1:00 – 11:00 PM; Thursday: 1:00 – 11:00 PM; Friday: 1:00 PM – 12:00 AM; Saturday: 1:00 PM – 12:00 AM; Sunday: 1:00 – 11:00 PM"
+	},
+	{
 		"id": "osm-5870422311",
 		"name": "Benares",
 		"address": "Oslo",
@@ -638,6 +950,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Su,Mo 16:00-22:00; Tu-Th 15:00-22:00; Fr,Sa 15:00-22:00",
 		"googleRating": 3.8,
 		"googleRatingCount": 720
+	},
+	{
+		"id": "osm-5236963270",
+		"name": "Billies Kitchen",
+		"address": "Oslo",
+		"latitude": 59.9423387,
+		"longitude": 10.7036099,
+		"cuisines": [
+			"mediterranean",
+			"international"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 45,
+		"openingHours": "Monday: 10:00 AM – 6:00 PM; Tuesday: 10:00 AM – 6:00 PM; Wednesday: 9:00 AM – 6:00 PM; Thursday: 10:00 AM – 6:00 PM; Friday: 10:00 AM – 6:00 PM; Saturday: 10:00 AM – 5:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-5101765645",
+		"name": "Birken Lunch",
+		"address": "Oslo",
+		"latitude": 59.9258992,
+		"longitude": 10.7590029,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 277,
+		"openingHours": "Monday: 1:30 – 10:00 PM; Tuesday: 1:30 – 10:00 PM; Wednesday: 1:30 – 10:00 PM; Thursday: 1:30 – 10:00 PM; Friday: 2:00 PM – 3:00 AM; Saturday: 2:00 PM – 3:00 AM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-383996262",
@@ -739,6 +1078,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 657
 	},
 	{
+		"id": "osm-12927973431",
+		"name": "Bistro Budapest",
+		"address": "Oslo",
+		"latitude": 59.9222529,
+		"longitude": 10.752289,
+		"cuisines": [
+			"european",
+			"bistro"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 209,
+		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 11:00 AM – 9:00 PM; Sunday: 11:00 AM – 7:00 PM"
+	},
+	{
 		"id": "osm-10951534701",
 		"name": "Bistro Fourrage",
 		"address": "Oslo",
@@ -763,6 +1116,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4,
 		"googleRatingCount": 137,
 		"openingHours": "Monday: 5:00 – 9:00 PM; Tuesday: 12:00 – 3:30 PM, 5:00 – 9:00 PM; Wednesday: 12:00 – 3:30 PM, 5:00 – 9:00 PM; Thursday: 12:00 – 3:30 PM, 5:00 – 10:00 PM; Friday: 12:00 – 3:30 PM, 5:00 – 10:00 PM; Saturday: 12:00 – 3:30 PM, 5:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-5235692723",
+		"name": "BIT",
+		"address": "Oslo",
+		"latitude": 59.9119258,
+		"longitude": 10.7572685,
+		"cuisines": [
+			"sandwich",
+			"salad",
+			"coffee"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 284,
+		"openingHours": "Monday: 6:30 AM – 9:00 PM; Tuesday: 6:30 AM – 9:00 PM; Wednesday: 6:30 AM – 9:00 PM; Thursday: 6:30 AM – 9:00 PM; Friday: 6:30 AM – 9:00 PM; Saturday: 8:30 AM – 8:00 PM; Sunday: 10:00 AM – 6:00 PM"
 	},
 	{
 		"id": "osm-1820941903",
@@ -814,6 +1182,16 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 16:00-22:00; Fr-Sa 15:00-22:00; Su 14:00-21:00",
 		"googleRating": 4.4,
 		"googleRatingCount": 301
+	},
+	{
+		"id": "osm-33730400",
+		"name": "Boletini",
+		"address": "Oslo",
+		"latitude": 59.919089,
+		"longitude": 10.733937,
+		"cuisines": [
+			"balkan"
+		]
 	},
 	{
 		"id": "osm-12726284735",
@@ -894,6 +1272,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 8:00 PM; Tuesday: 2:00 – 8:00 PM; Wednesday: 2:00 – 8:00 PM; Thursday: 2:00 – 8:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-11917568875",
+		"name": "Brasilia",
+		"address": "Oslo",
+		"latitude": 59.9127678,
+		"longitude": 10.7330036,
+		"cuisines": [
+			"barbecue",
+			"steak"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 1981,
+		"openingHours": "Monday: 4:00 – 11:00 PM; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 3:00 PM – 12:00 AM; Saturday: 3:00 PM – 12:00 AM; Sunday: 3:00 – 10:30 PM"
+	},
+	{
+		"id": "osm-13087065199",
+		"name": "Brasserie Blanche",
+		"address": "Oslo",
+		"latitude": 59.9232666,
+		"longitude": 10.7257246,
+		"cuisines": [
+			"french"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 827,
+		"openingHours": "Monday: Closed; Tuesday: 5:00 – 9:00 PM; Wednesday: 5:00 – 9:00 PM; Thursday: 5:00 – 9:00 PM; Friday: 5:00 – 9:00 PM; Saturday: 5:00 – 9:00 PM; Sunday: 4:00 – 9:00 PM"
+	},
+	{
 		"id": "osm-10253369145",
 		"name": "Brasserie Coucou",
 		"address": "Oslo",
@@ -918,6 +1323,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 11:30-22:00; Sa 12:00-22:00",
 		"googleRating": 4.6,
 		"googleRatingCount": 1411
+	},
+	{
+		"id": "osm-355580984",
+		"name": "Brasserie Hansken",
+		"address": "Oslo",
+		"latitude": 59.910523,
+		"longitude": 10.739517,
+		"cuisines": [
+			"french",
+			"seafood"
+		],
+		"openingHours": "Mo-Fr 11:30+; Sa 13:00+",
+		"googleRating": 4.3,
+		"googleRatingCount": 566
+	},
+	{
+		"id": "osm-992764242",
+		"name": "Brasserie Lipp",
+		"address": "Oslo",
+		"latitude": 59.912532,
+		"longitude": 10.735394,
+		"cuisines": [
+			"french"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 1411,
+		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 10:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-2291530274",
@@ -957,6 +1389,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Fr 11:30-23:00; Mo 16:30-23:00; Sa-Su 14:30-23:00",
 		"googleRating": 4.5,
 		"googleRatingCount": 469
+	},
+	{
+		"id": "osm-264768992",
+		"name": "Brattlikollen Pizza",
+		"address": "Oslo",
+		"latitude": 59.8868051,
+		"longitude": 10.8004863,
+		"cuisines": [
+			"pizza"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 212,
+		"openingHours": "Monday: 2:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 2:00 – 11:00 PM; Saturday: 2:00 – 11:00 PM; Sunday: 12:00 – 11:00 PM"
 	},
 	{
 		"id": "osm-9521494313",
@@ -1001,6 +1446,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 4.8,
 		"googleRatingCount": 188
+	},
+	{
+		"id": "osm-2045476602",
+		"name": "Bristol Grill",
+		"address": "Oslo",
+		"latitude": 59.915185,
+		"longitude": 10.740081,
+		"cuisines": [
+			"grill",
+			"european"
+		],
+		"openingHours": "Mo-Sa 17:00-23:00; Su 17:00-22:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 144
 	},
 	{
 		"id": "osm-9841510417",
@@ -1056,6 +1515,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 14:00-22:00; Su 12:00-21:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 1254
+	},
+	{
+		"id": "osm-10816090137",
+		"name": "Burek Factory",
+		"address": "Oslo",
+		"latitude": 59.9191511,
+		"longitude": 10.762659,
+		"cuisines": [
+			"balkan"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 92,
+		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
 	},
 	{
 		"id": "osm-3441434870",
@@ -1201,6 +1673,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 643
 	},
 	{
+		"id": "osm-1272498356",
+		"name": "Bølgen & Moi",
+		"address": "Oslo",
+		"latitude": 59.909025,
+		"longitude": 10.722849,
+		"cuisines": [
+			"norwegian",
+			"seafood"
+		],
+		"openingHours": "Mo-Fr 11:00-01:00; Sa 12:00-01:00",
+		"googleRating": 5,
+		"googleRatingCount": 2
+	},
+	{
 		"id": "osm-10984591311",
 		"name": "Bønder i byen",
 		"address": "Oslo",
@@ -1212,6 +1698,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 11:00-22:00; Su 13:00-20:00",
 		"googleRating": 4.7,
 		"googleRatingCount": 382
+	},
+	{
+		"id": "osm-9776884019",
+		"name": "Café Billabong",
+		"address": "Oslo",
+		"latitude": 59.929432,
+		"longitude": 10.714304,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 444,
+		"openingHours": "Monday: 11:00 AM – 1:00 AM; Tuesday: 11:00 AM – 1:00 AM; Wednesday: 11:00 AM – 1:00 AM; Thursday: 11:00 AM – 1:00 AM; Friday: 11:00 AM – 3:00 AM; Saturday: 11:00 AM – 3:00 AM; Sunday: 12:00 PM – 12:00 AM"
+	},
+	{
+		"id": "osm-669403008",
+		"name": "Café Caravelle",
+		"address": "Oslo",
+		"latitude": 59.9004105,
+		"longitude": 10.6218831,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 203,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 8:00 PM; Wednesday: 11:30 AM – 7:00 PM; Thursday: 11:30 AM – 7:00 PM; Friday: 4:00 – 7:00 PM; Saturday: 11:30 AM – 7:00 PM; Sunday: 12:00 – 6:00 PM"
 	},
 	{
 		"id": "osm-315230163",
@@ -1244,6 +1756,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 473
 	},
 	{
+		"id": "osm-3012159759",
+		"name": "Cafe Elise",
+		"address": "Oslo",
+		"latitude": 59.918947,
+		"longitude": 10.70605,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 219,
+		"openingHours": "Monday: 11:30 AM – 11:00 PM; Tuesday: 11:30 AM – 11:00 PM; Wednesday: 11:30 AM – 11:00 PM; Thursday: 11:30 AM – 11:00 PM; Friday: 11:30 AM – 11:00 PM; Saturday: 11:30 AM – 11:00 PM; Sunday: 1:30 – 10:00 PM"
+	},
+	{
 		"id": "osm-1498206424",
 		"name": "Café Sara",
 		"address": "Oslo",
@@ -1256,6 +1781,45 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 11:00-02:30; Su 13:00-23:30",
 		"googleRating": 4.3,
 		"googleRatingCount": 3839
+	},
+	{
+		"id": "osm-667383132",
+		"name": "Café Skansen",
+		"address": "Oslo",
+		"latitude": 59.9101303,
+		"longitude": 10.7388371,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 2553,
+		"openingHours": "Monday: Closed; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 10:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-292143403",
+		"name": "Café Stolen",
+		"address": "Oslo",
+		"latitude": 59.9242723,
+		"longitude": 10.7626023,
+		"cuisines": [
+			"coffee"
+		],
+		"openingHours": "Mo-Fr 15:00-01:00; Sa,Su 13:00-01:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 175
+	},
+	{
+		"id": "osm-1328765252",
+		"name": "Cafekontoret",
+		"address": "Oslo",
+		"latitude": 59.908703,
+		"longitude": 10.7683761,
+		"cuisines": [
+			"coffee"
+		],
+		"openingHours": "Mo-Fr 14:00-01:00, Sa,Su 12:00-01:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 439
 	},
 	{
 		"id": "osm-11387449122",
@@ -1365,6 +1929,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 3:00 – 11:30 PM; Tuesday: 3:00 – 11:30 PM; Wednesday: 3:00 – 11:30 PM; Thursday: 3:00 PM – 12:30 AM; Friday: 3:00 PM – 12:30 AM; Saturday: 2:00 PM – 3:00 AM; Sunday: 2:00 – 10:30 PM"
 	},
 	{
+		"id": "osm-3407677493",
+		"name": "Cass Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9422923,
+		"longitude": 10.8981912,
+		"cuisines": [
+			"grill",
+			"international"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 371,
+		"openingHours": "Monday: 3:00 – 11:30 PM; Tuesday: 3:00 – 11:30 PM; Wednesday: 3:00 – 11:30 PM; Thursday: 3:00 PM – 12:30 AM; Friday: 3:00 PM – 12:30 AM; Saturday: 2:00 PM – 3:00 AM; Sunday: 2:00 – 10:30 PM"
+	},
+	{
+		"id": "osm-4198742989",
+		"name": "Castello",
+		"address": "Oslo",
+		"latitude": 59.902841,
+		"longitude": 10.753317,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 1145,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-6606529283",
 		"name": "Cateringo",
 		"address": "Oslo",
@@ -1377,6 +1968,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "24/7",
 		"googleRating": 4.8,
 		"googleRatingCount": 69
+	},
+	{
+		"id": "osm-7725508978",
+		"name": "Centropa",
+		"address": "Oslo",
+		"latitude": 59.9086788,
+		"longitude": 10.7519428,
+		"cuisines": [
+			"european"
+		],
+		"openingHours": "Mo-Fr 11:00-15:30, Sa 12:00-16:30, Tu-Sa 16:30-23:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 324
 	},
 	{
 		"id": "osm-1930503853",
@@ -1457,6 +2061,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 4:00 – 9:00 PM; Tuesday: 4:00 – 9:00 PM; Wednesday: 4:00 – 9:00 PM; Thursday: 4:00 – 9:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-11188791737",
+		"name": "Chili & Wok",
+		"address": "Oslo",
+		"latitude": 59.9163366,
+		"longitude": 10.7542557,
+		"cuisines": [
+			"asian",
+			"chinese"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 96,
+		"openingHours": "Monday: 11:00 AM – 7:30 PM; Tuesday: 11:00 AM – 7:30 PM; Wednesday: 11:00 AM – 7:30 PM; Thursday: 11:00 AM – 7:30 PM; Friday: 11:00 AM – 7:30 PM; Saturday: 11:00 AM – 7:30 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-2777194991",
 		"name": "China Star Restaurant",
 		"address": "Oslo",
@@ -1468,6 +2086,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Th 14:00-23:00; Fr-Sa 13:00-23:00; Su 12:00-23:00",
 		"googleRating": 3.7,
 		"googleRatingCount": 60
+	},
+	{
+		"id": "osm-333736465",
+		"name": "Chinatown",
+		"address": "Oslo",
+		"latitude": 59.9294898,
+		"longitude": 10.7165854,
+		"cuisines": [
+			"chinese"
+		],
+		"googleRating": 3.3,
+		"googleRatingCount": 315,
+		"openingHours": "Monday: 1:00 – 11:00 PM; Tuesday: 1:00 – 11:00 PM; Wednesday: 1:00 – 11:00 PM; Thursday: 1:00 – 11:00 PM; Friday: 1:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 11:00 PM"
 	},
 	{
 		"id": "osm-10717774783",
@@ -1494,6 +2125,16 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 15:00-22:00",
 		"googleRating": 4.7,
 		"googleRatingCount": 301
+	},
+	{
+		"id": "osm-992764246",
+		"name": "Churchills Winebar",
+		"address": "Oslo",
+		"latitude": 59.912984,
+		"longitude": 10.735329,
+		"cuisines": [
+			"wine"
+		]
 	},
 	{
 		"id": "osm-12703051401",
@@ -1536,6 +2177,48 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th, Su 11:00-01:00; Fr, Sa 11:00-03:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 731
+	},
+	{
+		"id": "osm-1948264112",
+		"name": "Concerto Café, Bar og Pizzeria",
+		"address": "Oslo",
+		"latitude": 59.9142,
+		"longitude": 10.728951,
+		"cuisines": [
+			"pizza",
+			"coffee"
+		],
+		"openingHours": "Mo-Sa 10:00-21:30; Su 14:30-21:30",
+		"googleRating": 4.4,
+		"googleRatingCount": 253
+	},
+	{
+		"id": "osm-12062843390",
+		"name": "Coostina Bar & Restaurant",
+		"address": "Oslo",
+		"latitude": 59.919078,
+		"longitude": 10.7630443,
+		"cuisines": [
+			"middle_eastern"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 116,
+		"openingHours": "Monday: 2:00 PM – 1:00 AM; Tuesday: 2:00 PM – 1:00 AM; Wednesday: 2:00 PM – 1:00 AM; Thursday: 2:00 PM – 1:00 AM; Friday: 2:00 PM – 3:00 AM; Saturday: 2:00 PM – 3:00 AM; Sunday: 2:00 PM – 1:00 AM"
+	},
+	{
+		"id": "osm-13246595096",
+		"name": "Cordial",
+		"address": "Oslo",
+		"latitude": 59.916549,
+		"longitude": 10.7135203,
+		"cuisines": [
+			"bistro",
+			"european",
+			"spanish"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 13,
+		"openingHours": "Monday: Closed; Tuesday: 4:30 – 11:00 PM; Wednesday: 4:30 – 11:00 PM; Thursday: 4:30 – 11:00 PM; Friday: 4:30 – 11:00 PM; Saturday: 4:30 – 11:00 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-12656859501",
@@ -1588,6 +2271,61 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.5,
 		"googleRatingCount": 1479,
 		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:30 PM; Saturday: 11:00 AM – 9:30 PM; Sunday: 11:00 AM – 9:00 PM"
+	},
+	{
+		"id": "osm-13056506066",
+		"name": "Crispy Clubs",
+		"address": "Oslo",
+		"latitude": 59.914226,
+		"longitude": 10.7533869,
+		"cuisines": [
+			"fried_chicken",
+			"burger"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 262,
+		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 8:00 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-1986822060",
+		"name": "Crispy Crust",
+		"address": "Oslo",
+		"latitude": 59.927633,
+		"longitude": 10.715317,
+		"cuisines": [
+			"pizza",
+			"kebab",
+			"burger",
+			"fast_food"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 437
+	},
+	{
+		"id": "osm-13468421363",
+		"name": "Cru Vin & Kjøkken",
+		"address": "Oslo",
+		"latitude": 59.9087906,
+		"longitude": 10.7550201,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 351,
+		"openingHours": "Monday: 5:00 – 11:30 PM; Tuesday: 11:00 AM – 3:00 PM, 5:00 – 11:30 PM; Wednesday: 11:00 AM – 3:00 PM, 5:00 – 11:30 PM; Thursday: 11:00 AM – 3:00 PM, 5:00 – 11:30 PM; Friday: 11:00 AM – 3:00 PM, 5:00 – 11:30 PM; Saturday: 12:00 – 3:00 PM, 5:00 – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-5004548182",
+		"name": "Cultivate Food",
+		"address": "Oslo",
+		"latitude": 59.924624,
+		"longitude": 10.7594,
+		"cuisines": [
+			"salad"
+		],
+		"openingHours": "Mo-Sa 11:00-22:00; Su 12:00-21:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 611
 	},
 	{
 		"id": "osm-2183282943",
@@ -1643,6 +2381,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo 11:00-24:00, Tu-We 11:00-01:00, Th 11:00-02:00, Fr-Sa 11:00-03:00, Su 12:00-24:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 1378
+	},
+	{
+		"id": "osm-11105650107",
+		"name": "De la casa",
+		"address": "Oslo",
+		"latitude": 59.9197159,
+		"longitude": 10.7087121,
+		"cuisines": [
+			"spanish"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 484,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 10:00 PM"
 	},
 	{
 		"id": "osm-12965285810",
@@ -1723,6 +2474,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 725
 	},
 	{
+		"id": "osm-658841477",
+		"name": "Den Glade Gris",
+		"address": "Oslo",
+		"latitude": 59.91782,
+		"longitude": 10.733711,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "Mo 16:00-22:00; Tu-Fr 11:00-22:00; Sa 12:00-22:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 5071
+	},
+	{
+		"id": "osm-2348004237",
+		"name": "Den Lille Kokosbollefabrikken",
+		"address": "Oslo",
+		"latitude": 59.937988,
+		"longitude": 10.756726,
+		"cuisines": [
+			"cake",
+			"confectionery"
+		],
+		"openingHours": "Mo-Sa 09:00-18:00; Su 11:30-18:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 248
+	},
+	{
 		"id": "osm-13334174879",
 		"name": "Den Sultne Mave",
 		"address": "Oslo",
@@ -1775,6 +2553,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 39
 	},
 	{
+		"id": "osm-34693423",
+		"name": "Det Gamle Raadhus",
+		"address": "Oslo",
+		"latitude": 59.909861,
+		"longitude": 10.740101,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 482,
+		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-4799902087",
 		"name": "Digg",
 		"address": "Oslo",
@@ -1812,6 +2604,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 11:00-22:00; Su 12:00-22:00",
 		"googleRating": 4.8,
 		"googleRatingCount": 92
+	},
+	{
+		"id": "osm-2785549699",
+		"name": "Digg Burger",
+		"address": "Oslo",
+		"latitude": 59.914853,
+		"longitude": 10.740626,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 3.5,
+		"googleRatingCount": 71,
+		"openingHours": "Monday: 2:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 2:00 PM – 12:00 AM; Saturday: 3:00 PM – 12:00 AM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-13515804062",
@@ -1908,6 +2713,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 14:30-01:00; Fr 14:30-02:00; Sa 13:00-02:00; Su 13:00-01; 00",
 		"googleRating": 3.4,
 		"googleRatingCount": 141
+	},
+	{
+		"id": "osm-838574104",
+		"name": "Dirty Taco",
+		"address": "Oslo",
+		"latitude": 59.9234901,
+		"longitude": 10.7578905,
+		"cuisines": [
+			"mexican",
+			"tacos"
+		],
+		"googleRating": 5,
+		"googleRatingCount": 27,
+		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 PM – 1:00 AM; Saturday: 2:00 PM – 1:00 AM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-13416055219",
@@ -2066,6 +2885,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 9:00 PM; Tuesday: 1:30 – 10:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 1:00 – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 10:00 PM"
 	},
 	{
+		"id": "osm-12979690804",
+		"name": "Donia",
+		"address": "Oslo",
+		"latitude": 59.9135677,
+		"longitude": 10.7719514,
+		"cuisines": [
+			"pizza",
+			"falafel",
+			"kebab"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 128,
+		"openingHours": "Monday: 1:00 – 11:00 PM; Tuesday: 1:00 – 11:00 PM; Wednesday: 1:00 – 11:00 PM; Thursday: 1:00 – 11:00 PM; Friday: 1:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 11:00 PM"
+	},
+	{
 		"id": "osm-10816258754",
 		"name": "Doug's Hamburgers",
 		"address": "Oslo",
@@ -2106,6 +2940,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 200
 	},
 	{
+		"id": "osm-816420519",
+		"name": "Dr. Crunchy",
+		"address": "Oslo",
+		"latitude": 59.9277123,
+		"longitude": 10.749082,
+		"cuisines": [
+			"fried_chicken"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 322,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 PM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-1371624782",
 		"name": "Dragens restaurant",
 		"address": "Oslo",
@@ -2117,6 +2964,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 264,
 		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 1:00 AM; Saturday: 1:00 PM – 1:00 AM; Sunday: 1:00 – 11:00 PM"
+	},
+	{
+		"id": "osm-973804256",
+		"name": "Dronningen Restaurant og Selskapslokale",
+		"address": "Oslo",
+		"latitude": 59.9083031,
+		"longitude": 10.698297,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 37
 	},
 	{
 		"id": "osm-6684083405",
@@ -2173,6 +3033,46 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 3:00 PM – 12:00 AM; Wednesday: 3:00 PM – 12:00 AM; Thursday: 3:00 PM – 1:00 AM; Friday: 3:00 PM – 2:00 AM; Saturday: 3:00 PM – 2:00 AM; Sunday: 3:00 – 11:00 PM"
 	},
 	{
+		"id": "osm-12697111875",
+		"name": "Dumpling AS",
+		"address": "Oslo",
+		"latitude": 59.9276566,
+		"longitude": 10.7593132,
+		"cuisines": [
+			"chinese"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 195,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 9:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-464115007",
+		"name": "Dyna Fyr",
+		"address": "Oslo",
+		"latitude": 59.8948705,
+		"longitude": 10.6884165,
+		"cuisines": [
+			"norwegian",
+			"seafood"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 129,
+		"openingHours": "Monday: 3:00 – 8:00 PM; Tuesday: 12:00 – 10:00 PM; Wednesday: 12:00 – 10:00 PM; Thursday: 12:00 – 10:00 PM; Friday: 12:00 – 10:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: 3:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-4741169024",
+		"name": "Døgnvill",
+		"address": "Oslo",
+		"latitude": 59.9083027,
+		"longitude": 10.7235853,
+		"cuisines": [
+			"burger"
+		],
+		"openingHours": "Mo-Th 11:30-22:00; Fr 11:30-23:00; Sa 12:00-23:00; Su 13:00-22:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 3278
+	},
+	{
 		"id": "osm-6368904985",
 		"name": "Døgnvill burger",
 		"address": "Oslo",
@@ -2197,6 +3097,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 12:00-24:00; Fr-Sa 12:00-01:00; Su 12:00-23:00",
 		"googleRating": 4.5,
 		"googleRatingCount": 1781
+	},
+	{
+		"id": "osm-10951553574",
+		"name": "Döner Bros",
+		"address": "Oslo",
+		"latitude": 59.9167462,
+		"longitude": 10.7534733,
+		"cuisines": [
+			"doner",
+			"kebab"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 602,
+		"openingHours": "Monday: 3:30 – 11:00 PM; Tuesday: 3:30 – 11:00 PM; Wednesday: 3:30 – 11:00 PM; Thursday: 3:30 – 11:00 PM; Friday: 3:30 PM – 3:30 AM; Saturday: 1:00 PM – 3:30 AM; Sunday: 1:00 – 11:00 PM"
 	},
 	{
 		"id": "osm-1329411519",
@@ -2238,6 +3152,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 11:30 AM – 9:00 PM; Tuesday: 11:30 AM – 9:00 PM; Wednesday: 11:30 AM – 9:00 PM; Thursday: 11:30 AM – 9:00 PM; Friday: 11:30 AM – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 1:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-10694985430",
+		"name": "EatHappy Vegan",
+		"address": "Oslo",
+		"latitude": 59.9293635,
+		"longitude": 10.778318,
+		"cuisines": [
+			"asian",
+			"vietnamese",
+			"noodle"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 187,
+		"openingHours": "Monday: Closed; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 1:00 – 8:00 PM"
+	},
+	{
 		"id": "osm-3210767983",
 		"name": "EatHappy Vegan - Fredensborgveien",
 		"address": "Oslo",
@@ -2249,6 +3178,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Fr 12:00-20:00; Sa-Su 13:00-20:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 425
+	},
+	{
+		"id": "osm-6761522729",
+		"name": "Ebi Sushi",
+		"address": "Oslo",
+		"latitude": 59.9436888,
+		"longitude": 10.7745954,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 195,
+		"openingHours": "Monday: 1:00 – 9:00 PM; Tuesday: 1:00 – 9:00 PM; Wednesday: 1:00 – 9:00 PM; Thursday: 1:00 – 9:00 PM; Friday: 1:00 – 9:00 PM; Saturday: 1:00 – 9:00 PM; Sunday: 1:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-1298853098",
+		"name": "Eckers Café Ullevål",
+		"address": "Oslo",
+		"latitude": 59.9406056,
+		"longitude": 10.728741,
+		"cuisines": [
+			"coffee"
+		],
+		"openingHours": "Mo 08:00-18:00; Tu-Fr 08:00-22:00; Sa,Su 09:00-18:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 126
 	},
 	{
 		"id": "osm-311268456",
@@ -2331,6 +3286,59 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 616
 	},
 	{
+		"id": "osm-1884320069",
+		"name": "Eik Annen Etage",
+		"address": "Oslo",
+		"latitude": 59.913992,
+		"longitude": 10.7338,
+		"cuisines": [
+			"nordic",
+			"scandinavian"
+		],
+		"openingHours": "Tu-Sa 18:00-23:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 453
+	},
+	{
+		"id": "osm-12621373666",
+		"name": "Eilert",
+		"address": "Oslo",
+		"latitude": 59.9409781,
+		"longitude": 10.7247553,
+		"cuisines": [
+			"buffet",
+			"sandwich"
+		]
+	},
+	{
+		"id": "osm-115901265",
+		"name": "Ekebergrestauranten",
+		"address": "Oslo",
+		"latitude": 59.8993555,
+		"longitude": 10.7617075,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 2276,
+		"openingHours": "Monday: Closed; Tuesday: 12:00 – 9:00 PM; Wednesday: 12:00 – 9:00 PM; Thursday: 12:00 – 9:00 PM; Friday: 12:00 – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-12512247901",
+		"name": "Ekspedisjonshallen",
+		"address": "Oslo",
+		"latitude": 59.9153248,
+		"longitude": 10.7195677,
+		"cuisines": [
+			"bistro",
+			"scandinavian"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 222,
+		"openingHours": "Monday: 7:00 AM – 11:00 PM; Tuesday: 7:00 AM – 11:00 PM; Wednesday: 7:00 AM – 12:00 AM; Thursday: 7:00 AM – 12:00 AM; Friday: 7:00 AM – 12:30 AM; Saturday: 8:00 AM – 1:00 AM; Sunday: 8:00 AM – 11:00 PM"
+	},
+	{
 		"id": "osm-1287798779",
 		"name": "El Aroma",
 		"address": "Oslo",
@@ -2395,6 +3403,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 8:00 AM – 3:00 PM; Wednesday: 8:00 AM – 3:00 PM; Thursday: 8:00 AM – 3:00 PM; Friday: 8:00 AM – 3:00 PM; Saturday: 9:00 AM – 3:00 PM; Sunday: 9:00 AM – 3:00 PM"
 	},
 	{
+		"id": "osm-6928451385",
+		"name": "En til! Pizza",
+		"address": "Oslo",
+		"latitude": 59.94247,
+		"longitude": 10.812136,
+		"cuisines": [
+			"pizza"
+		],
+		"openingHours": "Mo-Fr 15:00-22:00; Sa,Su 13:00-22:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 479
+	},
+	{
 		"id": "osm-2811429719",
 		"name": "Enoteca",
 		"address": "Oslo",
@@ -2406,6 +3427,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "11:30-01:00",
 		"googleRating": 4.3,
 		"googleRatingCount": 213
+	},
+	{
+		"id": "osm-11917456955",
+		"name": "Entrecôte",
+		"address": "Oslo",
+		"latitude": 59.9093909,
+		"longitude": 10.7245913,
+		"cuisines": [
+			"french",
+			"steak"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 438,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 4:00 – 11:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-9837867556",
+		"name": "Esaias Vinbar",
+		"address": "Oslo",
+		"latitude": 59.912788,
+		"longitude": 10.747446,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 173
 	},
 	{
 		"id": "osm-12461261297",
@@ -2421,6 +3468,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 1:00 – 8:00 PM; Wednesday: 1:00 – 8:00 PM; Thursday: 1:00 – 8:00 PM; Friday: 1:00 – 9:00 PM; Saturday: 1:00 – 9:00 PM; Sunday: 1:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-9708640822",
+		"name": "Eufemia Bar",
+		"address": "Oslo",
+		"latitude": 59.9093447,
+		"longitude": 10.7527129,
+		"cuisines": [
+			"scandinavian",
+			"european"
+		],
+		"openingHours": "Mo 17:00-23:00; Tu-Sa 12:00-24:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 92
+	},
+	{
 		"id": "osm-6665258470",
 		"name": "Falafel me",
 		"address": "Oslo",
@@ -2432,6 +3493,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4,
 		"googleRatingCount": 360,
 		"openingHours": "Monday: 10:00 AM – 12:00 AM; Tuesday: 10:00 AM – 12:00 AM; Wednesday: 10:00 AM – 12:00 AM; Thursday: 10:00 AM – 12:00 AM; Friday: 10:00 AM – 3:30 AM; Saturday: 10:00 AM – 3:30 AM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-4754833651",
+		"name": "Falafel n' Juice",
+		"address": "Oslo",
+		"latitude": 59.9169718,
+		"longitude": 10.7534384,
+		"cuisines": [
+			"falafel",
+			"juice"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 1233,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 10:00 PM"
 	},
 	{
 		"id": "osm-7984723389",
@@ -2462,6 +3537,58 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1233
 	},
 	{
+		"id": "osm-829617325",
+		"name": "Falsen",
+		"address": "Oslo",
+		"latitude": 59.909385,
+		"longitude": 10.741357,
+		"cuisines": [
+			"italian",
+			"coffee"
+		]
+	},
+	{
+		"id": "osm-11264508846",
+		"name": "Fat City",
+		"address": "Oslo",
+		"latitude": 59.925125,
+		"longitude": 10.7593646,
+		"cuisines": [
+			"wine",
+			"european"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 75,
+		"openingHours": "Monday: 4:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 12:00 PM – 1:00 AM; Saturday: 12:00 PM – 1:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-392059059",
+		"name": "Feinschmecker",
+		"address": "Oslo",
+		"latitude": 59.918421,
+		"longitude": 10.70795,
+		"cuisines": [
+			"european",
+			"french"
+		],
+		"openingHours": "Mo-Sa 17:00+",
+		"googleRating": 4.8,
+		"googleRatingCount": 190
+	},
+	{
+		"id": "osm-13100905884",
+		"name": "Fenaknoken",
+		"address": "Oslo",
+		"latitude": 59.9027155,
+		"longitude": 10.7412171,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 194,
+		"openingHours": "Monday: 10:30 AM – 6:14 PM; Tuesday: 10:30 AM – 6:14 PM; Wednesday: 10:30 AM – 6:14 PM; Thursday: 10:30 AM – 6:14 PM; Friday: 10:30 AM – 6:14 PM; Saturday: 10:30 AM – 6:14 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-11119864105",
 		"name": "Feniqia",
 		"address": "Oslo",
@@ -2473,6 +3600,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.4,
 		"googleRatingCount": 955,
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 3:00 – 11:00 PM; Sunday: 3:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-3972241457",
+		"name": "Festningen Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9084313,
+		"longitude": 10.735454,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 854,
+		"openingHours": "Monday: 12:00 – 11:30 PM; Tuesday: 12:00 – 11:30 PM; Wednesday: 12:00 – 11:30 PM; Thursday: 12:00 – 11:30 PM; Friday: 12:00 – 11:30 PM; Saturday: 12:00 – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-10692785992",
+		"name": "Fish Masters",
+		"address": "Oslo",
+		"latitude": 59.9196308,
+		"longitude": 10.7649546,
+		"cuisines": [
+			"fish",
+			"seafood"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 277,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 11:00 PM"
 	},
 	{
 		"id": "osm-4738519183",
@@ -2527,6 +3681,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 1:00 – 10:00 PM; Tuesday: 1:00 – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 11:00 PM; Saturday: 11:00 AM – 11:00 PM; Sunday: 11:00 AM – 11:00 PM"
 	},
 	{
+		"id": "osm-10947976954",
+		"name": "Flamme Burger",
+		"address": "Oslo",
+		"latitude": 59.9158369,
+		"longitude": 10.7163436,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 142,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 4:00 AM; Saturday: 11:00 AM – 4:00 AM; Sunday: 11:00 AM – 10:00 PM"
+	},
+	{
 		"id": "osm-3835842882",
 		"name": "Flavour",
 		"address": "Oslo",
@@ -2551,6 +3718,48 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.6,
 		"googleRatingCount": 5071,
 		"openingHours": "Monday: 4:00 – 9:30 PM; Tuesday: 12:00 – 9:30 PM; Wednesday: 12:00 – 9:30 PM; Thursday: 12:00 – 9:30 PM; Friday: 12:00 – 9:30 PM; Saturday: 12:00 – 9:30 PM; Sunday: 4:00 – 9:30 PM"
+	},
+	{
+		"id": "osm-9790109876",
+		"name": "Fly Chicken",
+		"address": "Oslo",
+		"latitude": 59.9116841,
+		"longitude": 10.7429174,
+		"cuisines": [
+			"fried_chicken",
+			"chicken"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 417,
+		"openingHours": "Monday: 10:00 AM – 10:00 PM; Tuesday: 10:00 AM – 10:00 PM; Wednesday: 10:00 AM – 10:00 PM; Thursday: 10:00 AM – 10:00 PM; Friday: 10:00 AM – 10:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-10548855966",
+		"name": "Fly Chicken",
+		"address": "Oslo",
+		"latitude": 59.9140195,
+		"longitude": 10.7480177,
+		"cuisines": [
+			"fried_chicken",
+			"chicken"
+		],
+		"openingHours": "Mo-Th 11:30-22:00, Fr,Sa 11:30-03:30, Su 13:00-21:00",
+		"googleRating": 3.9,
+		"googleRatingCount": 417
+	},
+	{
+		"id": "osm-10711495313",
+		"name": "Fly Chicken",
+		"address": "Oslo",
+		"latitude": 59.9271927,
+		"longitude": 10.7130068,
+		"cuisines": [
+			"fried_chicken",
+			"chicken"
+		],
+		"openingHours": "Mo-Sa 11:30-22:00; Su 13:00-21:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 109
 	},
 	{
 		"id": "osm-11533672380",
@@ -2608,6 +3817,72 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 10:00 AM – 11:00 PM; Tuesday: 10:00 AM – 11:00 PM; Wednesday: 10:00 AM – 11:00 PM; Thursday: 10:00 AM – 11:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 11:00 PM"
 	},
 	{
+		"id": "osm-825239117",
+		"name": "Folkets Kebab",
+		"address": "Oslo",
+		"latitude": 59.917748,
+		"longitude": 10.800309,
+		"cuisines": [
+			"kebab"
+		],
+		"openingHours": "Mo-Su 10:00-24:00",
+		"googleRating": 4,
+		"googleRatingCount": 1482
+	},
+	{
+		"id": "osm-911234951",
+		"name": "Folkets Kebab",
+		"address": "Oslo",
+		"latitude": 59.929,
+		"longitude": 10.846068,
+		"cuisines": [
+			"kebab"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 576,
+		"openingHours": "Monday: 9:00 AM – 11:00 PM; Tuesday: 9:00 AM – 11:00 PM; Wednesday: 9:00 AM – 11:00 PM; Thursday: 9:00 AM – 11:00 PM; Friday: 9:00 AM – 11:00 PM; Saturday: 10:00 AM – 11:00 PM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-1925321266",
+		"name": "Folkets pizza og kebab",
+		"address": "Oslo",
+		"latitude": 59.9399211,
+		"longitude": 10.823779,
+		"cuisines": [
+			"pizza",
+			"kebab"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 1482,
+		"openingHours": "Monday: 10:00 AM – 12:00 AM; Tuesday: 10:00 AM – 12:00 AM; Wednesday: 10:00 AM – 12:00 AM; Thursday: 10:00 AM – 12:00 AM; Friday: 10:00 AM – 4:00 AM; Saturday: 10:00 AM – 4:00 AM; Sunday: 10:00 AM – 12:00 AM"
+	},
+	{
+		"id": "osm-292102329",
+		"name": "Folkvang",
+		"address": "Oslo",
+		"latitude": 59.9375292,
+		"longitude": 10.7564649,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 729,
+		"openingHours": "Monday: 12:00 – 8:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-12729370376",
+		"name": "Food Factory",
+		"address": "Oslo",
+		"latitude": 59.9140511,
+		"longitude": 10.7740226,
+		"cuisines": [
+			"international"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 92,
+		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
+	},
+	{
 		"id": "osm-1975692020",
 		"name": "Foodie Asian Restaurant",
 		"address": "Oslo",
@@ -2649,6 +3924,31 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1390
 	},
 	{
+		"id": "osm-441346642",
+		"name": "Frederikke",
+		"address": "Oslo",
+		"latitude": 59.9404039,
+		"longitude": 10.7214857,
+		"cuisines": [
+			"buffet"
+		],
+		"openingHours": "Mo-Fr 11:00-17:00"
+	},
+	{
+		"id": "osm-858384452",
+		"name": "French tacos and burgers avenue",
+		"address": "Oslo",
+		"latitude": 59.9340651,
+		"longitude": 10.7619897,
+		"cuisines": [
+			"burger",
+			"tacos"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 31,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 11:00 PM"
+	},
+	{
 		"id": "osm-11195652913",
 		"name": "French Tacos and Burgers avenue",
 		"address": "Oslo",
@@ -2662,6 +3962,71 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 270
 	},
 	{
+		"id": "osm-12820889261",
+		"name": "Frenchie",
+		"address": "Oslo",
+		"latitude": 59.9276548,
+		"longitude": 10.7105546,
+		"cuisines": [
+			"french"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 250,
+		"openingHours": "Monday: 11:30 AM – 10:30 PM; Tuesday: 11:30 AM – 10:30 PM; Wednesday: 11:30 AM – 11:00 PM; Thursday: 11:30 AM – 12:00 AM; Friday: 11:30 AM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-9627970478",
+		"name": "Frenchie Solli Plass",
+		"address": "Oslo",
+		"latitude": 59.914502,
+		"longitude": 10.719028,
+		"cuisines": [
+			"french"
+		],
+		"openingHours": "Mo, Tu 11:00-23:00; We 11:00-00:00; Th, Fr 11:00-01:00; Sa 12:30-01:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 284
+	},
+	{
+		"id": "osm-91313630",
+		"name": "Frognerseteren",
+		"address": "Oslo",
+		"latitude": 59.977695,
+		"longitude": 10.6775095,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 3515,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 9:00 PM"
+	},
+	{
+		"id": "osm-81106364",
+		"name": "Frognerseteren sportshall",
+		"address": "Oslo",
+		"latitude": 59.9780093,
+		"longitude": 10.6808105,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 146,
+		"openingHours": "Monday: 9:30 AM – 3:30 AM; Tuesday: 9:30 AM – 3:30 AM; Wednesday: 9:30 AM – 3:30 AM; Thursday: 9:30 AM – 3:30 AM; Friday: 9:30 AM – 3:30 AM; Saturday: 9:30 AM – 3:30 AM; Sunday: 9:30 AM – 3:30 AM"
+	},
+	{
+		"id": "osm-849847300",
+		"name": "Frognerstranda kro",
+		"address": "Oslo",
+		"latitude": 59.9102932,
+		"longitude": 10.7055635,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 889,
+		"openingHours": "Monday: 10:30 AM – 9:00 PM; Tuesday: 10:30 AM – 9:00 PM; Wednesday: 10:30 AM – 10:00 PM; Thursday: 9:30 AM – 10:00 PM; Friday: 10:30 AM – 10:00 PM; Saturday: 11:30 AM – 10:00 PM; Sunday: 11:30 AM – 9:00 PM"
+	},
+	{
 		"id": "osm-11937375869",
 		"name": "Fru Nilsen",
 		"address": "Oslo",
@@ -2673,6 +4038,35 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Th 11:00-23:00; Fr-Sa 11:00-03:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 33
+	},
+	{
+		"id": "osm-6314860618",
+		"name": "Fryd Løren",
+		"address": "Oslo",
+		"latitude": 59.930798,
+		"longitude": 10.793232,
+		"cuisines": [
+			"burger",
+			"pasta",
+			"tapas"
+		],
+		"openingHours": "Mo-Th 12:00-23:00, Fr,Sa 12:00-01:00, Su 12:00-22:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 195
+	},
+	{
+		"id": "osm-12625714203",
+		"name": "Fryd Manglerud",
+		"address": "Oslo",
+		"latitude": 59.8970259,
+		"longitude": 10.8134677,
+		"cuisines": [
+			"burger",
+			"fish_and_chips"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 60,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 11:30 PM; Saturday: 11:00 AM – 11:30 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-11884847917",
@@ -2715,6 +4109,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 111
 	},
 	{
+		"id": "osm-9775372797",
+		"name": "Funky Fresh Foods",
+		"address": "Oslo",
+		"latitude": 59.912204,
+		"longitude": 10.726649,
+		"cuisines": [
+			"salad"
+		],
+		"openingHours": "Mo-Th 11:00-22:00; Fr-Sa 11:00-01:00; Su 12:00-20:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 407
+	},
+	{
+		"id": "osm-6712672385",
+		"name": "FYR bistronomi & bar",
+		"address": "Oslo",
+		"latitude": 59.9238137,
+		"longitude": 10.7262439,
+		"cuisines": [
+			"bistro",
+			"grill"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 556
+	},
+	{
 		"id": "osm-1274798437",
 		"name": "Fyret",
 		"address": "Oslo",
@@ -2726,6 +4146,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.6,
 		"googleRatingCount": 363,
 		"openingHours": "Monday: 11:00 AM – 1:00 AM; Tuesday: 11:00 AM – 1:00 AM; Wednesday: 11:00 AM – 1:00 AM; Thursday: 11:00 AM – 1:00 AM; Friday: 11:00 AM – 2:00 AM; Saturday: 12:00 PM – 2:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-12967070921",
+		"name": "Gabels vinbar",
+		"address": "Oslo",
+		"latitude": 59.9174893,
+		"longitude": 10.711508,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 40,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 4:30 – 11:00 PM; Thursday: 4:30 – 11:00 PM; Friday: 4:30 PM – 12:00 AM; Saturday: 4:00 PM – 12:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-11898651792",
+		"name": "Gabi's",
+		"address": "Oslo",
+		"latitude": 59.921773,
+		"longitude": 10.7267174,
+		"cuisines": [
+			"french",
+			"bistro"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 86
 	},
 	{
 		"id": "osm-11035455186",
@@ -2767,6 +4213,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Su, Tu-Th 16:00-21:00; Fr-Sa 16:00-22:00",
 		"googleRating": 4.5,
 		"googleRatingCount": 1014
+	},
+	{
+		"id": "osm-333735412",
+		"name": "Gate of India",
+		"address": "Oslo",
+		"latitude": 59.9286639,
+		"longitude": 10.7153507,
+		"cuisines": [
+			"indian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 487,
+		"openingHours": "Monday: 4:00 – 9:30 PM; Tuesday: 4:00 – 10:30 PM; Wednesday: 4:00 – 10:30 PM; Thursday: 4:00 – 10:30 PM; Friday: 4:00 – 10:30 PM; Saturday: 4:00 – 10:30 PM; Sunday: 3:00 – 9:30 PM"
 	},
 	{
 		"id": "osm-10674613153",
@@ -2812,6 +4271,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 784
 	},
 	{
+		"id": "osm-11017648540",
+		"name": "Gibabo",
+		"address": "Oslo",
+		"latitude": 59.9160875,
+		"longitude": 10.7541685,
+		"cuisines": [
+			"ethiopian",
+			"african"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 32,
+		"openingHours": "Monday: 12:00 PM – 1:00 AM; Tuesday: 12:00 PM – 1:00 AM; Wednesday: 12:00 PM – 1:00 AM; Thursday: 12:00 PM – 3:00 AM; Friday: 12:00 PM – 3:00 AM; Saturday: 12:00 PM – 3:00 AM; Sunday: 12:00 PM – 1:00 AM"
+	},
+	{
 		"id": "osm-9717150517",
 		"name": "Girotondo",
 		"address": "Oslo",
@@ -2823,6 +4296,45 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 16:00-22:00; Sa 13:00-22:00; Su 13:00-21:00",
 		"googleRating": 4.6,
 		"googleRatingCount": 1110
+	},
+	{
+		"id": "osm-4775886935",
+		"name": "Git Bit",
+		"address": "Oslo",
+		"latitude": 59.922415,
+		"longitude": 10.731694,
+		"cuisines": [
+			"indian"
+		],
+		"googleRating": 3.4,
+		"googleRatingCount": 14,
+		"openingHours": "Monday: 6:30 AM – 8:00 PM; Tuesday: 6:30 AM – 8:00 PM; Wednesday: 6:30 AM – 8:00 PM; Thursday: 6:30 AM – 8:00 PM; Friday: 6:30 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 10:00 AM – 8:00 PM"
+	},
+	{
+		"id": "osm-3566985693",
+		"name": "Gladkokken",
+		"address": "Oslo",
+		"latitude": 59.9108016,
+		"longitude": 10.7519284,
+		"cuisines": [
+			"burger",
+			"grill"
+		],
+		"googleRating": 3.6,
+		"googleRatingCount": 635
+	},
+	{
+		"id": "osm-12968899187",
+		"name": "Gladkokken Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9108793,
+		"longitude": 10.7514151,
+		"cuisines": [
+			"burger",
+			"grill"
+		],
+		"googleRating": 3.6,
+		"googleRatingCount": 635
 	},
 	{
 		"id": "osm-12103401797",
@@ -2866,6 +4378,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 265
 	},
 	{
+		"id": "osm-12899047243",
+		"name": "Gorgonzo Pizza",
+		"address": "Oslo",
+		"latitude": 59.924883,
+		"longitude": 10.7425577,
+		"cuisines": [
+			"pizza"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 191,
+		"openingHours": "Monday: 3:00 – 10:45 PM; Tuesday: 3:00 – 10:45 PM; Wednesday: 3:00 – 10:45 PM; Thursday: 2:00 – 10:45 PM; Friday: 3:00 PM – 4:00 AM; Saturday: 2:00 PM – 4:00 AM; Sunday: 2:00 – 10:45 PM"
+	},
+	{
 		"id": "osm-11884847916",
 		"name": "Grains Bakeri (Frysja)",
 		"address": "Oslo",
@@ -2880,6 +4405,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 08:00-22:00; Su 09:00-21:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 110
+	},
+	{
+		"id": "osm-315233911",
+		"name": "Grand Café",
+		"address": "Oslo",
+		"latitude": 59.9137595,
+		"longitude": 10.7393822,
+		"cuisines": [
+			"coffee",
+			"european"
+		],
+		"openingHours": "Mo-Fr 06:30-10:00,11:00-16:00,17:00-23:00; Sa 07:00-11:00,12:00-16:00,17:00-23:00; Su 07:00-12:00,13:00-17:00,17:00-22:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 1383
 	},
 	{
 		"id": "osm-5854272907",
@@ -2905,6 +4444,29 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 13:00-21:00",
 		"googleRating": 4.5,
 		"googleRatingCount": 214
+	},
+	{
+		"id": "osm-61815190",
+		"name": "Grefsenkollen",
+		"address": "Oslo",
+		"latitude": 59.958984,
+		"longitude": 10.8038193,
+		"cuisines": [
+			"norwegian"
+		]
+	},
+	{
+		"id": "osm-973906336",
+		"name": "Gressholmen Kro",
+		"address": "Oslo",
+		"latitude": 59.8841359,
+		"longitude": 10.7223185,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "Mo 15:00-21:00; Tu-Su 12:00-21:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 541
 	},
 	{
 		"id": "osm-1988684938",
@@ -2933,6 +4495,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 11:00 AM – 9:30 PM; Sunday: 11:00 AM – 9:00 PM"
 	},
 	{
+		"id": "osm-855364280",
+		"name": "Grosch",
+		"address": "Oslo",
+		"latitude": 59.9086141,
+		"longitude": 10.7400892,
+		"cuisines": [
+			"scandinavian",
+			"european"
+		],
+		"googleRating": 3,
+		"googleRatingCount": 8
+	},
+	{
 		"id": "osm-12912979726",
 		"name": "Grotto",
 		"address": "Oslo",
@@ -2953,6 +4528,22 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"longitude": 10.755619,
 		"cuisines": [
 			"burger"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 557,
+		"openingHours": "Monday: 11:00 AM – 11:30 PM; Tuesday: 11:00 AM – 11:30 PM; Wednesday: 11:00 AM – 12:00 AM; Thursday: 11:00 AM – 12:00 AM; Friday: 11:00 AM – 3:30 AM; Saturday: 11:00 AM – 3:30 AM; Sunday: 12:00 PM – 12:00 AM"
+	},
+	{
+		"id": "osm-12966041661",
+		"name": "Grytelokket",
+		"address": "Oslo",
+		"latitude": 59.9332945,
+		"longitude": 10.7635535,
+		"cuisines": [
+			"fast_food",
+			"burger",
+			"kebab",
+			"pizza"
 		],
 		"googleRating": 4.1,
 		"googleRatingCount": 557,
@@ -3012,11 +4603,11 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1337
 	},
 	{
-		"id": "osm-1616641810",
+		"id": "osm-1616621709",
 		"name": "Hai Sushi",
 		"address": "Oslo",
-		"latitude": 59.9076447,
-		"longitude": 10.8192703,
+		"latitude": 59.9075645,
+		"longitude": 10.8192815,
 		"cuisines": [
 			"sushi"
 		],
@@ -3086,6 +4677,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 5:00 – 11:00 PM; Wednesday: 5:00 PM – 1:00 AM; Thursday: 5:00 PM – 1:00 AM; Friday: 5:00 PM – 2:00 AM; Saturday: 5:00 PM – 2:00 AM; Sunday: Closed"
 	},
 	{
+		"id": "osm-10712150514",
+		"name": "Happy Sushi",
+		"address": "Oslo",
+		"latitude": 59.919468,
+		"longitude": 10.7481704,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 2.7,
+		"googleRatingCount": 44,
+		"openingHours": "Monday: 3:30 PM – 3:00 AM; Tuesday: 3:30 PM – 3:00 AM; Wednesday: 3:30 PM – 3:00 AM; Thursday: 3:30 PM – 3:00 AM; Friday: 3:30 PM – 3:00 AM; Saturday: 3:30 PM – 3:00 AM; Sunday: 3:30 PM – 3:00 AM"
+	},
+	{
 		"id": "osm-5094785565",
 		"name": "Happy Time",
 		"address": "Oslo",
@@ -3099,6 +4703,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Fr,Sa 11:00-04:00, Su-Th 11:00-24:00",
 		"googleRating": 3.1,
 		"googleRatingCount": 28
+	},
+	{
+		"id": "osm-10268538991",
+		"name": "Hard Rock Cafe",
+		"address": "Oslo",
+		"latitude": 59.9115,
+		"longitude": 10.7514766,
+		"cuisines": [
+			"american"
+		],
+		"openingHours": "Mo-Th 11:00-22:00; Fr-Sa 11:00-23:00; Su 11:00-21:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 3522
 	},
 	{
 		"id": "osm-9151307965",
@@ -3129,6 +4746,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 284
 	},
 	{
+		"id": "osm-12347008201",
+		"name": "Haus",
+		"address": "Oslo",
+		"latitude": 59.9176319,
+		"longitude": 10.7547947,
+		"cuisines": [
+			"italian",
+			"nordic"
+		],
+		"openingHours": "Tu-Th 11:00-00:00; Fr-Sa 11:00-01:00; Su 11:00-00:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 78
+	},
+	{
 		"id": "osm-1053666516",
 		"name": "Havsmak",
 		"address": "Oslo",
@@ -3153,6 +4784,76 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.9,
 		"googleRatingCount": 240,
 		"openingHours": "Monday: 3:00 – 11:00 PM; Tuesday: 3:00 – 11:00 PM; Wednesday: 3:00 – 11:00 PM; Thursday: 3:00 – 11:00 PM; Friday: 3:00 – 11:00 PM; Saturday: 3:00 – 11:00 PM; Sunday: 2:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-13074097389",
+		"name": "Hei Solvik",
+		"address": "Oslo",
+		"latitude": 59.8650661,
+		"longitude": 10.7502256,
+		"cuisines": [
+			"pizza",
+			"norwegian"
+		],
+		"openingHours": "We-Fr 14-22; Sa-Su 12-22",
+		"googleRating": 4.8,
+		"googleRatingCount": 72
+	},
+	{
+		"id": "osm-12621373667",
+		"name": "Helga spiseri",
+		"address": "Oslo",
+		"latitude": 59.9386963,
+		"longitude": 10.7190242,
+		"cuisines": [
+			"buffet"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 16,
+		"openingHours": "Monday: 7:00 AM – 6:00 PM; Tuesday: 7:00 AM – 6:00 PM; Wednesday: 7:00 AM – 6:00 PM; Thursday: 7:00 AM – 6:00 PM; Friday: 7:00 AM – 6:00 PM; Saturday: Closed; Sunday: Closed"
+	},
+	{
+		"id": "osm-1711617555",
+		"name": "Hells Kitchen",
+		"address": "Oslo",
+		"latitude": 59.9156423,
+		"longitude": 10.7485562,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 469,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 11:00 PM; Thursday: 3:00 – 11:00 PM; Friday: 3:00 – 11:00 PM; Saturday: 2:00 – 11:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-330946894",
+		"name": "Helt rått",
+		"address": "Oslo",
+		"latitude": 59.9362576,
+		"longitude": 10.7523858,
+		"cuisines": [
+			"sushi",
+			"asian"
+		],
+		"openingHours": "Mo-Su 14:00-22:00",
+		"googleRating": 3.5,
+		"googleRatingCount": 112
+	},
+	{
+		"id": "osm-12921209983",
+		"name": "Helt Vilt",
+		"address": "Oslo",
+		"latitude": 59.922033,
+		"longitude": 10.7522538,
+		"cuisines": [
+			"scandinavian",
+			"norwegian",
+			"meat"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 515,
+		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 9:00 PM"
 	},
 	{
 		"id": "osm-3195514188",
@@ -3182,6 +4883,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 272
 	},
 	{
+		"id": "osm-11968662227",
+		"name": "Hitchiker",
+		"address": "Oslo",
+		"latitude": 59.9112229,
+		"longitude": 10.7403495,
+		"cuisines": [
+			"asian_fusion"
+		],
+		"openingHours": "Tu-Fr 11:00-23:00; Sa 12:00-23:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 258
+	},
+	{
+		"id": "osm-12967095602",
+		"name": "Hoa sen",
+		"address": "Oslo",
+		"latitude": 59.9149195,
+		"longitude": 10.7522288,
+		"cuisines": [
+			"vietnamese"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 380,
+		"openingHours": "Monday: Closed; Tuesday: 1:00 – 9:00 PM; Wednesday: 1:00 – 9:00 PM; Thursday: 1:00 – 9:00 PM; Friday: 1:00 – 9:00 PM; Saturday: 1:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
+	},
+	{
 		"id": "osm-3010287644",
 		"name": "Hokkigai Sushi",
 		"address": "Oslo",
@@ -3193,6 +4920,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 123,
 		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-486095485",
+		"name": "Holmenkollen Restaurant",
+		"address": "Oslo",
+		"latitude": 59.96053,
+		"longitude": 10.66696,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 753,
+		"openingHours": "Monday: Closed; Tuesday: 1:00 – 9:00 PM; Wednesday: 1:00 – 9:00 PM; Thursday: 1:00 – 9:00 PM; Friday: 1:00 – 9:00 PM; Saturday: 1:00 – 9:00 PM; Sunday: 1:00 – 8:00 PM"
 	},
 	{
 		"id": "osm-137620239",
@@ -3222,6 +4962,72 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.2,
 		"googleRatingCount": 2253,
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: 4:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-12959461596",
+		"name": "Hongs Bao Bao",
+		"address": "Oslo",
+		"latitude": 59.9222966,
+		"longitude": 10.7518224,
+		"cuisines": [
+			"chinese"
+		],
+		"googleRating": 3.2,
+		"googleRatingCount": 39
+	},
+	{
+		"id": "osm-9084688168",
+		"name": "Hos Alma",
+		"address": "Oslo",
+		"latitude": 59.9245976,
+		"longitude": 10.6745294,
+		"cuisines": [
+			"french",
+			"scandinavian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 76
+	},
+	{
+		"id": "osm-10210423311",
+		"name": "Hos Peder",
+		"address": "Oslo",
+		"latitude": 59.92366,
+		"longitude": 10.7594165,
+		"cuisines": [
+			"mediterranean",
+			"european"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 281,
+		"openingHours": "Monday: Closed; Tuesday: 5:00 – 11:00 PM; Wednesday: 5:00 – 11:00 PM; Thursday: 5:00 – 11:00 PM; Friday: 5:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 2:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-4517994500",
+		"name": "hos Thea",
+		"address": "Oslo",
+		"latitude": 59.912745,
+		"longitude": 10.709254,
+		"cuisines": [
+			"french",
+			"scandinavian"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 526,
+		"openingHours": "Monday: 5:00 – 11:00 PM; Tuesday: 5:00 – 11:00 PM; Wednesday: 5:00 – 11:00 PM; Thursday: 5:00 – 11:00 PM; Friday: 5:00 – 11:00 PM; Saturday: 5:00 – 11:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-10743475165",
+		"name": "Hot Shop",
+		"address": "Oslo",
+		"latitude": 59.9281852,
+		"longitude": 10.7685646,
+		"cuisines": [
+			"nordic"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 245,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 6:00 – 10:00 PM; Thursday: 6:00 – 10:00 PM; Friday: 5:00 – 10:00 PM; Saturday: 5:00 – 10:00 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-264768993",
@@ -3266,6 +5072,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 10:00 PM; Tuesday: 2:00 – 10:00 PM; Wednesday: 2:00 – 10:00 PM; Thursday: 2:00 – 10:00 PM; Friday: 2:00 – 11:00 PM; Saturday: 2:00 – 11:00 PM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-12787811254",
+		"name": "House of Mandi",
+		"address": "Oslo",
+		"latitude": 59.9143253,
+		"longitude": 10.7683734,
+		"cuisines": [
+			"arab",
+			"middle_eastern"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 513,
+		"openingHours": "Monday: 12:00 – 10:00 PM; Tuesday: 12:00 – 10:00 PM; Wednesday: 12:00 – 10:00 PM; Thursday: 12:00 – 10:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 1:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-13114530084",
+		"name": "House of Sushi",
+		"address": "Oslo",
+		"latitude": 59.9275685,
+		"longitude": 10.7215613,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 146,
+		"openingHours": "Monday: 12:00 – 9:30 PM; Tuesday: 12:00 – 9:30 PM; Wednesday: 12:00 – 9:30 PM; Thursday: 12:00 – 9:30 PM; Friday: 12:00 – 9:30 PM; Saturday: 1:00 – 9:30 PM; Sunday: 2:30 – 9:30 PM"
+	},
+	{
 		"id": "osm-5273825793",
 		"name": "Hovseter Grill",
 		"address": "Oslo",
@@ -3308,6 +5141,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.8,
 		"googleRatingCount": 255,
 		"openingHours": "Monday: 11:00 AM – 11:30 PM; Tuesday: 11:30 AM – 11:00 PM; Wednesday: 11:30 AM – 11:00 PM; Thursday: 11:30 AM – 11:00 PM; Friday: 11:00 AM – 1:00 AM; Saturday: 11:30 AM – 12:00 AM; Sunday: 12:00 – 11:00 PM"
+	},
+	{
+		"id": "osm-11917426012",
+		"name": "HUSET Aker brygge",
+		"address": "Oslo",
+		"latitude": 59.9095824,
+		"longitude": 10.7248296,
+		"cuisines": [
+			"seafood",
+			"norwegian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 28
+	},
+	{
+		"id": "osm-7526401782",
+		"name": "Hy’s",
+		"address": "Oslo",
+		"latitude": 59.9138804,
+		"longitude": 10.788471,
+		"cuisines": [
+			"sushi",
+			"asian"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 230,
+		"openingHours": "Monday: 2:00 – 9:15 PM; Tuesday: 2:00 – 9:15 PM; Wednesday: 2:00 – 9:15 PM; Thursday: 2:00 – 9:15 PM; Friday: 2:00 – 9:15 PM; Saturday: 2:00 – 9:15 PM; Sunday: 2:00 – 9:15 PM"
 	},
 	{
 		"id": "osm-6376869225",
@@ -3531,6 +5391,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 303
 	},
 	{
+		"id": "osm-12787739481",
+		"name": "Jafs",
+		"address": "Oslo",
+		"latitude": 59.9156339,
+		"longitude": 10.7713661,
+		"cuisines": [
+			"fast_food",
+			"burger",
+			"kebab"
+		],
+		"googleRating": 3.8,
+		"googleRatingCount": 64,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-5101765649",
 		"name": "Jagger",
 		"address": "Oslo",
@@ -3557,6 +5432,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 3898
 	},
 	{
+		"id": "osm-7868528987",
+		"name": "Jakobs hage",
+		"address": "Oslo",
+		"latitude": 59.918208,
+		"longitude": 10.753954,
+		"cuisines": [
+			"grill",
+			"burger"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 53
+	},
+	{
 		"id": "osm-9447113185",
 		"name": "Jamals Falafel",
 		"address": "Oslo",
@@ -3581,6 +5469,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 384,
 		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-5654658195",
+		"name": "Japo shusi",
+		"address": "Oslo",
+		"latitude": 59.920312,
+		"longitude": 10.684178,
+		"cuisines": [
+			"sushi",
+			"japanese"
+		],
+		"googleRating": 3.7,
+		"googleRatingCount": 258,
+		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: 1:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-1964286275",
@@ -3623,6 +5525,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.2,
 		"googleRatingCount": 1068,
 		"openingHours": "Monday: 11:30 AM – 10:00 PM; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 12:00 AM; Friday: 11:30 AM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-441543693",
+		"name": "Jensens Bøfhus",
+		"address": "Oslo",
+		"latitude": 59.91285,
+		"longitude": 10.7387988,
+		"cuisines": [
+			"steak",
+			"steak_house"
+		],
+		"googleRating": 3.6,
+		"googleRatingCount": 2491,
+		"openingHours": "Monday: 11:30 AM – 10:00 PM; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 11:00 PM; Saturday: 11:30 AM – 11:00 PM; Sunday: 12:00 – 8:00 PM"
 	},
 	{
 		"id": "osm-12461261298",
@@ -3675,6 +5591,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4,
 		"googleRatingCount": 983,
 		"openingHours": "Monday: 11:30 AM – 10:00 PM; Tuesday: 11:30 AM – 10:00 PM; Wednesday: 11:30 AM – 10:00 PM; Thursday: 11:30 AM – 10:00 PM; Friday: 11:30 AM – 11:00 PM; Saturday: 11:00 AM – 11:00 PM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-309470778",
+		"name": "Jonathan Sushi & Asian Dining",
+		"address": "Oslo",
+		"latitude": 59.8802876,
+		"longitude": 10.7867365,
+		"cuisines": [
+			"sushi",
+			"asian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 379,
+		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 11:00 AM – 8:00 PM; Sunday: 2:00 – 8:00 PM"
 	},
 	{
 		"id": "osm-12630097302",
@@ -3781,6 +5711,42 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 556
 	},
 	{
+		"id": "osm-295619711",
+		"name": "Kafé Celsius",
+		"address": "Oslo",
+		"latitude": 59.910269,
+		"longitude": 10.740319,
+		"cuisines": [
+			"coffee"
+		]
+	},
+	{
+		"id": "osm-11814064665",
+		"name": "Kafe Republik",
+		"address": "Oslo",
+		"latitude": 59.9149871,
+		"longitude": 10.7543073,
+		"cuisines": [
+			"coffee"
+		],
+		"openingHours": "Mo-Th 11:00-23:00, Fr-Sa 11:00-01:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 234
+	},
+	{
+		"id": "osm-12736825841",
+		"name": "Kafeteria August",
+		"address": "Oslo",
+		"latitude": 59.9172219,
+		"longitude": 10.7382013,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 209,
+		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 1:00 AM; Saturday: 11:00 AM – 1:00 AM; Sunday: Closed"
+	},
+	{
 		"id": "osm-2715487795",
 		"name": "Kaffistova",
 		"address": "Oslo",
@@ -3820,6 +5786,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 378
 	},
 	{
+		"id": "osm-487843789",
+		"name": "Kaktus",
+		"address": "Oslo",
+		"latitude": 59.9187768,
+		"longitude": 10.6367703,
+		"cuisines": [
+			"italian",
+			"mediterranean"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 8,
+		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 8:00 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-9267053722",
 		"name": "Kami Sushi",
 		"address": "Oslo",
@@ -3847,6 +5827,18 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 625
 	},
 	{
+		"id": "osm-3932053252",
+		"name": "Kantine",
+		"address": "Oslo",
+		"latitude": 59.9484312,
+		"longitude": 10.7684295,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 103
+	},
+	{
 		"id": "osm-264768989",
 		"name": "Karlsrud Mat og Vinhus",
 		"address": "Oslo",
@@ -3858,6 +5850,34 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo off; Tu-Th 15:00-23:00; Fr-Su 13:00-01:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 186
+	},
+	{
+		"id": "osm-11898738969",
+		"name": "Kastellet",
+		"address": "Oslo",
+		"latitude": 59.9212978,
+		"longitude": 10.7275835,
+		"cuisines": [
+			"international",
+			"european"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 122,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 2:00 PM – 12:00 AM; Saturday: 2:00 PM – 12:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-6853712038",
+		"name": "Katla",
+		"address": "Oslo",
+		"latitude": 59.9165058,
+		"longitude": 10.7386384,
+		"cuisines": [
+			"asian_fusion",
+			"grill"
+		],
+		"openingHours": "Tu-Fr 17:00-24:00; Sa 13:00-24:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 516
 	},
 	{
 		"id": "osm-12669709316",
@@ -3886,6 +5906,45 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 10:00 AM – 4:00 AM; Tuesday: 10:00 AM – 4:00 AM; Wednesday: 10:00 AM – 4:00 AM; Thursday: 10:00 AM – 4:00 AM; Friday: 10:00 AM – 5:00 AM; Saturday: 10:00 AM – 5:00 AM; Sunday: 10:00 AM – 4:00 AM"
 	},
 	{
+		"id": "osm-7864973485",
+		"name": "Kebabish Original",
+		"address": "Oslo",
+		"latitude": 59.9138416,
+		"longitude": 10.7622672,
+		"cuisines": [
+			"kebab"
+		],
+		"openingHours": "Mo-Su 11:00-23:00",
+		"googleRating": 3.7,
+		"googleRatingCount": 662
+	},
+	{
+		"id": "osm-816424062",
+		"name": "Kebabtoppen",
+		"address": "Oslo",
+		"latitude": 59.9282444,
+		"longitude": 10.7507374,
+		"cuisines": [
+			"kebab"
+		],
+		"googleRating": 2.8,
+		"googleRatingCount": 167,
+		"openingHours": "Monday: 10:30 AM – 1:00 AM; Tuesday: 10:30 AM – 1:00 AM; Wednesday: 10:30 AM – 1:00 AM; Thursday: 10:30 AM – 1:00 AM; Friday: 10:30 AM – 4:30 AM; Saturday: 10:30 AM – 4:30 AM; Sunday: 10:30 AM – 1:00 AM"
+	},
+	{
+		"id": "osm-12881298926",
+		"name": "Keyser Social",
+		"address": "Oslo",
+		"latitude": 59.9164491,
+		"longitude": 10.7151942,
+		"cuisines": [
+			"asian_fusion"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 228,
+		"openingHours": "Monday: 5:00 – 8:30 PM; Tuesday: 5:00 – 8:30 PM; Wednesday: 5:00 – 8:30 PM; Thursday: 5:00 – 9:00 PM; Friday: 4:00 – 9:00 PM; Saturday: 4:00 – 9:00 PM; Sunday: 4:00 – 8:30 PM"
+	},
+	{
 		"id": "osm-10911462669",
 		"name": "Khanateria",
 		"address": "Oslo",
@@ -3910,6 +5969,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 15:00-22:00; Su 14:00-21:00",
 		"googleRating": 4.7,
 		"googleRatingCount": 840
+	},
+	{
+		"id": "osm-12023137809",
+		"name": "Kimm's grill",
+		"address": "Oslo",
+		"latitude": 59.9163909,
+		"longitude": 10.7156803,
+		"cuisines": [
+			"grill",
+			"korean"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 546,
+		"openingHours": "Monday: 11:00 AM – 12:00 AM; Tuesday: 11:00 AM – 12:00 AM; Wednesday: 11:00 AM – 4:00 AM; Thursday: 11:00 AM – 4:00 AM; Friday: 11:00 AM – 4:00 AM; Saturday: 12:00 PM – 4:00 AM; Sunday: 12:00 PM – 12:00 AM"
 	},
 	{
 		"id": "osm-11287405949",
@@ -3975,6 +6048,34 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.7,
 		"googleRatingCount": 27,
 		"openingHours": "Monday: Closed; Tuesday: 10:00 AM – 11:00 PM; Wednesday: 10:00 AM – 11:00 PM; Thursday: 10:00 AM – 11:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 11:00 AM – 11:00 PM; Sunday: 11:00 AM – 9:00 PM"
+	},
+	{
+		"id": "osm-8038199232",
+		"name": "Klosteret",
+		"address": "Oslo",
+		"latitude": 59.9181373,
+		"longitude": 10.7476331,
+		"cuisines": [
+			"european",
+			"french",
+			"nordic"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 676,
+		"openingHours": "Monday: Closed; Tuesday: 5:00 – 11:00 PM; Wednesday: 5:00 – 11:00 PM; Thursday: 5:00 – 11:00 PM; Friday: 5:00 – 11:30 PM; Saturday: 5:00 – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-262389185",
+		"name": "Koi Sushi",
+		"address": "Oslo",
+		"latitude": 59.8660162,
+		"longitude": 10.8094698,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 110,
+		"openingHours": "Monday: Closed; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-13394584934",
@@ -4058,6 +6159,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 10:00 AM – 10:00 PM; Tuesday: 10:00 AM – 10:00 PM; Wednesday: 10:00 AM – 10:00 PM; Thursday: 10:00 AM – 10:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 10:00 AM – 11:00 PM; Sunday: 10:00 AM – 10:00 PM"
 	},
 	{
+		"id": "osm-12921335312",
+		"name": "Kork",
+		"address": "Oslo",
+		"latitude": 59.9218185,
+		"longitude": 10.757501,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 101,
+		"openingHours": "Monday: Closed; Tuesday: 3:00 – 11:00 PM; Wednesday: 3:00 – 11:00 PM; Thursday: 3:00 – 11:00 PM; Friday: 3:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-11281480727",
 		"name": "Korndokki",
 		"address": "Oslo",
@@ -4084,6 +6198,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1267
 	},
 	{
+		"id": "osm-9858652255",
+		"name": "Kraft Restaurant",
+		"address": "Oslo",
+		"latitude": 59.904134,
+		"longitude": 10.789561,
+		"cuisines": [
+			"scandinavian",
+			"norwegian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 141,
+		"openingHours": "Monday: Closed; Tuesday: 4:30 – 11:00 PM; Wednesday: 4:30 – 11:00 PM; Thursday: 4:30 – 11:00 PM; Friday: 4:30 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-3594001713",
+		"name": "Krishnas Cuisine",
+		"address": "Oslo",
+		"latitude": 59.930321,
+		"longitude": 10.709721,
+		"cuisines": [
+			"indian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 298,
+		"openingHours": "Monday: 11:00 AM – 8:00 PM; Tuesday: 11:00 AM – 8:00 PM; Wednesday: 11:00 AM – 8:00 PM; Thursday: 11:00 AM – 8:00 PM; Friday: 11:00 AM – 8:00 PM; Saturday: 11:00 AM – 6:00 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-1929351073",
 		"name": "Kullt",
 		"address": "Oslo",
@@ -4096,6 +6237,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Tu 15:00-23:00; We-Th 15:00-01:00; Fr-Sa 15:00-03:00; Su off",
 		"googleRating": 4.1,
 		"googleRatingCount": 1834
+	},
+	{
+		"id": "osm-6564836685",
+		"name": "Kvadrat salat",
+		"address": "Oslo",
+		"latitude": 59.911295,
+		"longitude": 10.743454,
+		"cuisines": [
+			"salad"
+		],
+		"openingHours": "Mo-Fr 10:00-18:00",
+		"googleRating": 4.9,
+		"googleRatingCount": 100
+	},
+	{
+		"id": "osm-4540115464",
+		"name": "Kverneriet",
+		"address": "Oslo",
+		"latitude": 59.9291763,
+		"longitude": 10.714829,
+		"cuisines": [
+			"burger"
+		],
+		"openingHours": "Mo-Fr 11:00-23:00; Sa,Su 12:00-23:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 2263
 	},
 	{
 		"id": "osm-6007974685",
@@ -4163,6 +6330,34 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 28
 	},
 	{
+		"id": "osm-7064928299",
+		"name": "L'Oasis Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9195232,
+		"longitude": 10.7646334,
+		"cuisines": [
+			"middle_eastern",
+			"turkish",
+			"kebab"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 265,
+		"openingHours": "Monday: 10:00 AM – 12:00 AM; Tuesday: 10:00 AM – 12:00 AM; Wednesday: 10:00 AM – 12:00 AM; Thursday: 10:00 AM – 12:00 AM; Friday: 10:00 AM – 12:00 AM; Saturday: 11:00 AM – 12:00 AM; Sunday: 11:00 AM – 12:00 AM"
+	},
+	{
+		"id": "osm-12927973433",
+		"name": "La Famiglia",
+		"address": "Oslo",
+		"latitude": 59.9219939,
+		"longitude": 10.7522327,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 238,
+		"openingHours": "Monday: Closed; Tuesday: 10:00 AM – 8:00 PM; Wednesday: 10:00 AM – 8:00 PM; Thursday: 10:00 AM – 8:00 PM; Friday: 10:00 AM – 9:00 PM; Saturday: 10:00 AM – 9:00 PM; Sunday: 11:00 AM – 6:30 PM"
+	},
+	{
 		"id": "osm-10914437464",
 		"name": "La Mayor",
 		"address": "Oslo",
@@ -4174,6 +6369,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-We 17:00-22:00; Th-Fr 17:00-23:00; Sa 12:00-23:00",
 		"googleRating": 4.7,
 		"googleRatingCount": 296
+	},
+	{
+		"id": "osm-9152686318",
+		"name": "La Pinsa",
+		"address": "Oslo",
+		"latitude": 59.9467571,
+		"longitude": 10.621429,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 84,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: 3:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-33731404",
+		"name": "La Sangria",
+		"address": "Oslo",
+		"latitude": 59.918682,
+		"longitude": 10.73364,
+		"cuisines": [
+			"spanish"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 637,
+		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: 4:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-5322455423",
@@ -4190,6 +6412,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 637
 	},
 	{
+		"id": "osm-13114541540",
+		"name": "La Såda",
+		"address": "Oslo",
+		"latitude": 59.9279947,
+		"longitude": 10.7217526,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 246,
+		"openingHours": "Monday: 5:00 – 10:00 PM; Tuesday: 5:00 – 10:00 PM; Wednesday: 5:00 – 10:00 PM; Thursday: 5:00 – 11:00 PM; Friday: 5:00 – 11:00 PM; Saturday: 5:00 – 11:00 PM; Sunday: 5:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-1537546029",
 		"name": "La Villa",
 		"address": "Oslo",
@@ -4201,6 +6437,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 10:00-24:00",
 		"googleRating": 4.4,
 		"googleRatingCount": 862
+	},
+	{
+		"id": "osm-9084751780",
+		"name": "Laboratoriet",
+		"address": "Oslo",
+		"latitude": 59.9244497,
+		"longitude": 10.6740575,
+		"cuisines": [
+			"italian",
+			"pizza"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 238,
+		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 12:00 AM; Saturday: 11:00 AM – 12:00 AM; Sunday: 12:00 – 11:00 PM"
+	},
+	{
+		"id": "osm-896829160",
+		"name": "Ladegården Kro",
+		"address": "Oslo",
+		"latitude": 59.906276,
+		"longitude": 10.76764,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 16,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-13228358030",
@@ -4229,6 +6492,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-5528521918",
+		"name": "Lalibela",
+		"address": "Oslo",
+		"latitude": 59.917663,
+		"longitude": 10.750323,
+		"cuisines": [
+			"ethiopian"
+		],
+		"openingHours": "Su-Th 14:00-22:00; Fr,Sa 14:00-23:00",
+		"googleRating": 5,
+		"googleRatingCount": 1
+	},
+	{
 		"id": "osm-12108641654",
 		"name": "Lamberts",
 		"address": "Oslo",
@@ -4241,6 +6517,30 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 10:00-21:00; Sa 11:00-21:00; Su 13:00-21:00",
 		"googleRating": 4.6,
 		"googleRatingCount": 29
+	},
+	{
+		"id": "osm-154001891",
+		"name": "Lanternen",
+		"address": "Oslo",
+		"latitude": 59.907243,
+		"longitude": 10.6956895,
+		"cuisines": [
+			"seafood",
+			"norwegian"
+		]
+	},
+	{
+		"id": "osm-3277681019",
+		"name": "Larsen Restaurant & pub",
+		"address": "Oslo",
+		"latitude": 59.9297589,
+		"longitude": 10.7137965,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 832,
+		"openingHours": "Monday: 12:00 PM – 12:30 AM; Tuesday: 12:00 PM – 12:30 AM; Wednesday: 12:00 PM – 12:30 AM; Thursday: 12:00 PM – 12:30 AM; Friday: 12:00 PM – 12:30 AM; Saturday: 1:00 PM – 12:30 AM; Sunday: 1:00 – 11:00 PM"
 	},
 	{
 		"id": "osm-12656859401",
@@ -4256,6 +6556,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 171
 	},
 	{
+		"id": "osm-111830206",
+		"name": "Lawo terrasse",
+		"address": "Oslo",
+		"latitude": 59.9145388,
+		"longitude": 10.7353875,
+		"cuisines": [
+			"international",
+			"pizza"
+		],
+		"openingHours": "Mo-Sa 11:00-23:00+; Su 12:00-21:00+",
+		"googleRating": 3.5,
+		"googleRatingCount": 469
+	},
+	{
 		"id": "osm-383735732",
 		"name": "Le Benjamin",
 		"address": "Oslo",
@@ -4267,6 +6581,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.7,
 		"googleRatingCount": 865,
 		"openingHours": "Monday: Closed; Tuesday: 4:00 – 9:30 PM; Wednesday: 4:00 – 9:30 PM; Thursday: 4:00 – 9:30 PM; Friday: 4:00 – 9:30 PM; Saturday: 4:00 – 9:30 PM; Sunday: 4:00 – 9:30 PM"
+	},
+	{
+		"id": "osm-5868561445",
+		"name": "Le Manon",
+		"address": "Oslo",
+		"latitude": 59.9123378,
+		"longitude": 10.7191872,
+		"cuisines": [
+			"french"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 150,
+		"openingHours": "Monday: Closed; Tuesday: 6:00 – 11:30 PM; Wednesday: 6:00 – 11:30 PM; Thursday: 6:00 – 11:30 PM; Friday: 6:00 – 11:30 PM; Saturday: 12:30 – 3:00 PM, 6:30 – 11:30 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-12127487601",
@@ -4334,6 +6661,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 149
 	},
 	{
+		"id": "osm-12079845769",
+		"name": "Lett",
+		"address": "Oslo",
+		"latitude": 59.9121887,
+		"longitude": 10.740571,
+		"cuisines": [
+			"salad",
+			"juice"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 165,
+		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 7:00 PM; Saturday: 11:00 AM – 5:00 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-5094785554",
 		"name": "Lett & Mett",
 		"address": "Oslo",
@@ -4371,6 +6712,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4,
 		"googleRatingCount": 141,
 		"openingHours": "Monday: 2:00 – 10:00 PM; Tuesday: 2:00 – 10:00 PM; Wednesday: 2:00 – 10:00 PM; Thursday: 2:00 – 10:00 PM; Friday: 2:00 – 10:00 PM; Saturday: 2:00 – 10:00 PM; Sunday: 2:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-5091617739",
+		"name": "Lille Amerika",
+		"address": "Oslo",
+		"latitude": 59.9192997,
+		"longitude": 10.763829,
+		"cuisines": [
+			"american"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 885,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-13515804061",
@@ -4411,6 +6765,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 13:00-23:00; Fr-Su 13:00-00:00; Su 14:00-00:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 92
+	},
+	{
+		"id": "osm-9725495855",
+		"name": "Lille Ó",
+		"address": "Oslo",
+		"latitude": 59.9446224,
+		"longitude": 10.7711363,
+		"cuisines": [
+			"nordic"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 226,
+		"openingHours": "Monday: 12:00 – 10:00 PM; Tuesday: 11:00 AM – 12:00 AM; Wednesday: 11:00 AM – 12:00 AM; Thursday: 11:00 AM – 12:00 AM; Friday: 11:00 AM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-5316879861",
@@ -4454,6 +6821,59 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-12946955224",
+		"name": "Lilly’s Sushi",
+		"address": "Oslo",
+		"latitude": 59.9172488,
+		"longitude": 10.792305,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 33,
+		"openingHours": "Monday: 12:00 – 9:00 PM; Tuesday: 12:00 – 9:00 PM; Wednesday: 12:00 – 9:00 PM; Thursday: 12:00 – 9:00 PM; Friday: 12:00 – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-9931463110",
+		"name": "Liminal",
+		"address": "Oslo",
+		"latitude": 59.933186,
+		"longitude": 10.766989,
+		"cuisines": [
+			"nordic",
+			"scandinavian"
+		],
+		"openingHours": "We-Sa 17:00-22:00",
+		"googleRating": 4.7,
+		"googleRatingCount": 93
+	},
+	{
+		"id": "osm-13082348969",
+		"name": "Limón",
+		"address": "Oslo",
+		"latitude": 59.9214874,
+		"longitude": 10.7272609,
+		"cuisines": [
+			"peruvian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 199,
+		"openingHours": "Monday: 10:30 AM – 8:00 PM; Tuesday: 10:30 AM – 8:00 PM; Wednesday: 10:30 AM – 8:00 PM; Thursday: 10:30 AM – 8:00 PM; Friday: 10:30 AM – 8:00 PM; Saturday: 12:00 – 8:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-6239304697",
+		"name": "Lio's Cafe Bar",
+		"address": "Oslo",
+		"latitude": 59.927344,
+		"longitude": 10.764699,
+		"cuisines": [
+			"coffee"
+		],
+		"openingHours": "Tu-Fr 10:00-20:00, Sa-Su 11:00-17:00",
+		"googleRating": 4.8,
+		"googleRatingCount": 218
+	},
+	{
 		"id": "osm-2045441425",
 		"name": "Listen to Baljit",
 		"address": "Oslo",
@@ -4465,6 +6885,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 14:00-23:00; Sa 13:00-23:00; Su 14:00-22:00",
 		"googleRating": 4.2,
 		"googleRatingCount": 1193
+	},
+	{
+		"id": "osm-1376727145",
+		"name": "Little Italy",
+		"address": "Oslo",
+		"latitude": 59.9425916,
+		"longitude": 10.7045679,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 124,
+		"openingHours": "Monday: Closed; Tuesday: 2:00 – 8:30 PM; Wednesday: 2:00 – 8:30 PM; Thursday: 2:00 – 8:30 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 8:30 PM"
 	},
 	{
 		"id": "osm-392057322",
@@ -4506,6 +6939,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 2:00 – 11:00 PM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-12888441172",
+		"name": "Lofthus Samvirkelag",
+		"address": "Oslo",
+		"latitude": 59.943969,
+		"longitude": 10.7325963,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "We-Su 15:00-22:00",
+		"googleRating": 4.7,
+		"googleRatingCount": 227
+	},
+	{
 		"id": "osm-3549921714",
 		"name": "Lofthus Samvirkelag Apostrophe",
 		"address": "Oslo",
@@ -4543,6 +6989,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo 11:00-01:00; Tu-Sa 11:00-03:30; Su 12:00-01:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 3537
+	},
+	{
+		"id": "osm-939102160",
+		"name": "Los Tacos",
+		"address": "Oslo",
+		"latitude": 59.9276208,
+		"longitude": 10.7512501,
+		"cuisines": [
+			"mexican",
+			"tacos"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 714,
+		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 3:30 AM; Saturday: 11:00 AM – 3:30 AM; Sunday: 11:00 AM – 11:00 PM"
 	},
 	{
 		"id": "osm-1932777090",
@@ -4662,6 +7122,89 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 104
 	},
 	{
+		"id": "osm-3441434866",
+		"name": "Louise Restaurant & Bar",
+		"address": "Oslo",
+		"latitude": 59.9098258,
+		"longitude": 10.7271608,
+		"cuisines": [
+			"seafood",
+			"norwegian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 4859
+	},
+	{
+		"id": "osm-10969326102",
+		"name": "Love Tea & Sushi",
+		"address": "Oslo",
+		"latitude": 59.923384,
+		"longitude": 10.7513001,
+		"cuisines": [
+			"sushi",
+			"tea"
+		],
+		"googleRating": 3.6,
+		"googleRatingCount": 78,
+		"openingHours": "Monday: 10:00 AM – 8:00 PM; Tuesday: 10:00 AM – 8:00 PM; Wednesday: 10:00 AM – 8:00 PM; Thursday: 10:00 AM – 8:00 PM; Friday: 10:00 AM – 8:00 PM; Saturday: 12:00 – 8:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-13094297535",
+		"name": "Ludo Kjøkken",
+		"address": "Oslo",
+		"latitude": 59.9265965,
+		"longitude": 10.7235955,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 301,
+		"openingHours": "Monday: 4:00 – 11:00 PM; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 2:00 – 11:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-12980653796",
+		"name": "Lulu",
+		"address": "Oslo",
+		"latitude": 59.9148286,
+		"longitude": 10.7507981,
+		"cuisines": [
+			"asian_fusion",
+			"japanese"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 427,
+		"openingHours": "Monday: Closed; Tuesday: 5:00 PM – 12:00 AM; Wednesday: 5:00 PM – 12:00 AM; Thursday: 5:00 PM – 12:00 AM; Friday: 5:00 PM – 1:00 AM; Saturday: 5:00 PM – 1:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-13005919002",
+		"name": "Lutlaget",
+		"address": "Oslo",
+		"latitude": 59.9058498,
+		"longitude": 10.7597217,
+		"cuisines": [
+			"bistro",
+			"french",
+			"nordic"
+		],
+		"openingHours": "Mo-Sa 09:00-00:00; Su 09:00-18:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 303
+	},
+	{
+		"id": "osm-12875035977",
+		"name": "Løkka Bar & Kjøkken",
+		"address": "Oslo",
+		"latitude": 59.9271309,
+		"longitude": 10.761273,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 113,
+		"openingHours": "Monday: 2:00 PM – 12:30 AM; Tuesday: 2:00 PM – 12:30 AM; Wednesday: 2:00 PM – 12:30 AM; Thursday: 2:00 PM – 12:30 AM; Friday: 2:00 PM – 3:00 AM; Saturday: 12:00 PM – 3:00 AM; Sunday: 12:00 PM – 12:30 AM"
+	},
+	{
 		"id": "osm-12723792861",
 		"name": "Løkka Sushi",
 		"address": "Oslo",
@@ -4703,6 +7246,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 3:00 – 9:00 PM; Wednesday: 3:00 – 9:00 PM; Thursday: 3:00 – 9:00 PM; Friday: 3:00 – 9:00 PM; Saturday: 11:00 AM – 8:00 PM; Sunday: 10:00 AM – 10:00 PM"
 	},
 	{
+		"id": "osm-9490916509",
+		"name": "Mac + Cheese Bar",
+		"address": "Oslo",
+		"latitude": 59.9285173,
+		"longitude": 10.7631503,
+		"cuisines": [
+			"american"
+		],
+		"openingHours": "We-Fr 15:00-22:00; Sa-Su 11:00-22:00",
+		"googleRating": 3.3,
+		"googleRatingCount": 112
+	},
+	{
 		"id": "osm-11704386367",
 		"name": "Mad Love",
 		"address": "Oslo",
@@ -4729,6 +7285,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: 4:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-5652445255",
+		"name": "Madonna",
+		"address": "Oslo",
+		"latitude": 59.907213,
+		"longitude": 10.756059,
+		"cuisines": [
+			"bistro",
+			"international"
+		],
+		"openingHours": "Mo-Th 16:00-23:00; Fr-Sa 12:00-24:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 100
+	},
+	{
+		"id": "osm-8044390472",
+		"name": "Madserud gård",
+		"address": "Oslo",
+		"latitude": 59.9236777,
+		"longitude": 10.6947586,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 5,
+		"googleRatingCount": 7,
+		"openingHours": "Monday: 8:00 AM – 4:00 PM; Tuesday: 8:00 AM – 4:00 PM; Wednesday: 8:00 AM – 4:00 PM; Thursday: 8:00 AM – 4:00 PM; Friday: 8:00 AM – 4:00 PM; Saturday: Closed; Sunday: Closed"
+	},
+	{
+		"id": "osm-7576747592",
+		"name": "Magic Spoon",
+		"address": "Oslo",
+		"latitude": 59.9359478,
+		"longitude": 10.7624058,
+		"cuisines": [
+			"pizza",
+			"burger",
+			"fast_food"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 13
+	},
+	{
 		"id": "osm-34693421",
 		"name": "Mahayana Asian Dining",
 		"address": "Oslo",
@@ -4753,6 +7350,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4,
 		"googleRatingCount": 264,
 		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 12:00 – 9:00 PM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-13051828132",
+		"name": "Maks Mukaram",
+		"address": "Oslo",
+		"latitude": 59.9142205,
+		"longitude": 10.7631101,
+		"cuisines": [
+			"middle_eastern"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 7,
+		"openingHours": "Monday: 10:00 AM – 11:00 PM; Tuesday: 10:00 AM – 11:00 PM; Wednesday: 10:00 AM – 11:00 PM; Thursday: 10:00 AM – 11:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 10:00 AM – 11:00 PM; Sunday: 10:00 AM – 11:00 PM"
 	},
 	{
 		"id": "osm-355320757",
@@ -4809,6 +7419,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1555
 	},
 	{
+		"id": "osm-310780987",
+		"name": "Markveien Mat & Vinhus",
+		"address": "Oslo",
+		"latitude": 59.9197894,
+		"longitude": 10.7572411,
+		"cuisines": [
+			"wine",
+			"norwegian"
+		],
+		"openingHours": "Tu-Sa 16:00-24:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 365
+	},
+	{
+		"id": "osm-4569056090",
+		"name": "Marmaris",
+		"address": "Oslo",
+		"latitude": 59.9154732,
+		"longitude": 10.7555983,
+		"cuisines": [
+			"turkish"
+		],
+		"openingHours": "Mo-Sa 11:00-03:30, Su 12:00-03:30",
+		"googleRating": 3.9,
+		"googleRatingCount": 322
+	},
+	{
 		"id": "osm-10858331890",
 		"name": "Masala politics",
 		"address": "Oslo",
@@ -4848,6 +7485,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 70
 	},
 	{
+		"id": "osm-1795590076",
+		"name": "Mat&Mer",
+		"address": "Oslo",
+		"latitude": 59.940022,
+		"longitude": 10.75897,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"openingHours": "Mo-Tu 11:00-22:30; Fr-Sa 11:00-23:30; Su 11:00-21:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 254
+	},
+	{
 		"id": "osm-315233909",
 		"name": "Max",
 		"address": "Oslo",
@@ -4872,6 +7523,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th,Su 10:00-02:00; Fr-Sa 10:00-17:00",
 		"googleRating": 3.7,
 		"googleRatingCount": 4149
+	},
+	{
+		"id": "osm-12002778554",
+		"name": "Maximus Trattoria",
+		"address": "Oslo",
+		"latitude": 59.9297539,
+		"longitude": 10.7096284,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 132,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 3:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-1523679603",
@@ -5109,6 +7773,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 656
 	},
 	{
+		"id": "osm-12901874954",
+		"name": "Melboden Pizzeria",
+		"address": "Oslo",
+		"latitude": 59.9250049,
+		"longitude": 10.7428318,
+		"cuisines": [
+			"pizza"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 260,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 9:30 PM; Wednesday: 4:00 – 9:30 PM; Thursday: 4:00 – 9:30 PM; Friday: 4:00 – 9:30 PM; Saturday: 2:00 – 9:30 PM; Sunday: 2:00 – 7:30 PM"
+	},
+	{
 		"id": "osm-7864963685",
 		"name": "Mesob Restaurant",
 		"address": "Oslo",
@@ -5121,6 +7798,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.7,
 		"googleRatingCount": 501,
 		"openingHours": "Monday: 1:00 – 10:00 PM; Tuesday: 1:00 – 10:00 PM; Wednesday: 1:00 – 10:00 PM; Thursday: 1:00 – 10:00 PM; Friday: 1:00 – 10:00 PM; Saturday: 1:00 – 10:00 PM; Sunday: 1:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-973843495",
+		"name": "Michaels",
+		"address": "Oslo",
+		"latitude": 59.92233,
+		"longitude": 10.715447,
+		"cuisines": [
+			"mediterranean",
+			"grill"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 263,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 5:00 – 11:00 PM; Thursday: 5:00 PM – 12:00 AM; Friday: 4:00 PM – 1:00 AM; Saturday: 12:00 PM – 1:00 AM; Sunday: Closed"
 	},
 	{
 		"id": "osm-12728383803",
@@ -5214,6 +7905,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 278
 	},
 	{
+		"id": "osm-1401049510",
+		"name": "Mix",
+		"address": "Oslo",
+		"latitude": 59.9269704,
+		"longitude": 10.8650308,
+		"cuisines": [
+			"kebab",
+			"pizza",
+			"fast_food"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 103,
+		"openingHours": "Monday: 9:00 AM – 10:00 PM; Tuesday: 9:00 AM – 10:00 PM; Wednesday: 9:00 AM – 10:00 PM; Thursday: 9:00 AM – 10:00 PM; Friday: 9:00 AM – 10:00 PM; Saturday: 10:00 AM – 10:00 PM; Sunday: 9:00 AM – 10:00 PM"
+	},
+	{
 		"id": "osm-2348123125",
 		"name": "Mm Sushi",
 		"address": "Oslo",
@@ -5264,6 +7970,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 16:00-22:00; Fr 16:00-23:00; Sa 13:00-23:00; Su 13:00-22:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 1154
+	},
+	{
+		"id": "osm-9992413685",
+		"name": "Mr Bowl",
+		"address": "Oslo",
+		"latitude": 59.9137723,
+		"longitude": 10.7497238,
+		"cuisines": [
+			"asian",
+			"chinese"
+		],
+		"openingHours": "Mo-Fr 11:00-21:00; Sa 12:00-21:00; Su 13:00-21:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 928
 	},
 	{
 		"id": "osm-13464250802",
@@ -5358,6 +8078,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 846
 	},
 	{
+		"id": "osm-6136462485",
+		"name": "Maaltid",
+		"address": "Oslo",
+		"latitude": 59.914309,
+		"longitude": 10.771528,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "mo off; Tu-fr 16:00-23:30; Sa 12:00-00:30; Su 12:00-17:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 91
+	},
+	{
+		"id": "osm-5237850124",
+		"name": "NAB kitchen and bar",
+		"address": "Oslo",
+		"latitude": 59.9295729,
+		"longitude": 10.7119747,
+		"cuisines": [
+			"asian",
+			"sushi",
+			"japanese"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 426,
+		"openingHours": "Monday: 2:00 – 10:00 PM; Tuesday: 2:00 – 10:00 PM; Wednesday: 2:00 – 10:00 PM; Thursday: 2:00 – 10:00 PM; Friday: 2:00 – 10:00 PM; Saturday: 2:00 – 10:00 PM; Sunday: 2:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-12980653795",
+		"name": "Nam",
+		"address": "Oslo",
+		"latitude": 59.9149761,
+		"longitude": 10.7504072,
+		"cuisines": [
+			"vietnamese"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 94,
+		"openingHours": "Monday: 11:00 AM – 8:00 PM; Tuesday: 11:00 AM – 8:00 PM; Wednesday: 11:00 AM – 8:00 PM; Thursday: 11:00 AM – 8:00 PM; Friday: 11:00 AM – 8:00 PM; Saturday: 12:00 – 8:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
 		"id": "osm-10969326101",
 		"name": "Nam Fah",
 		"address": "Oslo",
@@ -5409,6 +8170,45 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.6,
 		"googleRatingCount": 279,
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-10178372383",
+		"name": "Nedre Foss Gård",
+		"address": "Oslo",
+		"latitude": 59.9221998,
+		"longitude": 10.7538757,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 1149,
+		"openingHours": "Monday: 12:00 – 9:30 PM; Tuesday: 12:00 – 9:30 PM; Wednesday: 12:00 – 9:30 PM; Thursday: 12:00 – 9:30 PM; Friday: 12:00 – 9:30 PM; Saturday: 12:00 – 9:30 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-9775372796",
+		"name": "Nektar Vinbar",
+		"address": "Oslo",
+		"latitude": 59.92041,
+		"longitude": 10.74914,
+		"cuisines": [
+			"wine"
+		],
+		"openingHours": "Tu-Th 17:00-00:00; Fr-Sa 17:00-00:30",
+		"googleRating": 4.8,
+		"googleRatingCount": 262
+	},
+	{
+		"id": "osm-12885926161",
+		"name": "Nepal House",
+		"address": "Oslo",
+		"latitude": 59.9294704,
+		"longitude": 10.7608434,
+		"cuisines": [
+			"nepalese"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 162,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 3:00 – 9:30 PM"
 	},
 	{
 		"id": "osm-5094785574",
@@ -5488,6 +8288,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 54
 	},
 	{
+		"id": "osm-12974818630",
+		"name": "Nils Bar & Cafe",
+		"address": "Oslo",
+		"latitude": 59.9106897,
+		"longitude": 10.7467687,
+		"cuisines": [
+			"coffee"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 118,
+		"openingHours": "Monday: 1:00 PM – 3:30 AM; Tuesday: 1:00 PM – 3:30 AM; Wednesday: 1:00 PM – 3:30 AM; Thursday: 1:00 PM – 3:30 AM; Friday: 1:00 PM – 3:30 AM; Saturday: 1:00 PM – 3:30 AM; Sunday: 2:00 PM – 3:30 AM"
+	},
+	{
 		"id": "osm-9795309703",
 		"name": "Njokobok",
 		"address": "Oslo",
@@ -5501,6 +8314,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 364
 	},
 	{
+		"id": "osm-5115459127",
+		"name": "No Stress",
+		"address": "Oslo",
+		"latitude": 59.9160583,
+		"longitude": 10.7522431,
+		"cuisines": [
+			"international"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 173,
+		"openingHours": "Monday: 5:00 PM – 2:00 AM; Tuesday: 5:00 PM – 2:00 AM; Wednesday: 5:00 PM – 2:00 AM; Thursday: 5:00 PM – 2:00 AM; Friday: 2:00 PM – 3:00 AM; Saturday: 2:00 PM – 3:00 AM; Sunday: 5:00 PM – 2:00 AM"
+	},
+	{
 		"id": "osm-7778766116",
 		"name": "Noa Asia",
 		"address": "Oslo",
@@ -5512,6 +8338,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.1,
 		"googleRatingCount": 111,
 		"openingHours": "Monday: 1:00 – 9:00 PM; Tuesday: 1:00 – 9:00 PM; Wednesday: 1:00 – 9:00 PM; Thursday: 1:00 – 9:00 PM; Friday: 1:00 – 9:00 PM; Saturday: 1:00 – 9:00 PM; Sunday: 1:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-1185254652",
+		"name": "Noahs Ark",
+		"address": "Oslo",
+		"latitude": 59.927287,
+		"longitude": 10.7587225,
+		"cuisines": [
+			"turkish",
+			"pizza"
+		],
+		"openingHours": "Mo-Sa 10:00-01:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 664
 	},
 	{
 		"id": "osm-3729807525",
@@ -5550,6 +8390,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 4.6,
 		"googleRatingCount": 222
+	},
+	{
+		"id": "osm-4775895395",
+		"name": "Nordvegan",
+		"address": "Oslo",
+		"latitude": 59.9156329,
+		"longitude": 10.7379382,
+		"cuisines": [
+			"international",
+			"salad"
+		],
+		"openingHours": "Mo-Th 11:00-20:00; Fr 11:00-21:00; Sa 11:30-21:00; Su 12:00-20:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 1908
 	},
 	{
 		"id": "osm-5290156121",
@@ -5607,6 +8461,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 108
 	},
 	{
+		"id": "osm-7118275596",
+		"name": "O’learys",
+		"address": "Oslo",
+		"latitude": 59.9110674,
+		"longitude": 10.7524046,
+		"cuisines": [
+			"american"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 612,
+		"openingHours": "Monday: 11:00 AM – 12:00 AM; Tuesday: 11:00 AM – 12:00 AM; Wednesday: 11:00 AM – 12:00 AM; Thursday: 11:00 AM – 12:00 AM; Friday: 11:00 AM – 1:00 AM; Saturday: 12:00 PM – 1:00 AM; Sunday: 12:00 PM – 12:00 AM"
+	},
+	{
+		"id": "osm-10969326103",
+		"name": "Oasis Restaurant og Bar",
+		"address": "Oslo",
+		"latitude": 59.9232826,
+		"longitude": 10.751316,
+		"cuisines": [
+			"arab",
+			"middle_eastern",
+			"kebab"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 63
+	},
+	{
 		"id": "osm-12921217800",
 		"name": "Obento Box",
 		"address": "Oslo",
@@ -5618,6 +8499,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.7,
 		"googleRatingCount": 30,
 		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 8:00 PM; Wednesday: 11:00 AM – 8:00 PM; Thursday: 11:00 AM – 8:00 PM; Friday: 11:00 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
+	},
+	{
+		"id": "osm-12621090758",
+		"name": "Ole-Johan spiseri",
+		"address": "Oslo",
+		"latitude": 59.9430608,
+		"longitude": 10.7174387,
+		"cuisines": [
+			"buffet",
+			"norwegian"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 29,
+		"openingHours": "Monday: 5:00 AM – 12:00 AM; Tuesday: 5:00 AM – 12:00 AM; Wednesday: 5:00 AM – 12:00 AM; Thursday: 5:00 AM – 12:00 AM; Friday: 5:00 AM – 12:00 AM; Saturday: 5:00 AM – 12:00 AM; Sunday: 5:00 AM – 12:00 AM"
 	},
 	{
 		"id": "osm-1318750168",
@@ -5674,6 +8569,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 12:00 AM; Saturday: 11:00 AM – 12:00 AM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-9281591117",
+		"name": "Olivia",
+		"address": "Oslo",
+		"latitude": 59.9131523,
+		"longitude": 10.7415803,
+		"cuisines": [
+			"italian"
+		],
+		"openingHours": "Mo-Th 11:00-23:00, Fr,Sa 11:00-24:00, Su 12:00-22:30",
+		"googleRating": 4.3,
+		"googleRatingCount": 2163
+	},
+	{
+		"id": "osm-3664306363",
+		"name": "Olympen",
+		"address": "Oslo",
+		"latitude": 59.912256,
+		"longitude": 10.764388,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "Mo 11:00-24:00; Tu-Th 11:00-01:00; Fr 11:00-03:00; Sa 12:00-03:00; Su 12:00-24:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 1009
+	},
+	{
 		"id": "osm-6379363052",
 		"name": "Oppsal Sushi-Thai",
 		"address": "Oslo",
@@ -5714,6 +8635,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 714
 	},
 	{
+		"id": "osm-12241354601",
+		"name": "OSLOSLO",
+		"address": "Oslo",
+		"latitude": 59.9149262,
+		"longitude": 10.7480315,
+		"cuisines": [
+			"bistro",
+			"nordic"
+		],
+		"openingHours": "Tu-Sa 17:00-00:00",
+		"googleRating": 4.9,
+		"googleRatingCount": 57
+	},
+	{
 		"id": "osm-2790201984",
 		"name": "Ostebutikken",
 		"address": "Oslo",
@@ -5738,6 +8673,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.5,
 		"googleRatingCount": 95,
 		"openingHours": "Monday: 4:00 – 9:00 PM; Tuesday: 4:00 – 11:00 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 4:00 – 11:00 PM; Sunday: 4:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-4340314913",
+		"name": "Osteria Della Nonna",
+		"address": "Oslo",
+		"latitude": 59.9155116,
+		"longitude": 10.740515,
+		"cuisines": [
+			"italian"
+		],
+		"openingHours": "Mo-Sa 15:00-20:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 234
 	},
 	{
 		"id": "osm-10030495113",
@@ -5777,6 +8725,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 11:00-20:00; Sa-Su 12:00-20:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 48
+	},
+	{
+		"id": "osm-2284940360",
+		"name": "Palace Grill",
+		"address": "Oslo",
+		"latitude": 59.914347,
+		"longitude": 10.720532,
+		"cuisines": [
+			"french",
+			"seafood",
+			"norwegian"
+		],
+		"openingHours": "Mo-Su 15:00+",
+		"googleRating": 4.6,
+		"googleRatingCount": 294
 	},
 	{
 		"id": "osm-12820420444",
@@ -5832,6 +8795,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 483
 	},
 	{
+		"id": "osm-13009650940",
+		"name": "Panu",
+		"address": "Oslo",
+		"latitude": 59.9179746,
+		"longitude": 10.7406651,
+		"cuisines": [
+			"asian_fusion",
+			"japanese",
+			"thai"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 139,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 5:30 PM – 12:00 AM; Thursday: 5:30 PM – 12:00 AM; Friday: 5:30 PM – 1:00 AM; Saturday: 5:30 PM – 1:00 AM; Sunday: Closed"
+	},
+	{
 		"id": "osm-10204149141",
 		"name": "Pao Bar & BBQ",
 		"address": "Oslo",
@@ -5871,6 +8849,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 10:00 PM"
 	},
 	{
+		"id": "osm-116975773",
+		"name": "Park 29",
+		"address": "Oslo",
+		"latitude": 59.9204208,
+		"longitude": 10.7272983,
+		"cuisines": [
+			"french",
+			"italian",
+			"european"
+		],
+		"openingHours": "Mo-Thu 16:00-24:00; Sa 13:00-17:00,18:00-24:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 325
+	},
+	{
 		"id": "osm-10911462670",
 		"name": "Parthenon - Pizza & Grillbar",
 		"address": "Oslo",
@@ -5903,6 +8896,34 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1085
 	},
 	{
+		"id": "osm-743380823",
+		"name": "Pascal Greek & Grill",
+		"address": "Oslo",
+		"latitude": 59.9443191,
+		"longitude": 10.7861897,
+		"cuisines": [
+			"mediterranean",
+			"grill"
+		],
+		"openingHours": "Tu-Fr 14:30-21:00; Sa,Su 13:30-21:00",
+		"googleRating": 4.7,
+		"googleRatingCount": 436
+	},
+	{
+		"id": "osm-2597384197",
+		"name": "Pastis Bistrobar",
+		"address": "Oslo",
+		"latitude": 59.9101314,
+		"longitude": 10.7278442,
+		"cuisines": [
+			"french",
+			"bistro"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 2539,
+		"openingHours": "Monday: 8:00 AM – 10:00 PM; Tuesday: 8:00 AM – 10:00 PM; Wednesday: 8:00 AM – 10:00 PM; Thursday: 8:00 AM – 10:30 PM; Friday: 8:00 AM – 10:30 PM; Saturday: 9:00 AM – 10:30 PM; Sunday: 9:00 AM – 10:00 PM"
+	},
+	{
 		"id": "osm-13237974005",
 		"name": "Pele Pele",
 		"address": "Oslo",
@@ -5927,6 +8948,35 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 07:30-01:00; Fr 07:30-03:00; Sa 09:00-03:00; Su 10:00-19:00",
 		"googleRating": 4.3,
 		"googleRatingCount": 987
+	},
+	{
+		"id": "osm-12967017793",
+		"name": "Peloton Skøyen",
+		"address": "Oslo",
+		"latitude": 59.9214764,
+		"longitude": 10.6880708,
+		"cuisines": [
+			"italian",
+			"pizza",
+			"pasta"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 130,
+		"openingHours": "Monday: 4:00 – 9:00 PM; Tuesday: 11:00 AM – 10:30 PM; Wednesday: 11:00 AM – 10:30 PM; Thursday: 11:00 AM – 11:30 PM; Friday: 11:00 AM – 11:30 PM; Saturday: 12:00 – 10:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-4743370532",
+		"name": "People's",
+		"address": "Oslo",
+		"latitude": 59.91559,
+		"longitude": 10.7516106,
+		"cuisines": [
+			"burger",
+			"coffee"
+		],
+		"openingHours": "Mo-We 11:00-01:00; Th-Sa 11:00-03:30; Su 12:00-01:00",
+		"googleRating": 4,
+		"googleRatingCount": 817
 	},
 	{
 		"id": "osm-428063057",
@@ -6084,6 +9134,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 292
 	},
 	{
+		"id": "osm-2031417852",
+		"name": "Petrus Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9234496,
+		"longitude": 10.7658543,
+		"cuisines": [
+			"norwegian",
+			"pizza",
+			"burger"
+		],
+		"openingHours": "Mo-Fr 14:00-01:00; Sa,Su 12:00-01:00",
+		"googleRating": 4.3,
+		"googleRatingCount": 235
+	},
+	{
 		"id": "osm-5091617744",
 		"name": "Phuket",
 		"address": "Oslo",
@@ -6097,6 +9162,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 3:00 PM – 12:00 AM; Tuesday: Closed; Wednesday: 3:00 PM – 12:00 AM; Thursday: 3:00 PM – 12:00 AM; Friday: 3:00 PM – 1:00 AM; Saturday: 3:00 PM – 1:00 AM; Sunday: 3:00 PM – 1:00 AM"
 	},
 	{
+		"id": "osm-12461271909",
+		"name": "Piazza Italia",
+		"address": "Oslo",
+		"latitude": 59.9222978,
+		"longitude": 10.7043437,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 233,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 9:00 PM; Wednesday: 4:00 – 9:00 PM; Thursday: 4:00 – 9:00 PM; Friday: 4:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 4:00 – 9:00 PM"
+	},
+	{
 		"id": "osm-2362920528",
 		"name": "Picazzo Pizza",
 		"address": "Oslo",
@@ -6108,6 +9186,48 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.7,
 		"googleRatingCount": 613,
 		"openingHours": "Monday: 1:00 PM – 3:00 AM; Tuesday: 1:00 PM – 3:00 AM; Wednesday: 1:00 PM – 3:00 AM; Thursday: Closed; Friday: 2:00 PM – 4:00 AM; Saturday: 1:00 PM – 4:00 AM; Sunday: 1:00 PM – 3:00 AM"
+	},
+	{
+		"id": "osm-11949532061",
+		"name": "Pilestredet Parkservering",
+		"address": "Oslo",
+		"latitude": 59.9200474,
+		"longitude": 10.7392144,
+		"cuisines": [
+			"norwegian",
+			"european"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 315,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 11:00 PM; Friday: 3:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-3839398079",
+		"name": "Pincho Nation",
+		"address": "Oslo",
+		"latitude": 59.9149945,
+		"longitude": 10.7394138,
+		"cuisines": [
+			"tapas",
+			"spanish"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 1692,
+		"openingHours": "Monday: 2:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 2:00 PM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-7118179978",
+		"name": "Pincho Nation",
+		"address": "Oslo",
+		"latitude": 59.9107694,
+		"longitude": 10.748926,
+		"cuisines": [
+			"tapas",
+			"spanish"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 1692,
+		"openingHours": "Monday: 2:00 – 11:00 PM; Tuesday: 2:00 – 11:00 PM; Wednesday: 2:00 – 11:00 PM; Thursday: 2:00 – 11:00 PM; Friday: 2:00 PM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-181344678",
@@ -6137,6 +9257,31 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 865
 	},
 	{
+		"id": "osm-10941899434",
+		"name": "Piren",
+		"address": "Oslo",
+		"latitude": 59.9101093,
+		"longitude": 10.7329356,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		]
+	},
+	{
+		"id": "osm-9178261499",
+		"name": "Pizza & kina expressen",
+		"address": "Oslo",
+		"latitude": 59.9400653,
+		"longitude": 10.6246586,
+		"cuisines": [
+			"pizza",
+			"chinese"
+		],
+		"googleRating": 3.8,
+		"googleRatingCount": 135,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 2:00 – 8:00 PM; Thursday: 2:00 – 8:00 PM; Friday: 2:00 – 8:00 PM; Saturday: 2:00 – 8:00 PM; Sunday: 2:00 – 8:00 PM"
+	},
+	{
 		"id": "osm-2356664775",
 		"name": "Pizza & Kina Expressen",
 		"address": "Oslo",
@@ -6161,6 +9306,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 4.1,
 		"googleRatingCount": 221
+	},
+	{
+		"id": "osm-973881284",
+		"name": "Pizza da Mimmo",
+		"address": "Oslo",
+		"latitude": 59.9163984,
+		"longitude": 10.7165911,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"openingHours": "Tu,We 16:00-22:00; Th 16:00-23:00; Fr,Sa 15:00-23:00; Su 15:00-22:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 492
+	},
+	{
+		"id": "osm-9876448913",
+		"name": "Pizza Palermo",
+		"address": "Oslo",
+		"latitude": 59.9472157,
+		"longitude": 10.6432782,
+		"cuisines": [
+			"pizza"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 118,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 12:00 – 10:00 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-1796704819",
@@ -6465,6 +9637,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 591
 	},
 	{
+		"id": "osm-1520490188",
+		"name": "Planet Bollywood Resturant",
+		"address": "Oslo",
+		"latitude": 59.923151,
+		"longitude": 10.740715,
+		"cuisines": [
+			"indian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 515,
+		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 11:00 AM – 9:00 PM"
+	},
+	{
 		"id": "osm-7206938625",
 		"name": "Ploy's Thai Mat",
 		"address": "Oslo",
@@ -6504,6 +9689,34 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 8:30 PM; Tuesday: 2:00 – 8:30 PM; Wednesday: 2:00 – 8:30 PM; Thursday: 2:00 – 8:30 PM; Friday: 2:00 – 8:30 PM; Saturday: 1:00 – 8:30 PM; Sunday: 1:00 – 8:30 PM"
 	},
 	{
+		"id": "osm-2045411162",
+		"name": "Posthallen",
+		"address": "Oslo",
+		"latitude": 59.91073,
+		"longitude": 10.745428,
+		"cuisines": [
+			"steak_house",
+			"international"
+		],
+		"openingHours": "Mo-Fr 11:00-24:00; Sa 12:30-24:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 318
+	},
+	{
+		"id": "osm-10692882478",
+		"name": "Potetbaker'n",
+		"address": "Oslo",
+		"latitude": 59.9187736,
+		"longitude": 10.75957,
+		"cuisines": [
+			"fast_food",
+			"norwegian"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 21,
+		"openingHours": "Monday: 11:00 AM – 1:00 AM; Tuesday: 11:00 AM – 1:00 AM; Wednesday: 11:00 AM – 1:00 AM; Thursday: 11:00 AM – 4:00 AM; Friday: 11:00 AM – 4:00 AM; Saturday: 11:00 AM – 4:00 AM; Sunday: 11:00 AM – 1:00 AM"
+	},
+	{
 		"id": "osm-992757272",
 		"name": "Prima Fila",
 		"address": "Oslo",
@@ -6515,6 +9728,35 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 2122,
 		"openingHours": "Monday: 12:00 – 10:00 PM; Tuesday: 12:00 – 10:00 PM; Wednesday: 12:00 – 10:30 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:30 PM; Saturday: 12:00 – 11:30 PM; Sunday: 3:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-2931015401",
+		"name": "Prince lunchbar",
+		"address": "Oslo",
+		"latitude": 59.9109919,
+		"longitude": 10.7446288,
+		"cuisines": [
+			"fast_food",
+			"sandwich",
+			"kebab"
+		],
+		"openingHours": "Mo-Fr 08:00-20:00; Sa 10:00-20:00; Su 12:00-17:00",
+		"googleRating": 4,
+		"googleRatingCount": 222
+	},
+	{
+		"id": "osm-12669709317",
+		"name": "Punjab Masala",
+		"address": "Oslo",
+		"latitude": 59.928933,
+		"longitude": 10.7774308,
+		"cuisines": [
+			"indian",
+			"pakistani"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 533,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-3650497116",
@@ -6554,6 +9796,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.3,
 		"googleRatingCount": 640,
 		"openingHours": "Monday: 1:00 PM – 3:00 AM; Tuesday: 1:00 PM – 3:00 AM; Wednesday: 1:00 PM – 3:00 AM; Thursday: 1:00 PM – 3:00 AM; Friday: 1:00 PM – 3:00 AM; Saturday: 1:00 PM – 3:00 AM; Sunday: 1:00 PM – 3:00 AM"
+	},
+	{
+		"id": "osm-9177298278",
+		"name": "Qui",
+		"address": "Oslo",
+		"latitude": 59.9215473,
+		"longitude": 10.6784739,
+		"cuisines": [
+			"italian",
+			"pizza",
+			"pasta"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 600,
+		"openingHours": "Monday: 11:00 AM – 8:30 PM; Tuesday: 11:00 AM – 9:30 PM; Wednesday: 11:00 AM – 9:30 PM; Thursday: 11:00 AM – 9:30 PM; Friday: 11:00 AM – 9:30 PM; Saturday: 12:00 – 9:30 PM; Sunday: 12:00 – 8:30 PM"
 	},
 	{
 		"id": "osm-12736825842",
@@ -6634,6 +9891,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 254
 	},
 	{
+		"id": "osm-1261438446",
+		"name": "Rendez-vous kro",
+		"address": "Oslo",
+		"latitude": 59.935062,
+		"longitude": 10.7802943,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 889,
+		"openingHours": "Monday: 10:30 AM – 9:00 PM; Tuesday: 10:30 AM – 9:00 PM; Wednesday: 10:30 AM – 10:00 PM; Thursday: 9:30 AM – 10:00 PM; Friday: 10:30 AM – 10:00 PM; Saturday: 11:30 AM – 10:00 PM; Sunday: 11:30 AM – 9:00 PM"
+	},
+	{
 		"id": "osm-9720937317",
 		"name": "Rent mel",
 		"address": "Oslo",
@@ -6647,6 +9917,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 591
 	},
 	{
+		"id": "osm-5865849593",
+		"name": "Rentimel",
+		"address": "Oslo",
+		"latitude": 59.9084158,
+		"longitude": 10.7421801,
+		"cuisines": [
+			"italian"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 591,
+		"openingHours": "Monday: 7:30 AM – 9:00 PM; Tuesday: 7:30 AM – 10:00 PM; Wednesday: 7:30 AM – 10:00 PM; Thursday: 7:30 AM – 10:00 PM; Friday: 7:30 AM – 10:00 PM; Saturday: 7:30 AM – 10:00 PM; Sunday: 7:30 AM – 9:00 PM"
+	},
+	{
+		"id": "osm-9705303259",
+		"name": "Rest",
+		"address": "Oslo",
+		"latitude": 59.9090678,
+		"longitude": 10.7423909,
+		"cuisines": [
+			"nordic",
+			"norwegian"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 221
+	},
+	{
 		"id": "osm-12520076132",
 		"name": "Restaurant Betong",
 		"address": "Oslo",
@@ -6658,6 +9954,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.6,
 		"googleRatingCount": 129,
 		"openingHours": "Monday: Closed; Tuesday: 5:00 PM – 12:00 AM; Wednesday: 5:00 PM – 12:00 AM; Thursday: 5:00 PM – 12:00 AM; Friday: 5:00 PM – 12:00 AM; Saturday: 5:00 PM – 12:00 AM; Sunday: Closed"
+	},
+	{
+		"id": "osm-5920758085",
+		"name": "Restaurant Edda",
+		"address": "Oslo",
+		"latitude": 59.908082,
+		"longitude": 10.754386,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"openingHours": "Tu-Su 11:00-22:00"
+	},
+	{
+		"id": "osm-11207548375",
+		"name": "Restaurant Haakon",
+		"address": "Oslo",
+		"latitude": 59.9127548,
+		"longitude": 10.7311675,
+		"cuisines": [
+			"buffet",
+			"nordic",
+			"norwegian"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 48,
+		"openingHours": "Monday: 8:00 AM – 4:00 PM; Tuesday: 8:00 AM – 4:00 PM; Wednesday: 8:00 AM – 4:00 PM; Thursday: 8:00 AM – 4:00 PM; Friday: 8:00 AM – 4:00 PM; Saturday: Closed; Sunday: Closed"
+	},
+	{
+		"id": "osm-6853740535",
+		"name": "Restaurant Kontrast",
+		"address": "Oslo",
+		"latitude": 59.9229058,
+		"longitude": 10.7512391,
+		"cuisines": [
+			"nordic",
+			"scandinavian"
+		],
+		"openingHours": "Tu-Sa 18:00-22:00",
+		"googleRating": 4.7,
+		"googleRatingCount": 460
 	},
 	{
 		"id": "osm-2181346709",
@@ -6685,6 +10022,18 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 12
 	},
 	{
+		"id": "osm-973899210",
+		"name": "Revierhavnen Kro",
+		"address": "Oslo",
+		"latitude": 59.8990847,
+		"longitude": 10.7351102,
+		"cuisines": [
+			"norwegian"
+		],
+		"googleRating": 4.1,
+		"googleRatingCount": 254
+	},
+	{
 		"id": "osm-9547646217",
 		"name": "Rice Bowl",
 		"address": "Oslo",
@@ -6697,6 +10046,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 12:00-22:00; Sa 13:00-22:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 2303
+	},
+	{
+		"id": "osm-11547414805",
+		"name": "Ricksha",
+		"address": "Oslo",
+		"latitude": 59.912647,
+		"longitude": 10.7356361,
+		"cuisines": [
+			"indian",
+			"asian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 1137,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:30 PM; Wednesday: 4:00 – 10:30 PM; Thursday: 4:00 – 10:30 PM; Friday: 4:00 – 11:00 PM; Saturday: 3:00 – 11:00 PM; Sunday: 3:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-2785920497",
@@ -6738,6 +10101,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 8:00 PM; Tuesday: 2:00 – 8:00 PM; Wednesday: 2:00 – 8:00 PM; Thursday: 2:00 – 8:00 PM; Friday: 2:00 – 8:00 PM; Saturday: 2:00 – 8:00 PM; Sunday: 3:00 – 8:00 PM"
 	},
 	{
+		"id": "osm-6699369434",
+		"name": "Romsås Pizza og Grill",
+		"address": "Oslo",
+		"latitude": 59.9639102,
+		"longitude": 10.892525,
+		"cuisines": [
+			"pizza",
+			"grill"
+		],
+		"googleRating": 3.2,
+		"googleRatingCount": 42,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 11:00 AM – 10:00 PM; Sunday: 12:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-3974758583",
 		"name": "Rorbua",
 		"address": "Oslo",
@@ -6763,6 +10140,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "We-Fr 16:00-21:00; Sa-Su 14:00-21:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 146
+	},
+	{
+		"id": "osm-2353074026",
+		"name": "Roze Gastro",
+		"address": "Oslo",
+		"latitude": 59.929178,
+		"longitude": 10.732991,
+		"cuisines": [
+			"nordic",
+			"french",
+			"bistro"
+		],
+		"openingHours": "We-Sa 17:00–22:00",
+		"googleRating": 4.8,
+		"googleRatingCount": 111
 	},
 	{
 		"id": "osm-11148587905",
@@ -6812,6 +10204,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Sa 18:30-23:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 237
+	},
+	{
+		"id": "osm-7783715587",
+		"name": "Sabi sushi",
+		"address": "Oslo",
+		"latitude": 59.9469042,
+		"longitude": 10.621769,
+		"cuisines": [
+			"sushi"
+		],
+		"openingHours": "Mo-Su 14:00-21:00",
+		"googleRating": 3.6,
+		"googleRatingCount": 61
+	},
+	{
+		"id": "osm-12625737101",
+		"name": "Sabi sushi",
+		"address": "Oslo",
+		"latitude": 59.8969415,
+		"longitude": 10.8136229,
+		"cuisines": [
+			"sushi"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 30,
+		"openingHours": "Monday: 11:00 AM – 9:00 PM; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 11:00 AM – 9:00 PM; Sunday: 2:00 – 9:00 PM"
 	},
 	{
 		"id": "osm-1376727134",
@@ -6892,6 +10310,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 10:00 AM – 11:00 PM; Tuesday: 10:00 AM – 11:00 PM; Wednesday: 10:00 AM – 11:00 PM; Thursday: 10:00 AM – 11:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 10:00 AM – 11:00 PM; Sunday: 12:00 – 11:00 PM"
 	},
 	{
+		"id": "osm-13051828134",
+		"name": "Safari Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9140034,
+		"longitude": 10.7630892,
+		"cuisines": [
+			"african"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 79,
+		"openingHours": "Monday: 10:00 AM – 11:00 PM; Tuesday: 10:00 AM – 11:00 PM; Wednesday: 10:00 AM – 11:00 PM; Thursday: 10:00 AM – 11:00 PM; Friday: 10:00 AM – 11:00 PM; Saturday: 11:00 AM – 11:00 PM; Sunday: 11:00 AM – 11:00 PM"
+	},
+	{
 		"id": "osm-2348090407",
 		"name": "Sagene Pizzaria",
 		"address": "Oslo",
@@ -6946,6 +10377,32 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 9:00 PM; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-2045271457",
+		"name": "Salsa",
+		"address": "Oslo",
+		"latitude": 59.913137,
+		"longitude": 10.723053,
+		"cuisines": [
+			"mexican"
+		],
+		"openingHours": "Mo-Fr 16:00-22:00; Sa 16:00-24:00",
+		"googleRating": 4.9,
+		"googleRatingCount": 193
+	},
+	{
+		"id": "osm-10814404175",
+		"name": "San fransisco Bread bowl",
+		"address": "Oslo",
+		"latitude": 59.9163681,
+		"longitude": 10.7157965,
+		"cuisines": [
+			"soup",
+			"american"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 1026
+	},
+	{
 		"id": "osm-1948294798",
 		"name": "San Lorenzo",
 		"address": "Oslo",
@@ -6956,6 +10413,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 5,
 		"googleRatingCount": 1
+	},
+	{
+		"id": "osm-2091259543",
+		"name": "Sanguine",
+		"address": "Oslo",
+		"latitude": 59.907199,
+		"longitude": 10.752421,
+		"cuisines": [
+			"mediterranean",
+			"french",
+			"italian"
+		],
+		"openingHours": "Mo-Sa 11:00-21:00; Su 12:00-20:00",
+		"googleRating": 3.7,
+		"googleRatingCount": 182
 	},
 	{
 		"id": "osm-5767668090",
@@ -7052,6 +10524,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 5:00 – 11:00 PM; Tuesday: 5:00 – 11:00 PM; Wednesday: 5:00 – 11:00 PM; Thursday: 5:00 – 11:00 PM; Friday: 5:00 – 11:00 PM; Saturday: 4:00 – 11:00 PM; Sunday: Closed"
 	},
 	{
+		"id": "osm-12083513869",
+		"name": "Schrøder",
+		"address": "Oslo",
+		"latitude": 59.9234423,
+		"longitude": 10.7395251,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "Mo-Su 15:00-23:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 1183
+	},
+	{
 		"id": "osm-1940306128",
 		"name": "Sea Sushi Bar",
 		"address": "Oslo",
@@ -7063,6 +10548,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 13:00-22:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 195
+	},
+	{
+		"id": "osm-13060009501",
+		"name": "Seaport",
+		"address": "Oslo",
+		"latitude": 59.9026299,
+		"longitude": 10.7527621,
+		"cuisines": [
+			"seafood"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 3740,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 PM – 12:30 AM; Saturday: 12:00 PM – 12:30 AM; Sunday: 12:00 – 11:00 PM"
+	},
+	{
+		"id": "osm-12980590270",
+		"name": "Seeds Fornebu",
+		"address": "Oslo",
+		"latitude": 59.8982692,
+		"longitude": 10.6216142,
+		"cuisines": [
+			"salad",
+			"international"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 113,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: Closed; Thursday: 4:00 – 8:00 PM; Friday: 4:00 – 8:00 PM; Saturday: 12:00 – 8:00 PM; Sunday: 12:00 – 8:00 PM"
+	},
+	{
+		"id": "osm-13098115418",
+		"name": "Seven",
+		"address": "Oslo",
+		"latitude": 59.9089458,
+		"longitude": 10.754599,
+		"cuisines": [
+			"asian_fusion",
+			"mediterranean"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 103,
+		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 12:00 AM; Friday: 11:00 AM – 12:30 AM; Saturday: 12:00 PM – 12:30 AM; Sunday: Closed"
 	},
 	{
 		"id": "osm-9702947372",
@@ -7177,6 +10703,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 1:00 – 11:00 PM; Tuesday: 1:00 – 11:00 PM; Wednesday: 1:00 – 11:00 PM; Thursday: 1:00 – 11:00 PM; Friday: 1:00 – 11:00 PM; Saturday: 1:30 – 11:00 PM; Sunday: 1:30 – 10:30 PM"
 	},
 	{
+		"id": "osm-11281480729",
+		"name": "Simply Tasty",
+		"address": "Oslo",
+		"latitude": 59.9221147,
+		"longitude": 10.752269,
+		"cuisines": [
+			"pakistani",
+			"middle_eastern"
+		],
+		"googleRating": 4.8,
+		"googleRatingCount": 96,
+		"openingHours": "Monday: Closed; Tuesday: 10:00 AM – 8:00 PM; Wednesday: 10:00 AM – 8:00 PM; Thursday: 10:00 AM – 8:00 PM; Friday: 10:00 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
+	},
+	{
+		"id": "osm-52726104",
+		"name": "Sjøflyhavna Kro",
+		"address": "Oslo",
+		"latitude": 59.8937543,
+		"longitude": 10.6330451,
+		"cuisines": [
+			"norwegian"
+		],
+		"openingHours": "Mo-Su 11:00-00:00",
+		"googleRating": 4,
+		"googleRatingCount": 1321
+	},
+	{
 		"id": "osm-49139391",
 		"name": "Sjølyst Marina Restaurant",
 		"address": "Oslo",
@@ -7201,6 +10754,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Fr 11:30-24:00,13:00-24:00",
 		"googleRating": 4.3,
 		"googleRatingCount": 752
+	},
+	{
+		"id": "osm-9945598297",
+		"name": "Skalldyrekspressen",
+		"address": "Oslo",
+		"latitude": 59.8821678,
+		"longitude": 10.7828185,
+		"cuisines": [
+			"seafood"
+		],
+		"googleRating": 4.9,
+		"googleRatingCount": 9,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: Closed; Thursday: 11:00 AM – 6:00 PM; Friday: 11:00 AM – 6:00 PM; Saturday: 10:00 AM – 4:00 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-7101264347",
@@ -7267,6 +10833,60 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu 16:00-22:00; We-Sa 11:30-22:00; Su 13:00-20:00",
 		"googleRating": 4.3,
 		"googleRatingCount": 1111
+	},
+	{
+		"id": "osm-9573613717",
+		"name": "Skaal",
+		"address": "Oslo",
+		"latitude": 59.923495,
+		"longitude": 10.7586535,
+		"cuisines": [
+			"nordic",
+			"european"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 367,
+		"openingHours": "Monday: Closed; Tuesday: 12:00 – 11:30 PM; Wednesday: 12:00 – 11:30 PM; Thursday: 12:00 – 11:30 PM; Friday: 12:00 PM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: 12:00 – 4:00 PM"
+	},
+	{
+		"id": "osm-3397076897",
+		"name": "Smalgangen Spiseri",
+		"address": "Oslo",
+		"latitude": 59.912289,
+		"longitude": 10.76077,
+		"cuisines": [
+			"norwegian",
+			"bistro"
+		],
+		"openingHours": "Tu-Sa 11:00-01:00; Su 11:00-22:00",
+		"googleRating": 4.6,
+		"googleRatingCount": 504
+	},
+	{
+		"id": "osm-2046008740",
+		"name": "Smalhans",
+		"address": "Oslo",
+		"latitude": 59.923685,
+		"longitude": 10.739759,
+		"cuisines": [
+			"nordic",
+			"scandinavian"
+		],
+		"openingHours": "Mo 16:00-22:00; Tu 16:00-00:30, We-Sa 11:00-00:30, Su 12:00-22:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 1104
+	},
+	{
+		"id": "osm-10694985433",
+		"name": "Smash by Ghost Town",
+		"address": "Oslo",
+		"latitude": 59.9208344,
+		"longitude": 10.7591508,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 272
 	},
 	{
 		"id": "osm-12222696620",
@@ -7360,6 +10980,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 7:30 AM – 6:30 PM; Tuesday: 7:30 AM – 6:30 PM; Wednesday: 7:30 AM – 6:30 PM; Thursday: 7:30 AM – 6:30 PM; Friday: 7:30 AM – 6:30 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: Closed"
 	},
 	{
+		"id": "osm-3932040028",
+		"name": "Sodexo",
+		"address": "Oslo",
+		"latitude": 59.9495877,
+		"longitude": 10.7684727,
+		"cuisines": [
+			"international",
+			"buffet"
+		],
+		"googleRating": 3.6,
+		"googleRatingCount": 17,
+		"openingHours": "Monday: 8:00 AM – 4:00 PM; Tuesday: 8:00 AM – 4:00 PM; Wednesday: 8:00 AM – 4:00 PM; Thursday: 8:00 AM – 4:00 PM; Friday: 8:00 AM – 4:00 PM; Saturday: Closed; Sunday: Closed"
+	},
+	{
 		"id": "osm-12690754754",
 		"name": "Sofienberg Grill",
 		"address": "Oslo",
@@ -7387,6 +11021,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 14:00-20:30",
 		"googleRating": 5,
 		"googleRatingCount": 4
+	},
+	{
+		"id": "osm-11841822995",
+		"name": "Sofienlund Spiseri",
+		"address": "Oslo",
+		"latitude": 59.9222095,
+		"longitude": 10.6812882,
+		"cuisines": [
+			"european",
+			"pizza",
+			"burger"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 27
+	},
+	{
+		"id": "osm-6555167724",
+		"name": "Solsiden",
+		"address": "Oslo",
+		"latitude": 59.9076424,
+		"longitude": 10.7345438,
+		"cuisines": [
+			"seafood"
+		],
+		"openingHours": "Mo-Sa 16:30-22:00; Su 16:30-21:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 912
 	},
 	{
 		"id": "osm-1769606908",
@@ -7442,6 +11103,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: Closed; Tuesday: 11:00 AM – 9:00 PM; Wednesday: 11:00 AM – 9:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 5:00 PM; Saturday: 12:00 – 5:00 PM; Sunday: 12:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-9775372795",
+		"name": "Spor av Nord",
+		"address": "Oslo",
+		"latitude": 59.909927,
+		"longitude": 10.746587,
+		"cuisines": [
+			"nordic"
+		],
+		"openingHours": "Mo-Su 08:00-19:00; PH 08:00-15:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 663
+	},
+	{
 		"id": "osm-2461518886",
 		"name": "St. Lars",
 		"address": "Oslo",
@@ -7453,6 +11127,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 16:30-24:00",
 		"googleRating": 4.4,
 		"googleRatingCount": 633
+	},
+	{
+		"id": "osm-305954881",
+		"name": "St1 Marienlyst",
+		"address": "Oslo",
+		"latitude": 59.9324952,
+		"longitude": 10.7222278,
+		"cuisines": [
+			"fast_food"
+		],
+		"openingHours": "24/7",
+		"googleRating": 3.7,
+		"googleRatingCount": 98
 	},
 	{
 		"id": "osm-1033293278",
@@ -7474,6 +11161,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 123
 	},
 	{
+		"id": "osm-12927973432",
+		"name": "Stange",
+		"address": "Oslo",
+		"latitude": 59.9221037,
+		"longitude": 10.7520297,
+		"cuisines": [
+			"chicken",
+			"sandwich"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 27,
+		"openingHours": "Monday: Closed; Tuesday: 10:00 AM – 8:00 PM; Wednesday: 10:00 AM – 8:00 PM; Thursday: 10:00 AM – 8:00 PM; Friday: 10:00 AM – 8:00 PM; Saturday: 10:00 AM – 8:00 PM; Sunday: 11:00 AM – 6:00 PM"
+	},
+	{
 		"id": "osm-3979406958",
 		"name": "Starmo Pizzeria",
 		"address": "Oslo",
@@ -7484,6 +11185,49 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 4.1,
 		"googleRatingCount": 39
+	},
+	{
+		"id": "osm-2045384808",
+		"name": "Statholderens Mat & Vinkjeller",
+		"address": "Oslo",
+		"latitude": 59.909407,
+		"longitude": 10.743142,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"openingHours": "Tu-Fr 11:30-24:00; Sa 12:30-24:00",
+		"googleRating": 4.7,
+		"googleRatingCount": 408
+	},
+	{
+		"id": "osm-2045384807",
+		"name": "Statholdergaarden",
+		"address": "Oslo",
+		"latitude": 59.909517,
+		"longitude": 10.743218,
+		"cuisines": [
+			"norwegian",
+			"scandinavian"
+		],
+		"openingHours": "Mo-Sa 18:00-24:00",
+		"googleRating": 4.8,
+		"googleRatingCount": 544
+	},
+	{
+		"id": "osm-3655173289",
+		"name": "Stock",
+		"address": "Oslo",
+		"latitude": 59.9081096,
+		"longitude": 10.7579278,
+		"cuisines": [
+			"nordic",
+			"steak_house",
+			"european"
+		],
+		"openingHours": "Mo-Fr 11:00-24:00; Sa 12:00-24:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 969
 	},
 	{
 		"id": "osm-1815939256",
@@ -7497,6 +11241,31 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.5,
 		"googleRatingCount": 1064,
 		"openingHours": "Monday: 2:00 – 9:00 PM; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
+	},
+	{
+		"id": "osm-10947974232",
+		"name": "Stortorvet Kebab",
+		"address": "Oslo",
+		"latitude": 59.9124767,
+		"longitude": 10.7449814,
+		"cuisines": [
+			"kebab"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 451
+	},
+	{
+		"id": "osm-13340053983",
+		"name": "Stranden 30",
+		"address": "Oslo",
+		"latitude": 59.9083745,
+		"longitude": 10.7260503,
+		"cuisines": [
+			"nordic",
+			"international",
+			"seafood"
+		],
+		"openingHours": "Mo-Fr 11:00-late; Sa 12:00-late"
 	},
 	{
 		"id": "osm-12571352601",
@@ -7590,6 +11359,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 9:00 AM – 8:00 PM; Tuesday: 9:00 AM – 8:00 PM; Wednesday: 9:00 AM – 8:00 PM; Thursday: 9:00 AM – 8:00 PM; Friday: 9:00 AM – 8:00 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: 11:00 AM – 6:00 PM"
 	},
 	{
+		"id": "osm-13018869328",
+		"name": "Sugar & Spice",
+		"address": "Oslo",
+		"latitude": 59.9271466,
+		"longitude": 10.7951222,
+		"cuisines": [
+			"asian",
+			"thai",
+			"vietnamese"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 234,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 3:00 – 10:00 PM; Sunday: 3:00 – 9:00 PM"
+	},
+	{
 		"id": "osm-6136462187",
 		"name": "Sukhumvit Soup&Grill",
 		"address": "Oslo",
@@ -7601,6 +11385,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 11:00-21:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 194
+	},
+	{
+		"id": "osm-5055674714",
+		"name": "Sult Lille Herbern",
+		"address": "Oslo",
+		"latitude": 59.8985977,
+		"longitude": 10.6935942,
+		"cuisines": [
+			"seafood",
+			"nordic"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 654
 	},
 	{
 		"id": "osm-12787862012",
@@ -7669,6 +11466,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-We 11:00-22:00; Th-Sa 11:00-23:00; Su 12:00-22:00",
 		"googleRating": 4,
 		"googleRatingCount": 698
+	},
+	{
+		"id": "osm-713025686",
+		"name": "Sumo Restaurant",
+		"address": "Oslo",
+		"latitude": 59.9473567,
+		"longitude": 10.7712178,
+		"cuisines": [
+			"sushi",
+			"japanese"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 501,
+		"openingHours": "Monday: 3:00 – 10:00 PM; Tuesday: 3:00 – 10:00 PM; Wednesday: 3:00 – 10:00 PM; Thursday: 3:00 – 10:00 PM; Friday: 3:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-6757226549",
@@ -7858,6 +11669,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 2:00 – 9:00 PM; Tuesday: 2:00 – 9:00 PM; Wednesday: 2:00 – 9:00 PM; Thursday: 2:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
 	},
 	{
+		"id": "osm-12966041662",
+		"name": "Sushi Thai",
+		"address": "Oslo",
+		"latitude": 59.933205,
+		"longitude": 10.7634945,
+		"cuisines": [
+			"sushi",
+			"thai"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 131,
+		"openingHours": "Monday: 3:00 – 9:00 PM; Tuesday: 3:00 – 9:00 PM; Wednesday: 3:00 – 9:00 PM; Thursday: 3:00 – 9:00 PM; Friday: 2:00 – 9:00 PM; Saturday: 3:00 – 9:00 PM; Sunday: 2:00 – 9:00 PM"
+	},
+	{
 		"id": "osm-2505136414",
 		"name": "Sushi time",
 		"address": "Oslo",
@@ -7879,6 +11704,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		]
 	},
 	{
+		"id": "osm-10694985427",
+		"name": "Sushi Wok Ekspressen",
+		"address": "Oslo",
+		"latitude": 59.93006,
+		"longitude": 10.7778232,
+		"cuisines": [
+			"sushi",
+			"chinese"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 127,
+		"openingHours": "Monday: 1:00 – 9:30 PM; Tuesday: 1:00 – 9:30 PM; Wednesday: 1:00 – 9:30 PM; Thursday: 1:00 – 10:00 PM; Friday: 1:00 – 10:00 PM; Saturday: 1:00 – 10:00 PM; Sunday: 1:00 – 10:00 PM"
+	},
+	{
 		"id": "osm-1963760389",
 		"name": "Sushihjørnet",
 		"address": "Oslo",
@@ -7892,6 +11731,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 72
 	},
 	{
+		"id": "osm-12621373668",
+		"name": "Sverdup spiseri",
+		"address": "Oslo",
+		"latitude": 59.9391931,
+		"longitude": 10.7217585,
+		"cuisines": [
+			"buffet"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 15,
+		"openingHours": "Monday: 8:00 AM – 10:00 PM; Tuesday: 8:00 AM – 10:00 PM; Wednesday: 8:00 AM – 10:00 PM; Thursday: 8:00 AM – 10:00 PM; Friday: 8:00 AM – 10:00 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: 10:00 AM – 6:00 PM"
+	},
+	{
 		"id": "osm-10837215702",
 		"name": "Svingen på sletta",
 		"address": "Oslo",
@@ -7903,6 +11755,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.8,
 		"googleRatingCount": 86,
 		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 11:00 AM – 6:00 PM; Thursday: 11:00 AM – 9:00 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 11:00 AM – 6:00 PM; Sunday: 11:00 AM – 6:00 PM"
+	},
+	{
+		"id": "osm-292145389",
+		"name": "Südøst",
+		"address": "Oslo",
+		"latitude": 59.9181246,
+		"longitude": 10.7606108,
+		"cuisines": [
+			"asian"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 2773,
+		"openingHours": "Monday: 4:00 – 10:30 PM; Tuesday: 4:00 – 10:30 PM; Wednesday: 4:00 – 11:00 PM; Thursday: 4:00 – 11:00 PM; Friday: 4:00 PM – 12:00 AM; Saturday: 4:00 PM – 12:00 AM; Sunday: 2:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-8792307673",
@@ -7944,6 +11809,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 12
 	},
 	{
+		"id": "osm-13390509481",
+		"name": "Tandoori Curry",
+		"address": "Oslo",
+		"latitude": 59.9129708,
+		"longitude": 10.7617712,
+		"cuisines": [
+			"indian"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 283,
+		"openingHours": "Monday: 12:00 – 11:00 PM; Tuesday: 12:00 – 11:00 PM; Wednesday: 12:00 – 11:00 PM; Thursday: 12:00 – 11:00 PM; Friday: 12:00 – 11:00 PM; Saturday: 12:00 – 11:00 PM; Sunday: 12:00 – 11:00 PM"
+	},
+	{
 		"id": "osm-2110522805",
 		"name": "Tandoori Hut",
 		"address": "Oslo",
@@ -7954,6 +11832,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		],
 		"googleRating": 4.2,
 		"googleRatingCount": 282
+	},
+	{
+		"id": "osm-13240656810",
+		"name": "Taste of Damascus",
+		"address": "Oslo",
+		"latitude": 59.9131524,
+		"longitude": 10.7608904,
+		"cuisines": [
+			"syrian",
+			"middle_eastern"
+		],
+		"googleRating": 5,
+		"googleRatingCount": 6,
+		"openingHours": "Monday: 2:00 – 10:00 PM; Tuesday: 2:00 – 10:00 PM; Wednesday: 2:00 – 10:00 PM; Thursday: 2:00 – 10:00 PM; Friday: 2:00 – 10:00 PM; Saturday: 2:00 – 10:00 PM; Sunday: 2:00 – 10:00 PM"
+	},
+	{
+		"id": "osm-4390169490",
+		"name": "Taste of The Far East",
+		"address": "Oslo",
+		"latitude": 59.9149982,
+		"longitude": 10.7536068,
+		"cuisines": [
+			"asian"
+		],
+		"openingHours": "Mo-Su 14:00-23:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 542
 	},
 	{
 		"id": "osm-2085240160",
@@ -7983,6 +11888,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 956
 	},
 	{
+		"id": "osm-12911322042",
+		"name": "Tavernan",
+		"address": "Oslo",
+		"latitude": 59.9147988,
+		"longitude": 10.7501001,
+		"cuisines": [
+			"pizza",
+			"bistro",
+			"seafood"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 1111,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 12:00 AM; Saturday: 12:00 PM – 12:00 AM; Sunday: Closed"
+	},
+	{
 		"id": "osm-9812718617",
 		"name": "Teatro Terrasse",
 		"address": "Oslo",
@@ -7994,6 +11914,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 4.4,
 		"googleRatingCount": 253,
 		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:00 PM; Saturday: 2:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-5098522806",
+		"name": "Texas Grill",
+		"address": "Oslo",
+		"latitude": 59.9206034,
+		"longitude": 10.7591654,
+		"cuisines": [
+			"american",
+			"grill"
+		],
+		"googleRating": 3.4,
+		"googleRatingCount": 140,
+		"openingHours": "Monday: 11:00 AM – 3:30 AM; Tuesday: 11:00 AM – 3:30 AM; Wednesday: 11:00 AM – 3:30 AM; Thursday: 11:00 AM – 3:30 AM; Friday: 11:00 AM – 3:30 AM; Saturday: 11:00 AM – 3:30 AM; Sunday: 11:00 AM – 3:30 AM"
+	},
+	{
+		"id": "osm-5865563902",
+		"name": "Texburger Universitetsgata",
+		"address": "Oslo",
+		"latitude": 59.9154904,
+		"longitude": 10.7374528,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 3.9,
+		"googleRatingCount": 561,
+		"openingHours": "Monday: 10:30 AM – 11:30 PM; Tuesday: 10:30 AM – 11:30 PM; Wednesday: 10:30 AM – 11:30 PM; Thursday: 10:30 AM – 4:00 AM; Friday: 10:30 AM – 4:00 AM; Saturday: 10:30 AM – 4:00 AM; Sunday: 11:00 AM – 11:30 PM"
 	},
 	{
 		"id": "osm-221404796",
@@ -8086,6 +12033,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 127
 	},
 	{
+		"id": "osm-5298106480",
+		"name": "The Golden Chimp",
+		"address": "Oslo",
+		"latitude": 59.915244,
+		"longitude": 10.7502585,
+		"cuisines": [
+			"asian",
+			"chinese",
+			"japanese"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 565,
+		"openingHours": "Monday: Closed; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 10:00 PM; Saturday: 4:00 – 10:00 PM; Sunday: Closed"
+	},
+	{
 		"id": "osm-3471869888",
 		"name": "The Greasy House",
 		"address": "Oslo",
@@ -8097,6 +12059,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.9,
 		"googleRatingCount": 312,
 		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 12:00 AM; Saturday: 11:00 AM – 12:00 AM; Sunday: 9:00 AM – 11:00 PM"
+	},
+	{
+		"id": "osm-10271575848",
+		"name": "The Little Pickle",
+		"address": "Oslo",
+		"latitude": 59.9191342,
+		"longitude": 10.7640184,
+		"cuisines": [
+			"european",
+			"bistro"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 248,
+		"openingHours": "Monday: Closed; Tuesday: Closed; Wednesday: 9:00 AM – 3:00 PM, 5:00 – 9:00 PM; Thursday: 9:00 AM – 3:00 PM, 5:00 – 9:00 PM; Friday: 9:00 AM – 3:00 PM, 5:00 – 9:00 PM; Saturday: 10:00 AM – 3:00 PM, 5:00 – 9:00 PM; Sunday: 10:00 AM – 3:00 PM, 3:30 – 5:30 PM"
 	},
 	{
 		"id": "osm-11076664482",
@@ -8151,6 +12127,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Monday: 4:00 – 10:00 PM; Tuesday: 4:00 – 10:00 PM; Wednesday: 4:00 – 10:00 PM; Thursday: 4:00 – 10:00 PM; Friday: 4:00 – 11:00 PM; Saturday: 1:00 – 11:00 PM; Sunday: 1:00 – 10:00 PM"
 	},
 	{
+		"id": "osm-9787221041",
+		"name": "Tiffany’s",
+		"address": "Oslo",
+		"latitude": 59.9394263,
+		"longitude": 10.7591514,
+		"cuisines": [
+			"scandinavian",
+			"burger"
+		],
+		"openingHours": "Mo-Th 16:00-22:00, Fr 16:00-23:00, Sa-Su 13:00-22:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 373
+	},
+	{
 		"id": "osm-1770766093",
 		"name": "Tijuana",
 		"address": "Oslo",
@@ -8162,6 +12152,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-We 16:00-01:30; Th 16:00-03:30; Fr 14:30-03:30; Sa 12:00-03:30",
 		"googleRating": 3.8,
 		"googleRatingCount": 1651
+	},
+	{
+		"id": "osm-681304680",
+		"name": "Tintin",
+		"address": "Oslo",
+		"latitude": 59.9135679,
+		"longitude": 10.6374665,
+		"cuisines": [
+			"sushi",
+			"japanese",
+			"korean"
+		],
+		"googleRating": 4.4,
+		"googleRatingCount": 342,
+		"openingHours": "Monday: 11:00 AM – 8:30 PM; Tuesday: 11:00 AM – 8:30 PM; Wednesday: 11:00 AM – 8:30 PM; Thursday: 11:00 AM – 8:30 PM; Friday: 11:00 AM – 9:00 PM; Saturday: 2:00 – 9:00 PM; Sunday: 2:00 – 8:30 PM"
 	},
 	{
 		"id": "osm-13343041312",
@@ -8189,6 +12194,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 14:00-21:00",
 		"googleRating": 4.9,
 		"googleRatingCount": 75
+	},
+	{
+		"id": "osm-748165316",
+		"name": "Toni's Pizza",
+		"address": "Oslo",
+		"latitude": 59.9223416,
+		"longitude": 10.8576412,
+		"cuisines": [
+			"pizza"
+		],
+		"openingHours": "Mo-Su 15:00-21:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 113
+	},
+	{
+		"id": "osm-12967173550",
+		"name": "Torgterrassen",
+		"address": "Oslo",
+		"latitude": 59.9131991,
+		"longitude": 10.7437227,
+		"cuisines": [
+			"mediterranean",
+			"european"
+		],
+		"openingHours": "We-Sa 17:00-24:00, We-Fr 16:00-24:00, Sa 13:00-24:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 89
 	},
 	{
 		"id": "osm-1329411515",
@@ -8243,6 +12275,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 1805
 	},
 	{
+		"id": "osm-9517015969",
+		"name": "Trewerket",
+		"address": "Oslo",
+		"latitude": 59.916438,
+		"longitude": 10.806042,
+		"cuisines": [
+			"international",
+			"steak"
+		],
+		"openingHours": "Tu-Fr 16:00-21:00; Sa 12:00-21:00",
+		"googleRating": 4.5,
+		"googleRatingCount": 100
+	},
+	{
 		"id": "osm-835666196",
 		"name": "Trollbua",
 		"address": "Oslo",
@@ -8267,6 +12313,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Sa 12:00-23:00; Su 14:00-23:00",
 		"googleRating": 3.8,
 		"googleRatingCount": 260
+	},
+	{
+		"id": "osm-11799998020",
+		"name": "Troys",
+		"address": "Oslo",
+		"latitude": 59.9236232,
+		"longitude": 10.7257639,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 666,
+		"openingHours": "Monday: 11:00 AM – 11:00 PM; Tuesday: 11:00 AM – 11:00 PM; Wednesday: 11:00 AM – 11:00 PM; Thursday: 11:00 AM – 11:00 PM; Friday: 11:00 AM – 4:00 AM; Saturday: 11:00 AM – 4:00 AM; Sunday: 11:00 AM – 11:00 PM"
 	},
 	{
 		"id": "osm-5005278651",
@@ -8322,6 +12381,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 652
 	},
 	{
+		"id": "osm-12979647500",
+		"name": "Tøyen Burger",
+		"address": "Oslo",
+		"latitude": 59.9124553,
+		"longitude": 10.7744798,
+		"cuisines": [
+			"burger"
+		],
+		"googleRating": 4,
+		"googleRatingCount": 209,
+		"openingHours": "Monday: 11:00 AM – 12:00 AM; Tuesday: 11:00 AM – 12:00 AM; Wednesday: 11:00 AM – 12:00 AM; Thursday: 11:00 AM – 12:00 AM; Friday: 11:00 AM – 12:00 AM; Saturday: 11:00 AM – 12:00 AM; Sunday: 12:00 PM – 12:00 AM"
+	},
+	{
 		"id": "osm-7959754713",
 		"name": "Tøyen Pizza & Grill",
 		"address": "Oslo",
@@ -8351,6 +12423,20 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Fr 12:00-21:00; Sa-Su 13:00-20:30",
 		"googleRating": 4,
 		"googleRatingCount": 709
+	},
+	{
+		"id": "osm-4375609898",
+		"name": "Tåsen Grill & Pizza",
+		"address": "Oslo",
+		"latitude": 59.9510938,
+		"longitude": 10.7513688,
+		"cuisines": [
+			"grill",
+			"pizza"
+		],
+		"googleRating": 3.5,
+		"googleRatingCount": 160,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:00 PM; Wednesday: 11:00 AM – 10:00 PM; Thursday: 11:00 AM – 10:00 PM; Friday: 11:00 AM – 10:45 PM; Saturday: 12:00 – 10:45 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-1999461639",
@@ -8418,6 +12504,33 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 179
 	},
 	{
+		"id": "osm-12451070357",
+		"name": "Unik sushi og roll",
+		"address": "Oslo",
+		"latitude": 59.9458921,
+		"longitude": 10.7725743,
+		"cuisines": [
+			"sushi"
+		],
+		"openingHours": "Mo-Fr 11:15-21:00; Sa,Su 13:15-22:00",
+		"googleRating": 4.2,
+		"googleRatingCount": 74
+	},
+	{
+		"id": "osm-9095744797",
+		"name": "Union 371",
+		"address": "Oslo",
+		"latitude": 59.9406022,
+		"longitude": 10.7217771,
+		"cuisines": [
+			"pizza",
+			"coffee"
+		],
+		"openingHours": "Mo-Fr 11:00-18:00",
+		"googleRating": 4.4,
+		"googleRatingCount": 14
+	},
+	{
 		"id": "osm-10013717804",
 		"name": "Upper Crust",
 		"address": "Oslo",
@@ -8429,6 +12542,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.5,
 		"googleRatingCount": 34,
 		"openingHours": "Monday: 7:00 AM – 8:00 PM; Tuesday: 7:00 AM – 8:00 PM; Wednesday: 7:00 AM – 8:00 PM; Thursday: 7:00 AM – 8:00 PM; Friday: 7:00 AM – 8:00 PM; Saturday: 10:00 AM – 7:00 PM; Sunday: 11:00 AM – 5:00 PM"
+	},
+	{
+		"id": "osm-13432829501",
+		"name": "Vadio Restaurante & Bar",
+		"address": "Oslo",
+		"latitude": 59.9198634,
+		"longitude": 10.7181284,
+		"cuisines": [
+			"european",
+			"mediterranean"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 58
+	},
+	{
+		"id": "osm-12669698857",
+		"name": "Valentino Pizzeria & Gastropub",
+		"address": "Oslo",
+		"latitude": 59.9294227,
+		"longitude": 10.7783229,
+		"cuisines": [
+			"pizza",
+			"italian"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 250,
+		"openingHours": "Monday: 3:00 PM – 1:00 AM; Tuesday: 3:00 PM – 1:00 AM; Wednesday: 3:00 PM – 1:00 AM; Thursday: 3:00 PM – 1:00 AM; Friday: 2:00 PM – 1:00 AM; Saturday: 2:00 PM – 1:00 AM; Sunday: 2:00 PM – 1:00 AM"
+	},
+	{
+		"id": "osm-1988588025",
+		"name": "Valkyrien",
+		"address": "Oslo",
+		"latitude": 59.9295915,
+		"longitude": 10.7169579,
+		"cuisines": [
+			"norwegian",
+			"burger"
+		],
+		"googleRating": 4.2,
+		"googleRatingCount": 161,
+		"openingHours": "Monday: 10:00 AM – 7:00 PM; Tuesday: 10:00 AM – 7:00 PM; Wednesday: 10:00 AM – 7:00 PM; Thursday: 10:00 AM – 8:00 PM; Friday: 10:00 AM – 7:00 PM; Saturday: 10:00 AM – 6:00 PM; Sunday: Closed"
 	},
 	{
 		"id": "osm-2788528556",
@@ -8455,6 +12609,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRating": 3.8,
 		"googleRatingCount": 300,
 		"openingHours": "Monday: 10:00 AM – 12:00 AM; Tuesday: 10:00 AM – 12:00 AM; Wednesday: 10:00 AM – 12:00 AM; Thursday: 10:00 AM – 12:00 AM; Friday: 10:00 AM – 12:00 AM; Saturday: 10:00 AM – 3:30 AM; Sunday: 10:00 AM – 12:00 AM"
+	},
+	{
+		"id": "osm-3729807725",
+		"name": "Vesper Bar",
+		"address": "Oslo",
+		"latitude": 59.9075101,
+		"longitude": 10.7604517,
+		"cuisines": [
+			"wine"
+		],
+		"googleRating": 4.3,
+		"googleRatingCount": 445,
+		"openingHours": "Monday: Closed; Tuesday: 3:00 PM – 12:00 AM; Wednesday: 3:00 PM – 12:00 AM; Thursday: 3:00 PM – 12:00 AM; Friday: 3:00 PM – 2:00 AM; Saturday: 3:00 PM – 2:00 AM; Sunday: Closed"
 	},
 	{
 		"id": "osm-7288007623",
@@ -8495,6 +12662,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "14:00-21:00",
 		"googleRating": 4.8,
 		"googleRatingCount": 255
+	},
+	{
+		"id": "osm-5141613754",
+		"name": "Victoria Nasjonal Jazzscene",
+		"address": "Oslo",
+		"latitude": 59.9141097,
+		"longitude": 10.7381849,
+		"cuisines": [
+			"international"
+		],
+		"googleRating": 4.7,
+		"googleRatingCount": 363,
+		"openingHours": "Monday: 7:00 PM – 1:00 AM; Tuesday: 7:00 PM – 1:00 AM; Wednesday: 7:00 PM – 1:00 AM; Thursday: 7:00 PM – 1:00 AM; Friday: 7:00 PM – 1:00 AM; Saturday: 7:00 PM – 1:00 AM; Sunday: Closed"
 	},
 	{
 		"id": "osm-11374926341",
@@ -8559,6 +12739,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Su-Th 11:00-23:00, Fr,Sa 11:00-01:00",
 		"googleRating": 4.4,
 		"googleRatingCount": 308
+	},
+	{
+		"id": "osm-12987535309",
+		"name": "Vinkassen",
+		"address": "Oslo",
+		"latitude": 59.9284355,
+		"longitude": 10.7325812,
+		"cuisines": [
+			"wine"
+		],
+		"openingHours": "Mo–Sa 16:00-00:00",
+		"googleRating": 4.9,
+		"googleRatingCount": 98
 	},
 	{
 		"id": "osm-1421832781",
@@ -8639,6 +12832,47 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 138
 	},
 	{
+		"id": "osm-3625525693",
+		"name": "Vaaghals",
+		"address": "Oslo",
+		"latitude": 59.908421,
+		"longitude": 10.756768,
+		"cuisines": [
+			"norwegian",
+			"nordic"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 1512,
+		"openingHours": "Monday: 5:00 – 11:30 PM; Tuesday: 11:00 AM – 11:30 PM; Wednesday: 11:00 AM – 11:30 PM; Thursday: 11:00 AM – 11:30 PM; Friday: 11:00 AM – 11:30 PM; Saturday: 11:00 AM – 11:30 PM; Sunday: Closed"
+	},
+	{
+		"id": "osm-11982649755",
+		"name": "Vålerenga Tikka & Grill",
+		"address": "Oslo",
+		"latitude": 59.9099628,
+		"longitude": 10.7882555,
+		"cuisines": [
+			"indian",
+			"grill"
+		],
+		"openingHours": "Mo-Su 11:00-23:00",
+		"googleRating": 3.8,
+		"googleRatingCount": 101
+	},
+	{
+		"id": "osm-1286853823",
+		"name": "Wallmans Salonger",
+		"address": "Oslo",
+		"latitude": 59.9303543,
+		"longitude": 10.7567201,
+		"cuisines": [
+			"international"
+		],
+		"googleRating": 4.5,
+		"googleRatingCount": 1498,
+		"openingHours": "Monday: Open 24 hours; Tuesday: Open 24 hours; Wednesday: Open 24 hours; Thursday: Open 24 hours; Friday: Open 24 hours; Saturday: Open 24 hours; Sunday: Closed"
+	},
+	{
 		"id": "osm-4558463883",
 		"name": "Wasabi sushi",
 		"address": "Oslo",
@@ -8678,6 +12912,21 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 68
 	},
 	{
+		"id": "osm-10013753418",
+		"name": "Winther Aker Brygge",
+		"address": "Oslo",
+		"latitude": 59.9108348,
+		"longitude": 10.7274223,
+		"cuisines": [
+			"italian",
+			"pizza",
+			"pasta"
+		],
+		"openingHours": "Tu-Sa 11:30-22:00",
+		"googleRating": 4.1,
+		"googleRatingCount": 455
+	},
+	{
 		"id": "osm-4343892495",
 		"name": "Wünderburger",
 		"address": "Oslo",
@@ -8702,6 +12951,18 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Su 12:00-22:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 379
+	},
+	{
+		"id": "osm-2110714812",
+		"name": "Xef",
+		"address": "Oslo",
+		"latitude": 59.9085229,
+		"longitude": 10.7217038,
+		"cuisines": [
+			"spanish"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 147
 	},
 	{
 		"id": "osm-4065303389",
@@ -8754,6 +13015,19 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Th 11:00-21:00; Fr-Sa 11:00-22:00; Su 12:00-21:00",
 		"googleRating": 3.5,
 		"googleRatingCount": 393
+	},
+	{
+		"id": "osm-11917500267",
+		"name": "Yokoso",
+		"address": "Oslo",
+		"latitude": 59.9092003,
+		"longitude": 10.7256717,
+		"cuisines": [
+			"japanese"
+		],
+		"googleRating": 4.6,
+		"googleRatingCount": 2669,
+		"openingHours": "Monday: 11:00 AM – 10:00 PM; Tuesday: 11:00 AM – 10:30 PM; Wednesday: 11:00 AM – 10:30 PM; Thursday: 11:00 AM – 10:30 PM; Friday: 11:00 AM – 11:00 PM; Saturday: 11:00 AM – 11:00 PM; Sunday: 12:00 – 10:00 PM"
 	},
 	{
 		"id": "osm-12669751801",
@@ -8820,6 +13094,16 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Mo-Su 14:00-22:00",
 		"googleRating": 4.8,
 		"googleRatingCount": 216
+	},
+	{
+		"id": "osm-12976489694",
+		"name": "Zam Zam Tandoori",
+		"address": "Oslo",
+		"latitude": 59.9134626,
+		"longitude": 10.7763977,
+		"cuisines": [
+			"indian"
+		]
 	},
 	{
 		"id": "osm-5094785570",

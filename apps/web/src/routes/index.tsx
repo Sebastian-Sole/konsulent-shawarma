@@ -8,10 +8,7 @@ import { type MapRef, Map as MapView } from "@/components/ui/map";
 import type { Firm } from "@/data/firms";
 import { firms } from "@/data/firms";
 import type { NearestResult } from "@/lib/geo";
-import {
-	DEFAULT_CATEGORIES,
-	categoriesToCuisines,
-} from "@/lib/cuisine-categories";
+import { DEFAULT_CATEGORIES } from "@/lib/cuisine-categories";
 import { useNearestShawarma } from "@/hooks/use-nearest-shawarma";
 
 const OSLO_CENTER: [number, number] = [10.7522, 59.9139];
@@ -49,20 +46,15 @@ function App() {
 	const [openNow, setOpenNow] = useState(true);
 	const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
 
-	const enabledCuisines = useMemo(
-		() => categoriesToCuisines(enabledCategories),
-		[enabledCategories],
-	);
-
 	const filterOptions = useMemo(
 		() => ({
 			count: resultCount,
 			maxDistanceMeters: maxDistance,
-			cuisines: enabledCuisines,
+			enabledCategories,
 			minRating,
 			openNow: openNow || undefined,
 		}),
-		[resultCount, maxDistance, enabledCuisines, minRating, openNow],
+		[resultCount, maxDistance, enabledCategories, minRating, openNow],
 	);
 
 	const results = useNearestShawarma(selectedFirm, filterOptions);

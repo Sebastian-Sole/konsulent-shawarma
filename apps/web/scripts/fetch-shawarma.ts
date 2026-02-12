@@ -14,8 +14,8 @@ const OVERPASS_ENDPOINTS = [
 // Oslo bounding box: south, west, north, east
 const OSLO_BBOX = "59.85,10.60,59.98,10.90";
 
-// Fetch all restaurants and fast_food that have any cuisine tag
-const QUERY = `[out:json][timeout:60];(nw["amenity"="restaurant"]["cuisine"](${OSLO_BBOX});nw["amenity"="fast_food"]["cuisine"](${OSLO_BBOX}););out center;`;
+// Fetch all restaurants and fast_food in Oslo (no cuisine filter, to catch places like Birken Lunch)
+const QUERY = `[out:json][timeout:60];(nw["amenity"="restaurant"](${OSLO_BBOX});nw["amenity"="fast_food"](${OSLO_BBOX}););out center;`;
 
 type OverpassElement = {
 	type: "node" | "way";
@@ -88,6 +88,115 @@ function parseCuisines(raw: string | undefined): string[] {
 		.filter(Boolean);
 }
 
+const NAME_CUISINE_KEYWORDS: [RegExp, string[]][] = [
+	// Asian
+	[/sushi/i, ["sushi"]],
+	[/ramen/i, ["ramen"]],
+	[/wok/i, ["chinese"]],
+	[/dim\s*sum/i, ["chinese"]],
+	[/dumpling/i, ["chinese"]],
+	[/bao\b/i, ["chinese"]],
+	[/chinatown|china\b/i, ["chinese"]],
+	[/pho\b/i, ["vietnamese"]],
+	[/thai\b/i, ["thai"]],
+	[/tandoori|tikka|curry\b|masala/i, ["indian"]],
+	[/india|gandhi|bollywood|punjab/i, ["indian"]],
+	[/nepal/i, ["nepalese"]],
+	[/korea/i, ["korean"]],
+	[/bibimbap/i, ["korean"]],
+	[/udon/i, ["udon"]],
+	[/noodle/i, ["noodle"]],
+	[/filipino|pinoy/i, ["filipino"]],
+	[/indonesi/i, ["indonesian"]],
+
+	// Italian
+	[/pizz[ea]/i, ["pizza"]],
+	[/pinsa/i, ["pizza", "italian"]],
+	[/pasta/i, ["pasta"]],
+	[/trattoria|ristorante|osteria|piazza/i, ["italian"]],
+	[/italiano|italia\b/i, ["italian"]],
+
+	// Middle Eastern / Kebab
+	[/kebab|d[öo]ner/i, ["kebab"]],
+	[/shawarma/i, ["shawarma"]],
+	[/falafel/i, ["falafel"]],
+	[/damascus|aleppo/i, ["syrian", "middle_eastern"]],
+	[/mandi\b/i, ["arab", "middle_eastern"]],
+	[/lebanese|libanon/i, ["lebanese"]],
+	[/persian|persi/i, ["persian"]],
+	[/palesti/i, ["palestinian"]],
+
+	// American / Burgers
+	[/burger/i, ["burger"]],
+	[/grill(?:en)?/i, ["grill"]],
+	[/wings?\b/i, ["chicken"]],
+	[/fried\s*chicken|fly\s*chicken/i, ["fried_chicken"]],
+	[/steak\s*house/i, ["steak_house"]],
+	[/bøfhus/i, ["steak", "steak_house"]],
+	[/texburger|tex[\s-]?mex/i, ["tex-mex"]],
+
+	// Latin American / Mexican
+	[/taco|burrito|tortilla|mexicansk/i, ["mexican"]],
+	[/los\s*tacos/i, ["mexican", "tacos"]],
+	[/salsa\b/i, ["mexican"]],
+	[/peruvi|ceviche/i, ["peruvian"]],
+	[/colombian/i, ["colombian"]],
+
+	// Seafood / Fish
+	[/fish\s*(?:&|and|og)\s*chips/i, ["fish_and_chips"]],
+	[/fisk|sjømat|seafood|skalldyr/i, ["seafood"]],
+
+	// European / French / Spanish
+	[/brasserie/i, ["french"]],
+	[/frenchie|french/i, ["french"]],
+	[/bistro/i, ["bistro"]],
+	[/tapas|pintxos/i, ["tapas", "spanish"]],
+	[/sangria/i, ["spanish"]],
+	[/basque|bask/i, ["basque"]],
+
+	// African
+	[/ethiopi|lalibela/i, ["ethiopian"]],
+	[/african/i, ["african"]],
+	[/safari\b/i, ["african"]],
+
+	// Balkan
+	[/burek/i, ["balkan"]],
+	[/balkan/i, ["balkan"]],
+
+	// Turkish
+	[/marmaris|turkish/i, ["turkish"]],
+
+	// Drinks / Cafes / Dessert
+	[/caf[eé]|kaff[eé]|coffee/i, ["coffee"]],
+	[/bakeri|baker|bagel/i, ["bagel"]],
+	[/konditori|kake/i, ["cake"]],
+	[/juice|smoothie/i, ["juice"]],
+	[/bubble\s*tea|boba/i, ["bubble_tea"]],
+	[/vin\s*bar|vinbar|vinhus/i, ["wine"]],
+
+	// Salad / Sandwich / Light
+	[/salat|salad/i, ["salad"]],
+	[/sandwich|sub\b|smørbrød/i, ["sandwich"]],
+
+	// Norwegian / Nordic
+	[/lunsj|lunch|kantine/i, ["norwegian"]],
+	[/kro\b/i, ["norwegian"]],
+	[/spiseri/i, ["norwegian"]],
+	[/nordic|nordisk/i, ["nordic"]],
+];
+
+function guessCuisinesFromName(name: string): string[] {
+	const matches: string[] = [];
+	for (const [pattern, cuisines] of NAME_CUISINE_KEYWORDS) {
+		if (pattern.test(name)) {
+			for (const c of cuisines) {
+				if (!matches.includes(c)) matches.push(c);
+			}
+		}
+	}
+	return matches;
+}
+
 function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (!el.tags?.name) return null;
 	const lat = el.lat ?? el.center?.lat;
@@ -95,8 +204,10 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 	if (lat == null || lon == null) return null;
 
 	const tags = el.tags;
-	const cuisines = parseCuisines(tags.cuisine);
-	if (cuisines.length === 0) return null;
+	let cuisines = parseCuisines(tags.cuisine);
+	if (cuisines.length === 0) {
+		cuisines = guessCuisinesFromName(tags.name);
+	}
 
 	const parts = [
 		[tags["addr:street"], tags["addr:housenumber"]]

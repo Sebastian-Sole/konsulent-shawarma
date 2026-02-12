@@ -8,14 +8,14 @@ export function useNearestShawarma(
 	options?: {
 		count?: number;
 		maxDistanceMeters?: number;
-		cuisines?: Set<string>;
+		enabledCategories?: Set<string>;
 		minRating?: number;
 		openNow?: boolean;
 	},
 ): NearestResult[] {
 	const count = options?.count ?? 10;
 	const maxDistanceMeters = options?.maxDistanceMeters;
-	const cuisines = options?.cuisines;
+	const enabledCategories = options?.enabledCategories;
 	const minRating = options?.minRating;
 	const openNow = options?.openNow;
 
@@ -23,11 +23,11 @@ export function useNearestShawarma(
 		if (!firm) return [];
 		return findNearestPlaces(firm, shawarmaPlaces, count, {
 			maxDistanceMeters,
-			cuisines,
+			enabledCategories,
 			minRating,
 			openNow,
 		});
-		// cuisines is a Set - we serialize to track changes
+		// enabledCategories is a Set - we serialize to track changes
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [firm, count, maxDistanceMeters, cuisines && [...cuisines].join(","), minRating, openNow]);
+	}, [firm, count, maxDistanceMeters, enabledCategories && [...enabledCategories].join(","), minRating, openNow]);
 }

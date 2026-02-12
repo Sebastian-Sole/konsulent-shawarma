@@ -1,5 +1,6 @@
 import type { Firm } from "@/data/firms";
 import type { ShawarmaPlace } from "@/data/shawarma-places";
+import { categoriesToCuisines } from "@/lib/cuisine-categories";
 import { isOpenNow } from "@/lib/opening-hours";
 
 const EARTH_RADIUS_M = 6_371_000;
@@ -48,16 +49,17 @@ export function findNearestPlaces(
 	count: number,
 	options?: {
 		maxDistanceMeters?: number;
-		cuisines?: Set<string>;
+		enabledCategories?: Set<string>;
 		minRating?: number;
 		openNow?: boolean;
 	},
 ): NearestResult[] {
 	let filtered = places;
 
-	if (options?.cuisines && options.cuisines.size > 0) {
+	if (options?.enabledCategories && options.enabledCategories.size > 0) {
+		const allowedCuisines = categoriesToCuisines(options.enabledCategories);
 		filtered = filtered.filter((place) =>
-			place.cuisines.some((c) => options.cuisines!.has(c)),
+			place.cuisines.some((c) => allowedCuisines.has(c)),
 		);
 	}
 

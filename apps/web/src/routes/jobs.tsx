@@ -92,6 +92,7 @@ function JobsPage() {
 										>
 											Se fullstendig utlysning →
 										</a>
+
 									)}
 								</article>
 							))}
@@ -123,13 +124,12 @@ function CopyEmailButton() {
 		</button>
 	);
 }
-
 function PostJobCard() {
 	return (
 		<div className="rounded-lg border border-border bg-card p-8 text-center shadow-sm">
 			<h2 className="text-lg font-semibold">Ingen stillinger ennå</h2>
 			<p className="mt-2 text-sm text-muted-foreground">
-				Vil du nå tusenvis av konsulenter? Legg ut en stilling her.
+				Vil du nå tusenvis av <i><b>sultne</b></i> konsulenter? Legg ut en stilling her.
 			</p>
 			<p className="mt-1 text-xs text-muted-foreground">
 				Ta kontakt på{" "}
