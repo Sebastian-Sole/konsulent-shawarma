@@ -13,7 +13,8 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import { type MapRef, Map as MapView } from "@/components/ui/map";
+import { type MapRef, Map as MapView, MapRoute } from "@/components/ui/map";
+import { useRoute } from "@/hooks/use-route";
 import type { Firm } from "@/data/firms";
 import { firms } from "@/data/firms";
 import type { NearestResult } from "@/lib/geo";
@@ -150,6 +151,18 @@ function App() {
 
 	const results = useNearestShawarma(selectedFirm, filterOptions);
 
+	const focusedResult = useMemo(
+		() => results.find((r) => r.place.id === focusedPlaceId) ?? null,
+		[results, focusedPlaceId],
+	);
+
+	const { route } = useRoute(
+		selectedFirm,
+		focusedResult
+			? { longitude: focusedResult.place.longitude, latitude: focusedResult.place.latitude }
+			: null,
+	);
+
 	const handleToggleCategory = useCallback((category: string) => {
 		setEnabledCategories((prev) => {
 			const next = new Set(prev);
@@ -164,6 +177,7 @@ function App() {
 
 	const handleSelect = useCallback((firm: Firm | null) => {
 		setSelectedFirm(firm);
+		setFocusedPlaceId(null);
 		if (firm && mapRef.current) {
 			mapRef.current.flyTo({
 				center: [firm.longitude, firm.latitude],
@@ -182,6 +196,7 @@ function App() {
 
 	const handleClear = useCallback(() => {
 		setSelectedFirm(null);
+		setFocusedPlaceId(null);
 		if (mapRef.current) {
 			mapRef.current.flyTo({
 				center: OSLO_CENTER,
@@ -236,6 +251,16 @@ function App() {
 							onFocus={() => handleFocusPlace(result)}
 						/>
 					))}
+
+				{route && (
+					<MapRoute
+						coordinates={route.coordinates}
+						color="#e63946"
+						width={5}
+						opacity={0.9}
+						interactive={false}
+					/>
+				)}
 			</MapView>
 
 			<SearchCommand

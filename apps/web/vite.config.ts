@@ -14,7 +14,7 @@ const config = defineConfig({
 		},
 	},
 	plugins: [
-		devtools(),
+		devtools({ eventBusConfig: { enabled: false } }),
 		// this is the plugin that enables path aliases
 		viteTsConfigPaths({
 			projects: ["./tsconfig.json"],
@@ -24,6 +24,10 @@ const config = defineConfig({
 		nitro(),
 		viteReact(),
 	],
+	server: {
+		port: 3000,
+		strictPort: false,
+	}
 });
 
 export default config;

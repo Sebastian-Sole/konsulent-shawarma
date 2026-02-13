@@ -20,7 +20,7 @@ export function FirmMarker({ firm, isSelected, onClick }: FirmMarkerProps) {
 					className={cn(
 						"rounded-full border-2 border-white shadow-lg transition-all duration-200",
 						isSelected
-							? "size-5 bg-blue-600 ring-4 ring-blue-400/40 scale-125"
+							? "size-5 bg-green-500 ring-4 ring-green-400/40 scale-125"
 							: "size-3.5 bg-blue-500 hover:scale-110",
 					)}
 				/>
