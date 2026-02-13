@@ -1667,6 +1667,13 @@ export const firms: Firm[] = [
 		longitude: 10.765888359084856,
 	},
 	{
+		id: "vasser-as",
+		name: "Vasser AS",
+		address: "Kjølberggata 21, 0653 OSLO",
+		latitude: 59.91118918774128, 
+		longitude: 10.778385184976617,
+	},
+	{
 		id: "verifone-norway-as",
 		name: "VERIFONE NORWAY AS",
 		address: "Østre Aker vei 24, 0581 OSLO",
