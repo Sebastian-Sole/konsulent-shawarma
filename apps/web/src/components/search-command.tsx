@@ -32,13 +32,13 @@ export function SearchCommand({
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-			<h1 className="text-lg font-bold text-white drop-shadow-lg">
+		<div className="absolute top-4 left-4 z-10 flex flex-col gap-2 rounded-xl bg-background/80 p-3 backdrop-blur-md shadow-lg border border-border/30">
+			<h1 className="text-lg font-bold text-foreground">
 				Konsulent Shawarma
 			</h1>
 			<Link
 				to="/jobs"
-				className="text-sm font-medium text-white drop-shadow-lg hover:underline"
+				className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline"
 			>
 				Søke jobb? →
 			</Link>
@@ -48,7 +48,7 @@ export function SearchCommand({
 						variant="outline"
 						role="combobox"
 						aria-expanded={open}
-						className="w-[280px] sm:w-[320px] justify-between bg-white/95 backdrop-blur-sm shadow-lg border-border/50 hover:bg-white"
+						className="w-[280px] sm:w-[320px] justify-between shadow-sm"
 					>
 						<div className="flex items-center gap-2 truncate">
 							<Search className="size-4 shrink-0 text-muted-foreground" />
