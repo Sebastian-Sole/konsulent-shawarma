@@ -253,7 +253,7 @@ function App() {
 					<Button
 						variant="outline"
 						size="icon"
-						className="absolute bottom-12 left-2 xs:bottom-12 xs:left-2 z-10 size-10 rounded-full bg-background/80! hover:bg-background/70! backdrop-blur-md shadow-lg border border-border/30"
+						className="absolute bottom-2 left-2 xs:bottom-12 xs:left-2 z-10 size-10 rounded-full bg-background/80! hover:bg-background/70! backdrop-blur-md shadow-lg border border-border/30"
 						aria-label="Velg karttema"
 					>
 						<Palette className="size-[18px]" />
