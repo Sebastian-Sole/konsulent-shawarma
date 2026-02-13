@@ -372,13 +372,6 @@ export const firms: Firm[] = [
 		longitude: 10.741010065248897,
 	},
 	{
-		id: "compendia-as",
-		name: "COMPENDIA AS",
-		address: "Hetlandsgata 9, 4344 BRYNE",
-		latitude: 58.7343253578738,
-		longitude: 5.650307517914699,
-	},
-	{
 		id: "cowork-as",
 		name: "COWORK AS",
 		address: "Arbeidersamfunnets plass 1, 0181 OSLO",

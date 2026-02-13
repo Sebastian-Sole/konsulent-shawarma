@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { BmcButton } from "@/components/bmc-button";
+import { OnboardingDialog } from "@/components/onboarding-dialog";
 import { FirmMarker } from "@/components/firm-marker";
 import { ResultsPanel } from "@/components/results-panel";
 import { SearchCommand } from "@/components/search-command";
@@ -36,6 +37,9 @@ export const Route = createFileRoute("/")({
 });
 
 function App() {
+	const [showOnboarding, setShowOnboarding] = useState(
+		() => localStorage.getItem("onboarding-seen") !== "true",
+	);
 	const mapRef = useRef<MapRef>(null);
 	const [selectedFirm, setSelectedFirm] = useState<Firm | null>(null);
 	const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
@@ -44,7 +48,7 @@ function App() {
 	const [resultCount, setResultCount] = useState(10);
 	const [maxDistance, setMaxDistance] = useState<number | undefined>(undefined);
 	const [minRating, setMinRating] = useState<number | undefined>(undefined);
-	const [openNow, setOpenNow] = useState(true);
+	const [openNow, setOpenNow] = useState(false);
 	const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
 
 	const filterOptions = useMemo(
@@ -166,13 +170,15 @@ function App() {
 				/>
 			)}
 
+			<OnboardingDialog open={showOnboarding} onOpenChange={setShowOnboarding} />
+
 			<BmcButton panelOpen={!!selectedFirm} />
 
 			<a
 				href="https://github.com/Sebastian-Sole"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="absolute bottom-10 right-2 xs:bottom-2 xs:right-auto xs:left-2 z-10 w-fit rounded-md bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
+				className="absolute bottom-10 right-2 xs:bottom-2 xs:right-auto xs:left-2 z-[5] w-fit rounded-md bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
 			>
 				Powered by Sole Innovations
 			</a>

@@ -53,7 +53,9 @@ export function FilterControls({
 	openNow,
 	onOpenNowChange,
 }: FilterControlsProps) {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(
+		() => typeof window !== "undefined" && window.innerWidth >= 768,
+	);
 
 	return (
 		<div className="shrink-0">
