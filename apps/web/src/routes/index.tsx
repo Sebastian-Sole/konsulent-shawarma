@@ -59,27 +59,6 @@ const MAP_THEMES = [
 		swatch: "bg-[#f5f3ed]",
 	},
 	{
-		id: "alidade-smooth",
-		label: "Alidade Smooth",
-		group: "Stadia",
-		url: "https://tiles.stadiamaps.com/styles/alidade_smooth.json",
-		swatch: "bg-[#d8d5cb]",
-	},
-	{
-		id: "alidade-dark",
-		label: "Alidade Dark",
-		group: "Stadia",
-		url: "https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json",
-		swatch: "bg-[#2a2a2e]",
-	},
-	{
-		id: "satellite",
-		label: "Satellitt",
-		group: "Stadia",
-		url: "https://tiles.stadiamaps.com/styles/alidade_satellite.json",
-		swatch: "bg-[#2c4a1e]",
-	},
-	{
 		id: "colorful",
 		label: "Colorful",
 		group: "VersaTiles",
@@ -285,7 +264,7 @@ function App() {
 					align="start"
 					className="w-auto min-w-[180px] max-h-[60vh] overflow-y-auto p-2"
 				>
-					{(["CartoDB", "OpenFreeMap", "Stadia", "VersaTiles"] as const).map((group) => (
+					{(["CartoDB", "OpenFreeMap", "VersaTiles"] as const).map((group) => (
 						<div key={group}>
 							<p className="px-2 pt-1.5 pb-1 text-xs font-medium text-muted-foreground">
 								{group}
