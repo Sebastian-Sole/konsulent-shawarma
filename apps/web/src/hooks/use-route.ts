@@ -33,7 +33,12 @@ export function useRoute(
 		const url = `${OSRM_BASE}/${from.longitude},${from.latitude};${to.longitude},${to.latitude}?overview=full&geometries=geojson`;
 
 		fetch(url, { signal: controller.signal })
-			.then((res) => res.json())
+			.then((res) => {
+				if (!res.ok) {
+					throw new Error(`OSRM request failed with status ${res.status}`);
+				}
+				return res.json();
+			})
 			.then((data) => {
 				if (data.code !== "Ok" || !data.routes?.length) {
 					setRoute(null);
