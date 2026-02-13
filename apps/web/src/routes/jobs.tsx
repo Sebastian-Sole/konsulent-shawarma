@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
+import { BmcButton } from "@/components/bmc-button";
 import type { JobListing } from "@/data/job-listing";
 import { getSanityClient } from "@/lib/sanity";
 
@@ -28,8 +29,9 @@ function JobsPage() {
 	return (
 		<div className="min-h-dvh bg-background text-foreground">
 			<header className="border-b border-border/50 bg-card/95 backdrop-blur-sm">
-				<div className="flex items-center px-4 py-4">
-					<h1 className="text-xl font-bold">Ledige stillinger</h1>
+				<div className="flex items-center justify-between px-4 py-4">
+					<h1 className="text-xl font-bold">Jobbsøk</h1>
+					<BmcButton className="static z-auto shadow-none" />
 				</div>
 			</header>
 

@@ -24,6 +24,7 @@ code {
 }
 
 @theme inline {
+  --breakpoint-xs: 480px;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useMemo, useRef, useState } from "react";
+import { BmcButton } from "@/components/bmc-button";
 import { FirmMarker } from "@/components/firm-marker";
 import { ResultsPanel } from "@/components/results-panel";
 import { SearchCommand } from "@/components/search-command";
@@ -165,11 +166,13 @@ function App() {
 				/>
 			)}
 
+			<BmcButton panelOpen={!!selectedFirm} />
+
 			<a
 				href="https://github.com/Sebastian-Sole"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="absolute bottom-2 left-2 z-10 rounded-md bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
+				className="absolute bottom-10 right-2 xs:bottom-2 xs:right-auto xs:left-2 z-10 w-fit rounded-md bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
 			>
 				Powered by Sole Innovations
 			</a>

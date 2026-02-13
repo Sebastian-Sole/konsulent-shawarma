@@ -40,7 +40,7 @@ export function SearchCommand({
 				to="/jobs"
 				className="text-sm font-medium text-white drop-shadow-lg hover:underline"
 			>
-				Ledige stillinger →
+				Søke jobb? →
 			</Link>
 			<Popover open={open} onOpenChange={setOpen}>
 				<PopoverTrigger asChild>

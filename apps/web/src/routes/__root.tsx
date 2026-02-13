@@ -25,6 +25,10 @@ export const Route = createRootRoute({
 		],
 		links: [
 			{ rel: "stylesheet", href: appCss },
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Cookie&display=swap",
+			},
 			{ rel: "canonical", href: siteUrl },
 		],
 		scripts: [
