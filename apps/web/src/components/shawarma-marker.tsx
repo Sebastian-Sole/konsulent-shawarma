@@ -15,14 +15,15 @@ type ShawarmaMarkerProps = {
 	result: NearestResult;
 	rank: number;
 	focused?: boolean;
+	onFocus?: () => void;
 };
 
-export function ShawarmaMarker({ result, rank, focused }: ShawarmaMarkerProps) {
+export function ShawarmaMarker({ result, rank, focused, onFocus }: ShawarmaMarkerProps) {
 	const { place, distanceMeters, walkingMinutes, googleMapsUrl } = result;
 	const cat = getPlaceCategory(place.cuisines);
 
 	return (
-		<MapMarker longitude={place.longitude} latitude={place.latitude}>
+		<MapMarker longitude={place.longitude} latitude={place.latitude} onClick={onFocus}>
 			<MarkerContent>
 				<div
 					className={cn(

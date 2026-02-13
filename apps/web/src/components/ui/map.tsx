@@ -552,7 +552,13 @@ function MarkerPopup({
 		if (!map) return;
 
 		popup.setDOMContent(container);
-		marker.setPopup(popup);
+
+		// Only use native marker click toggle when not programmatically controlled.
+		// When `open` prop is provided, the parent manages open/close state,
+		// so we skip setPopup to avoid conflicting with programmatic control.
+		if (openProp == null) {
+			marker.setPopup(popup);
+		}
 
 		return () => {
 			marker.setPopup(null);

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Check, Palette } from "lucide-react";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { BmcButton } from "@/components/bmc-button";
 import { OnboardingDialog } from "@/components/onboarding-dialog";
@@ -6,12 +7,94 @@ import { FirmMarker } from "@/components/firm-marker";
 import { ResultsPanel } from "@/components/results-panel";
 import { SearchCommand } from "@/components/search-command";
 import { ShawarmaMarker } from "@/components/shawarma-marker";
+import { Button } from "@/components/ui/button";
+import {
+	Popover,
+	PopoverContent,
+	PopoverTrigger,
+} from "@/components/ui/popover";
 import { type MapRef, Map as MapView } from "@/components/ui/map";
 import type { Firm } from "@/data/firms";
 import { firms } from "@/data/firms";
 import type { NearestResult } from "@/lib/geo";
 import { DEFAULT_CATEGORIES } from "@/lib/cuisine-categories";
 import { useNearestShawarma } from "@/hooks/use-nearest-shawarma";
+import { cn } from "@/lib/utils";
+
+const MAP_THEMES = [
+	{
+		id: "dark",
+		label: "Mørk",
+		group: "CartoDB",
+		url: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+		swatch: "bg-[#1a1a2e]",
+	},
+	{
+		id: "light",
+		label: "Lys",
+		group: "CartoDB",
+		url: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+		swatch: "bg-[#e8e8e8]",
+	},
+	{
+		id: "voyager",
+		label: "Farger",
+		group: "CartoDB",
+		url: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+		swatch: "bg-[#f2efe9]",
+	},
+	{
+		id: "liberty",
+		label: "Liberty",
+		group: "OpenFreeMap",
+		url: "https://tiles.openfreemap.org/styles/liberty",
+		swatch: "bg-[#f0eee6]",
+	},
+	{
+		id: "bright",
+		label: "Bright",
+		group: "OpenFreeMap",
+		url: "https://tiles.openfreemap.org/styles/bright",
+		swatch: "bg-[#f5f3ed]",
+	},
+	{
+		id: "alidade-smooth",
+		label: "Alidade Smooth",
+		group: "Stadia",
+		url: "https://tiles.stadiamaps.com/styles/alidade_smooth.json",
+		swatch: "bg-[#d8d5cb]",
+	},
+	{
+		id: "alidade-dark",
+		label: "Alidade Dark",
+		group: "Stadia",
+		url: "https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json",
+		swatch: "bg-[#2a2a2e]",
+	},
+	{
+		id: "satellite",
+		label: "Satellitt",
+		group: "Stadia",
+		url: "https://tiles.stadiamaps.com/styles/alidade_satellite.json",
+		swatch: "bg-[#2c4a1e]",
+	},
+	{
+		id: "colorful",
+		label: "Colorful",
+		group: "VersaTiles",
+		url: "https://tiles.versatiles.org/assets/styles/colorful/style.json",
+		swatch: "bg-[#f5ecd7]",
+	},
+	{
+		id: "neutrino",
+		label: "Neutrino",
+		group: "VersaTiles",
+		url: "https://tiles.versatiles.org/assets/styles/neutrino/style.json",
+		swatch: "bg-[#d5d0e0]",
+	},
+] as const;
+
+type MapThemeId = (typeof MAP_THEMES)[number]["id"];
 
 const OSLO_CENTER: [number, number] = [10.7522, 59.9139];
 const OSLO_ZOOM = 13;
@@ -50,6 +133,9 @@ function App() {
 	const [minRating, setMinRating] = useState<number | undefined>(undefined);
 	const [openNow, setOpenNow] = useState(false);
 	const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
+	const [mapThemeId, setMapThemeId] = useState<MapThemeId>("dark");
+
+	const selectedMapTheme = MAP_THEMES.find((t) => t.id === mapThemeId)!;
 
 	const filterOptions = useMemo(
 		() => ({
@@ -105,17 +191,22 @@ function App() {
 		}
 	}, []);
 
-	const handleResultClick = useCallback((result: NearestResult) => {
-		setFocusedPlaceId(result.place.id);
-		if (mapRef.current) {
-			mapRef.current.flyTo({
-				center: [result.place.longitude, result.place.latitude],
-				zoom: 16,
-				duration: 800,
-				padding: getPanelPadding(),
-			});
-		}
-	}, []);
+	const handleFocusPlace = useCallback(
+		(result: NearestResult) => {
+			setFocusedPlaceId((prev) =>
+				prev === result.place.id ? null : result.place.id,
+			);
+			if (mapRef.current) {
+				mapRef.current.flyTo({
+					center: [result.place.longitude, result.place.latitude],
+					zoom: 16,
+					duration: 800,
+					padding: getPanelPadding(),
+				});
+			}
+		},
+		[],
+	);
 
 	return (
 		<div className="relative h-dvh w-full">
@@ -124,6 +215,7 @@ function App() {
 				className="h-full w-full"
 				center={OSLO_CENTER}
 				zoom={OSLO_ZOOM}
+				styles={{ dark: selectedMapTheme.url, light: selectedMapTheme.url }}
 			>
 				{firms.map((firm) => (
 					<FirmMarker
@@ -141,6 +233,7 @@ function App() {
 							result={result}
 							rank={i + 1}
 							focused={focusedPlaceId === result.place.id}
+							onFocus={() => handleFocusPlace(result)}
 						/>
 					))}
 			</MapView>
@@ -151,12 +244,64 @@ function App() {
 				onSelect={handleSelect}
 			/>
 
+			<Popover>
+				<PopoverTrigger asChild>
+					<Button
+						variant="outline"
+						size="icon"
+						className="absolute bottom-12 left-2 xs:bottom-12 xs:left-2 z-10 size-10 rounded-full bg-background/80! hover:bg-background/70! backdrop-blur-md shadow-lg border border-border/30"
+						aria-label="Velg karttema"
+					>
+						<Palette className="size-[18px]" />
+					</Button>
+				</PopoverTrigger>
+				<PopoverContent
+					side="top"
+					align="start"
+					className="w-auto min-w-[180px] max-h-[60vh] overflow-y-auto p-2"
+				>
+					{(["CartoDB", "OpenFreeMap", "Stadia", "VersaTiles"] as const).map((group) => (
+						<div key={group}>
+							<p className="px-2 pt-1.5 pb-1 text-xs font-medium text-muted-foreground">
+								{group}
+							</p>
+							{MAP_THEMES.filter((t) => t.group === group).map(
+								(theme) => (
+									<button
+										key={theme.id}
+										type="button"
+										onClick={() => setMapThemeId(theme.id)}
+										className={cn(
+											"flex w-full items-center gap-2.5 rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-accent",
+											mapThemeId === theme.id && "bg-accent",
+										)}
+									>
+										<span
+											className={cn(
+												"size-4 shrink-0 rounded-full border border-border/50",
+												theme.swatch,
+											)}
+										/>
+										<span className="flex-1 text-left">
+											{theme.label}
+										</span>
+										{mapThemeId === theme.id && (
+											<Check className="size-3.5 text-foreground" />
+										)}
+									</button>
+								),
+							)}
+						</div>
+					))}
+				</PopoverContent>
+			</Popover>
+
 			{selectedFirm && (
 				<ResultsPanel
 					firm={selectedFirm}
 					results={results}
 					onClear={handleClear}
-					onResultClick={handleResultClick}
+					onResultClick={handleFocusPlace}
 					enabledCategories={enabledCategories}
 					onToggleCategory={handleToggleCategory}
 					resultCount={resultCount}
