@@ -7233,19 +7233,6 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"googleRatingCount": 97
 	},
 	{
-		"id": "osm-8436229223",
-		"name": "Mac + Cheese Bar",
-		"address": "Oslo",
-		"latitude": 59.9186803,
-		"longitude": 10.7511467,
-		"cuisines": [
-			"american"
-		],
-		"googleRating": 3.3,
-		"googleRatingCount": 112,
-		"openingHours": "Monday: Closed; Tuesday: 3:00 – 9:00 PM; Wednesday: 3:00 – 9:00 PM; Thursday: 3:00 – 9:00 PM; Friday: 3:00 – 9:00 PM; Saturday: 11:00 AM – 8:00 PM; Sunday: 10:00 AM – 10:00 PM"
-	},
-	{
 		"id": "osm-9490916509",
 		"name": "Mac + Cheese Bar",
 		"address": "Oslo",
@@ -12925,19 +12912,6 @@ export const shawarmaPlaces: ShawarmaPlace[] = [
 		"openingHours": "Tu-Sa 11:30-22:00",
 		"googleRating": 4.1,
 		"googleRatingCount": 455
-	},
-	{
-		"id": "osm-4343892495",
-		"name": "Wünderburger",
-		"address": "Oslo",
-		"latitude": 59.9174041,
-		"longitude": 10.7542231,
-		"cuisines": [
-			"burger"
-		],
-		"openingHours": "Mo-Th 11:00-22:00; Fr 11:00-01:00; Sa 12:00-01:00; Su 13:00-22:00",
-		"googleRating": 4,
-		"googleRatingCount": 616
 	},
 	{
 		"id": "osm-3664306370",
