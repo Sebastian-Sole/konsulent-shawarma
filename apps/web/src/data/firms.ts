@@ -1743,4 +1743,11 @@ export const firms: Firm[] = [
 		latitude: 59.91729772713344,
 		longitude: 10.754026546112721,
 	},
+	{
+		id: "o3-cyber-as",
+		name: "O3 CYBER AS",
+		address: "Schweigaardsgate 46, 0191 OSLO",
+		latitude: 59.909141732875725,
+		longitude: 10.766934156417847,
+	},
 ];
