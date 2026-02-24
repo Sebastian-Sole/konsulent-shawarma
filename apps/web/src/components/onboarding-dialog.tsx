@@ -35,7 +35,6 @@ export function OnboardingDialog({
 	onOpenChange: (open: boolean) => void;
 }) {
 	function handleDismiss() {
-		localStorage.setItem("onboarding-seen", "true");
 		onOpenChange(false);
 	}
 

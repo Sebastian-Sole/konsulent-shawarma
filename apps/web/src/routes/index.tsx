@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, Palette } from "lucide-react";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BmcButton } from "@/components/bmc-button";
 import { OnboardingDialog } from "@/components/onboarding-dialog";
+import { UpdateDialog } from "@/components/update-dialog";
 import { FirmMarker } from "@/components/firm-marker";
 import { ResultsPanel } from "@/components/results-panel";
 import { SearchCommand } from "@/components/search-command";
@@ -76,13 +77,17 @@ const MAP_THEMES = [
 
 type MapThemeId = (typeof MAP_THEMES)[number]["id"];
 
-const OSLO_CENTER: [number, number] = [10.7522, 59.9139];
-const OSLO_ZOOM = 13;
+const CURRENT_ONBOARDING_VERSION = "2";
+
+const NORWAY_CENTER: [number, number] = [10.0, 63.5];
+const NORWAY_ZOOM = 5;
 const SELECTED_ZOOM = 15;
 
 const MD_BREAKPOINT = 768;
 
 const PANEL_WIDTH = 360;
+
+const EARTH_CIRCUMFERENCE = 40_075_016.686;
 
 function getPanelPadding() {
 	if (typeof window === "undefined") return undefined;
@@ -94,15 +99,35 @@ function getPanelPadding() {
 	return { bottom: window.innerHeight * 0.45 + 20 };
 }
 
+/** Compute zoom level that fits `distanceMeters` within the visible viewport. */
+function getZoomForDistance(distanceMeters: number, latitude: number): number {
+	if (distanceMeters <= 0) return SELECTED_ZOOM;
+	const cosLat = Math.cos((latitude * Math.PI) / 180);
+	const viewportWidth = typeof window !== "undefined" ? window.innerWidth : 1000;
+	const panelWidth = viewportWidth >= MD_BREAKPOINT ? PANEL_WIDTH + 20 : 0;
+	// Use 25% of effective width as target — gives comfortable margin
+	// so the nearest marker isn't near the viewport edge.
+	const targetPixels = (viewportWidth - panelWidth) * 0.2;
+	const zoom = Math.log2(
+		(EARTH_CIRCUMFERENCE * cosLat * targetPixels) / (256 * distanceMeters),
+	);
+	return Math.max(NORWAY_ZOOM, Math.min(SELECTED_ZOOM, zoom));
+}
+
 export const Route = createFileRoute("/")({
 	component: App,
 	ssr: false,
 });
 
 function App() {
-	const [showOnboarding, setShowOnboarding] = useState(
-		() => localStorage.getItem("onboarding-seen") !== "true",
-	);
+	const [dialogToShow, setDialogToShow] = useState<
+		"onboarding" | "update" | null
+	>(() => {
+		const seen = localStorage.getItem("onboarding-seen");
+		if (!seen) return "onboarding";
+		if (seen !== CURRENT_ONBOARDING_VERSION) return "update";
+		return null;
+	});
 	const mapRef = useRef<MapRef>(null);
 	const [selectedFirm, setSelectedFirm] = useState<Firm | null>(null);
 	const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
@@ -154,32 +179,51 @@ function App() {
 		});
 	}, []);
 
+	// Fly to firm with a zoom level that shows at least the nearest filtered restaurant.
+	// We track the firm id so the effect only fires on firm selection, not filter changes.
+	const pendingFirmRef = useRef<string | null>(null);
+
 	const handleSelect = useCallback((firm: Firm | null) => {
 		setSelectedFirm(firm);
 		setFocusedPlaceId(null);
-		if (firm && mapRef.current) {
-			mapRef.current.flyTo({
-				center: [firm.longitude, firm.latitude],
-				zoom: SELECTED_ZOOM,
-				duration: 1200,
-				padding: getPanelPadding(),
-			});
+		if (firm) {
+			pendingFirmRef.current = firm.id;
 		} else if (mapRef.current) {
+			pendingFirmRef.current = null;
 			mapRef.current.flyTo({
-				center: OSLO_CENTER,
-				zoom: OSLO_ZOOM,
+				center: NORWAY_CENTER,
+				zoom: NORWAY_ZOOM,
 				duration: 1200,
 			});
 		}
 	}, []);
+
+	useEffect(() => {
+		if (!pendingFirmRef.current || !selectedFirm || !mapRef.current) return;
+		if (pendingFirmRef.current !== selectedFirm.id) return;
+		// Consume the pending flag so this only runs once per selection
+		pendingFirmRef.current = null;
+
+		const avgDist =
+			results.length > 0
+				? results.reduce((sum, r) => sum + r.distanceMeters, 0) / results.length
+				: 0;
+		const zoom = getZoomForDistance(avgDist, selectedFirm.latitude);
+		mapRef.current.flyTo({
+			center: [selectedFirm.longitude, selectedFirm.latitude],
+			zoom,
+			duration: 1200,
+			padding: getPanelPadding(),
+		});
+	}, [selectedFirm, results]);
 
 	const handleClear = useCallback(() => {
 		setSelectedFirm(null);
 		setFocusedPlaceId(null);
 		if (mapRef.current) {
 			mapRef.current.flyTo({
-				center: OSLO_CENTER,
-				zoom: OSLO_ZOOM,
+				center: NORWAY_CENTER,
+				zoom: NORWAY_ZOOM,
 				duration: 1200,
 			});
 		}
@@ -190,16 +234,29 @@ function App() {
 			setFocusedPlaceId((prev) =>
 				prev === result.place.id ? null : result.place.id,
 			);
-			if (mapRef.current) {
-				mapRef.current.flyTo({
-					center: [result.place.longitude, result.place.latitude],
-					zoom: 16,
+			if (mapRef.current && selectedFirm) {
+				const sw: [number, number] = [
+					Math.min(selectedFirm.longitude, result.place.longitude),
+					Math.min(selectedFirm.latitude, result.place.latitude),
+				];
+				const ne: [number, number] = [
+					Math.max(selectedFirm.longitude, result.place.longitude),
+					Math.max(selectedFirm.latitude, result.place.latitude),
+				];
+				const panel = getPanelPadding();
+				mapRef.current.fitBounds([sw, ne], {
+					maxZoom: 16,
+					padding: {
+						top: 80,
+						left: 80,
+						right: (panel as { right?: number })?.right ?? 80,
+						bottom: (panel as { bottom?: number })?.bottom ?? 80,
+					},
 					duration: 800,
-					padding: getPanelPadding(),
 				});
 			}
 		},
-		[],
+		[selectedFirm],
 	);
 
 	return (
@@ -207,8 +264,8 @@ function App() {
 			<MapView
 				ref={mapRef}
 				className="h-full w-full"
-				center={OSLO_CENTER}
-				zoom={OSLO_ZOOM}
+				center={NORWAY_CENTER}
+				zoom={NORWAY_ZOOM}
 				styles={{ dark: selectedMapTheme.url, light: selectedMapTheme.url }}
 			>
 				{firms.map((firm) => (
@@ -319,7 +376,20 @@ function App() {
 				/>
 			)}
 
-			<OnboardingDialog open={showOnboarding} onOpenChange={setShowOnboarding} />
+			<OnboardingDialog
+				open={dialogToShow === "onboarding"}
+				onOpenChange={() => {
+					localStorage.setItem("onboarding-seen", CURRENT_ONBOARDING_VERSION);
+					setDialogToShow(null);
+				}}
+			/>
+			<UpdateDialog
+				open={dialogToShow === "update"}
+				onOpenChange={() => {
+					localStorage.setItem("onboarding-seen", CURRENT_ONBOARDING_VERSION);
+					setDialogToShow(null);
+				}}
+			/>
 
 			<BmcButton panelOpen={!!selectedFirm} />
 

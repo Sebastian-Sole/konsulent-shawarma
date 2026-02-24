@@ -10,7 +10,6 @@ const GEOCODE_API = "https://ws.geonorge.no/adresser/v1/sok";
 
 const BRREG_PARAMS = {
 	naeringskode: "62.200",
-	kommunenummer: "0301",
 	organisasjonsform: "AS",
 	fraAntallAnsatte: "10",
 	size: "100",

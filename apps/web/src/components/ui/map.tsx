@@ -539,6 +539,9 @@ function MarkerPopup({
 		const popupInstance = new MapLibreGL.Popup({
 			offset: 16,
 			...popupOptions,
+			// When programmatically controlled, disable closeOnClick to prevent
+			// MapLibreGL from closing the popup behind React's back (state desync).
+			closeOnClick: openProp != null ? false : (popupOptions as PopupOptions).closeOnClick,
 			closeButton: false,
 		})
 			.setMaxWidth("none")
@@ -575,6 +578,17 @@ function MarkerPopup({
 			popup.remove();
 		}
 	}, [openProp, map, popup, marker]);
+
+	// Forward wheel events to map canvas so scrolling over popup still zooms
+	useEffect(() => {
+		if (!map) return;
+		const handleWheel = (e: WheelEvent) => {
+			e.stopPropagation();
+			map.getCanvas()?.dispatchEvent(new WheelEvent(e.type, e));
+		};
+		container.addEventListener("wheel", handleWheel);
+		return () => container.removeEventListener("wheel", handleWheel);
+	}, [map, container]);
 
 	if (popup.isOpen()) {
 		const prev = prevPopupOptions.current;
@@ -675,6 +689,17 @@ function MarkerTooltip({
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map]);
+
+	// Forward wheel events to map canvas so scrolling over tooltip still zooms
+	useEffect(() => {
+		if (!map) return;
+		const handleWheel = (e: WheelEvent) => {
+			e.stopPropagation();
+			map.getCanvas()?.dispatchEvent(new WheelEvent(e.type, e));
+		};
+		container.addEventListener("wheel", handleWheel);
+		return () => container.removeEventListener("wheel", handleWheel);
+	}, [map, container]);
 
 	if (tooltip.isOpen()) {
 		const prev = prevTooltipOptions.current;
@@ -1005,6 +1030,17 @@ function MapPopup({
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [map]);
+
+	// Forward wheel events to map canvas so scrolling over popup still zooms
+	useEffect(() => {
+		if (!map) return;
+		const handleWheel = (e: WheelEvent) => {
+			e.stopPropagation();
+			map.getCanvas()?.dispatchEvent(new WheelEvent(e.type, e));
+		};
+		container.addEventListener("wheel", handleWheel);
+		return () => container.removeEventListener("wheel", handleWheel);
+	}, [map, container]);
 
 	if (popup.isOpen()) {
 		const prev = popupOptionsRef.current;

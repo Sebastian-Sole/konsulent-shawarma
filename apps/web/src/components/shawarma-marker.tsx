@@ -5,7 +5,6 @@ import {
 	MapMarker,
 	MarkerContent,
 	MarkerPopup,
-	MarkerTooltip,
 } from "@/components/ui/map";
 import type { NearestResult } from "@/lib/geo";
 import { getPlaceCategory } from "@/lib/cuisine-categories";
@@ -36,11 +35,6 @@ export function ShawarmaMarker({ result, rank, focused, onFocus }: ShawarmaMarke
 					{rank}
 				</div>
 			</MarkerContent>
-			<MarkerTooltip>
-				<div className="rounded-md bg-white px-2.5 py-1.5 text-sm font-medium text-slate-900 shadow-md">
-					{place.name}
-				</div>
-			</MarkerTooltip>
 			<MarkerPopup open={focused}>
 				<div className="w-56 rounded-lg bg-white p-3 shadow-xl">
 					<p className="font-semibold text-slate-900">{place.name}</p>
