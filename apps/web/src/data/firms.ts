@@ -3394,5 +3394,12 @@ export const firms: Firm[] = [
 		"address": "Rolfsbuktveien 2, 1364 FORNEBU",
 		"latitude": 59.89483071126213,
 		"longitude": 10.627014437650896
+	},
+	{
+		id: "o3-cyber-as",
+		name: "O3 CYBER AS",
+		address: "Schweigaardsgate 46, 0191 OSLO",
+		latitude: 59.909141732875725,
+		longitude: 10.766934156417847,
 	}
 ];
