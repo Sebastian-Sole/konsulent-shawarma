@@ -12,7 +12,7 @@ export function BmcButton({ panelOpen, className }: BmcButtonProps) {
 			target="_blank"
 			rel="noopener noreferrer"
 			className={cn(
-				"absolute top-4 right-4 z-10 flex items-center gap-2 rounded-lg bg-[#BD5FFF] p-2.5 sm:px-4 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110",
+				"absolute top-4 right-4 z-10 hidden xs:flex items-center gap-2 rounded-lg bg-[#BD5FFF] p-2.5 sm:px-4 text-sm font-semibold text-white shadow-lg transition-all hover:brightness-110",
 				panelOpen && "md:right-[376px]",
 				className,
 			)}

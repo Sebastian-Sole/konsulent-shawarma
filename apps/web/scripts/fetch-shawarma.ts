@@ -11,11 +11,8 @@ const OVERPASS_ENDPOINTS = [
 	"https://overpass.kumi.systems/api/interpreter",
 ];
 
-// Oslo bounding box: south, west, north, east
-const OSLO_BBOX = "59.85,10.60,59.98,10.90";
-
-// Fetch all restaurants and fast_food in Oslo (no cuisine filter, to catch places like Birken Lunch)
-const QUERY = `[out:json][timeout:60];(nw["amenity"="restaurant"](${OSLO_BBOX});nw["amenity"="fast_food"](${OSLO_BBOX}););out center;`;
+// Fetch all restaurants and fast_food in Norway using area query
+const QUERY = `[out:json][timeout:180];area["ISO3166-1"="NO"][admin_level=2]->.norway;(nw["amenity"="restaurant"](area.norway);nw["amenity"="fast_food"](area.norway););out center;`;
 
 type OverpassElement = {
 	type: "node" | "way";
@@ -213,7 +210,7 @@ function parseElement(el: OverpassElement): ShawarmaPlace | null {
 		[tags["addr:street"], tags["addr:housenumber"]]
 			.filter(Boolean)
 			.join(" "),
-		tags["addr:city"] ?? "Oslo",
+		tags["addr:city"] ?? "",
 	].filter(Boolean);
 
 	const place: ShawarmaPlace = {
