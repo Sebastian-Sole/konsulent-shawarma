@@ -1,7 +1,9 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Firm } from "@/data/firms";
-import { shawarmaPlaces } from "@/data/shawarma-places";
+import type { ShawarmaPlace } from "@/data/shawarma-places";
 import { findNearestPlaces, type NearestResult } from "@/lib/geo";
+
+let cachedPlaces: ShawarmaPlace[] | null = null;
 
 export function useNearestShawarma(
 	firm: Firm | null,
@@ -19,9 +21,19 @@ export function useNearestShawarma(
 	const minRating = options?.minRating;
 	const openNow = options?.openNow;
 
+	const [places, setPlaces] = useState<ShawarmaPlace[]>(cachedPlaces ?? []);
+
+	useEffect(() => {
+		if (cachedPlaces) return;
+		import("@/data/shawarma-places").then((mod) => {
+			cachedPlaces = mod.shawarmaPlaces;
+			setPlaces(mod.shawarmaPlaces);
+		});
+	}, []);
+
 	return useMemo(() => {
-		if (!firm) return [];
-		return findNearestPlaces(firm, shawarmaPlaces, count, {
+		if (!firm || places.length === 0) return [];
+		return findNearestPlaces(firm, places, count, {
 			maxDistanceMeters,
 			enabledCategories,
 			minRating,
@@ -29,5 +41,5 @@ export function useNearestShawarma(
 		});
 		// enabledCategories is a Set - we serialize to track changes
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [firm, count, maxDistanceMeters, enabledCategories && [...enabledCategories].join(","), minRating, openNow]);
+	}, [firm, places, count, maxDistanceMeters, enabledCategories && [...enabledCategories].join(","), minRating, openNow]);
 }
