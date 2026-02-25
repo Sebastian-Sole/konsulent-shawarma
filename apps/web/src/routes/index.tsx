@@ -220,13 +220,6 @@ function App() {
 	const handleClear = useCallback(() => {
 		setSelectedFirm(null);
 		setFocusedPlaceId(null);
-		if (mapRef.current) {
-			mapRef.current.flyTo({
-				center: NORWAY_CENTER,
-				zoom: NORWAY_ZOOM,
-				duration: 1200,
-			});
-		}
 	}, []);
 
 	const handleFocusPlace = useCallback(

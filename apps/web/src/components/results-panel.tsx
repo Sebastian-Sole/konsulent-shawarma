@@ -69,26 +69,26 @@ export function ResultsPanel({
 				</Button>
 			</div>
 			<Separator className="shrink-0" />
-			<FilterControls
-				enabledCategories={enabledCategories}
-				onToggleCategory={onToggleCategory}
-				resultCount={resultCount}
-				onResultCountChange={onResultCountChange}
-				maxDistance={maxDistance}
-				onMaxDistanceChange={onMaxDistanceChange}
-				minRating={minRating}
-				onMinRatingChange={onMinRatingChange}
-				openNow={openNow}
-				onOpenNowChange={onOpenNowChange}
-			/>
-			<Separator className="shrink-0" />
-			<div className="px-4 pt-2 pb-1 shrink-0">
-				<p className="text-sm font-medium text-slate-700">
-					Nærmeste matsteder ({results.length})
-				</p>
-			</div>
-			<ScrollArea className="flex-1 min-h-0 px-4 pb-4 overscroll-contain">
-				<div className="flex flex-col gap-2 pt-1">
+			<ScrollArea className="flex-1 min-h-0 overscroll-contain">
+				<FilterControls
+					enabledCategories={enabledCategories}
+					onToggleCategory={onToggleCategory}
+					resultCount={resultCount}
+					onResultCountChange={onResultCountChange}
+					maxDistance={maxDistance}
+					onMaxDistanceChange={onMaxDistanceChange}
+					minRating={minRating}
+					onMinRatingChange={onMinRatingChange}
+					openNow={openNow}
+					onOpenNowChange={onOpenNowChange}
+				/>
+				<Separator />
+				<div className="px-4 pt-2 pb-1">
+					<p className="text-sm font-medium text-slate-700">
+						Nærmeste matsteder ({results.length})
+					</p>
+				</div>
+				<div className="flex flex-col gap-2 pt-1 px-4 pb-4">
 					{results.length === 0 ? (
 						<p className="text-xs text-slate-400 py-4 text-center">
 							Ingen steder funnet med valgte filtre
