@@ -310,7 +310,7 @@ function App() {
 					<Button
 						variant="outline"
 						size="icon"
-						className="absolute bottom-2 left-2 xs:bottom-12 xs:left-2 z-10 size-10 rounded-full bg-background/80! hover:bg-background/70! backdrop-blur-md shadow-lg border border-border/30"
+						className="absolute bottom-2 left-2 z-10 size-10 rounded-full bg-background/80! hover:bg-background/70! backdrop-blur-md shadow-lg border border-border/30"
 						aria-label="Velg karttema"
 					>
 						<Palette className="size-[18px]" />
@@ -392,15 +392,6 @@ function App() {
 			/>
 
 			<BmcButton panelOpen={!!selectedFirm} />
-
-			<a
-				href="https://github.com/Sebastian-Sole"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="absolute bottom-10 right-2 xs:bottom-2 xs:right-auto xs:left-2 z-[5] w-fit rounded-md bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur-sm transition-colors hover:text-foreground"
-			>
-				Powered by Sole Innovations
-			</a>
 		</div>
 	);
 }

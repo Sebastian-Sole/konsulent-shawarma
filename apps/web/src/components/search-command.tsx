@@ -105,6 +105,14 @@ export function SearchCommand({
 					</Command>
 				</PopoverContent>
 			</Popover>
+			<a
+				href="https://github.com/Sebastian-Sole"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-[11px] text-muted-foreground/60 transition-colors hover:text-muted-foreground"
+			>
+				Powered by Sole Innovations
+			</a>
 		</div>
 	);
 }
