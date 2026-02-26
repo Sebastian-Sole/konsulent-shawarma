@@ -1,6 +1,10 @@
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-import { Analytics } from "@vercel/analytics/react";
+import { Suspense, lazy } from "react";
 import appCss from "../styles.css?url";
+
+const Analytics = lazy(() =>
+	import("@vercel/analytics/react").then((m) => ({ default: m.Analytics })),
+);
 
 const siteUrl = "https://konsulentshawarma.no";
 const siteTitle = "Konsulent Shawarma";
@@ -26,10 +30,6 @@ export const Route = createRootRoute({
 		],
 		links: [
 			{ rel: "stylesheet", href: appCss },
-			{
-				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Cookie&display=swap",
-			},
 			{ rel: "canonical", href: siteUrl },
 		],
 		scripts: [
@@ -64,7 +64,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				{children}
-				<Analytics />
+				<Suspense fallback={null}>
+					<Analytics />
+				</Suspense>
 				<Scripts />
 			</body>
 		</html>

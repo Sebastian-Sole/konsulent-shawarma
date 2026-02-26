@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 type BmcButtonProps = {
@@ -6,6 +7,14 @@ type BmcButtonProps = {
 };
 
 export function BmcButton({ panelOpen, className }: BmcButtonProps) {
+	useEffect(() => {
+		if (document.querySelector('link[href*="family=Cookie"]')) return;
+		const link = document.createElement("link");
+		link.rel = "stylesheet";
+		link.href = "https://fonts.googleapis.com/css2?family=Cookie&display=swap";
+		document.head.appendChild(link);
+	}, []);
+
 	return (
 		<a
 			href="https://buymeacoffee.com/sebastiansole"
