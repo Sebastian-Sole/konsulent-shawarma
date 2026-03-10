@@ -148,6 +148,8 @@ type MapProps = {
 	 * to enable controlled mode where the map viewport is driven by your state.
 	 */
 	onViewportChange?: (viewport: MapViewport) => void;
+	/** Callback fired once the underlying MapLibre map has loaded. */
+	onMapLoad?: (map: MapLibreGL.Map) => void;
 } & Omit<MapLibreGL.MapOptions, "container" | "style">;
 
 type MapRef = MapLibreGL.Map;
@@ -171,6 +173,7 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 		projection,
 		viewport,
 		onViewportChange,
+		onMapLoad,
 		...props
 	},
 	ref,
@@ -188,6 +191,8 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 
 	const onViewportChangeRef = useRef(onViewportChange);
 	onViewportChangeRef.current = onViewportChange;
+	const onMapLoadRef = useRef(onMapLoad);
+	onMapLoadRef.current = onMapLoad;
 
 	const mapStyles = useMemo(
 		() => ({
@@ -238,7 +243,10 @@ const Map = forwardRef<MapRef, MapProps>(function Map(
 				}
 			}, 100);
 		};
-		const loadHandler = () => setIsLoaded(true);
+		const loadHandler = () => {
+			setIsLoaded(true);
+			onMapLoadRef.current?.(map);
+		};
 
 		// Viewport change handler - skip if triggered by internal update
 		const handleMove = () => {

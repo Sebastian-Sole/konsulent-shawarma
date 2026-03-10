@@ -119,6 +119,8 @@ export const Route = createLazyFileRoute("/")({
 });
 
 function App() {
+	const search = Route.useSearch();
+	const navigate = Route.useNavigate();
 	const [dialogToShow, setDialogToShow] = useState<
 		"onboarding" | "update" | null
 	>(() => {
@@ -128,7 +130,10 @@ function App() {
 		return null;
 	});
 	const mapRef = useRef<MapRef>(null);
-	const [selectedFirm, setSelectedFirm] = useState<Firm | null>(null);
+	const [selectedFirm, setSelectedFirm] = useState<Firm | null>(() => {
+		if (!search.company) return null;
+		return firms.find((firm) => firm.id === search.company) ?? null;
+	});
 	const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
 		() => new Set(DEFAULT_CATEGORIES),
 	);
@@ -138,6 +143,7 @@ function App() {
 	const [openNow, setOpenNow] = useState(false);
 	const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
 	const [mapThemeId, setMapThemeId] = useState<MapThemeId>("dark");
+	const [isMapLoaded, setIsMapLoaded] = useState(false);
 
 	const selectedMapTheme = MAP_THEMES.find((t) => t.id === mapThemeId)!;
 
@@ -183,6 +189,13 @@ function App() {
 	const pendingFirmRef = useRef<string | null>(null);
 
 	const handleSelect = useCallback((firm: Firm | null) => {
+		navigate({
+			search: (prev) => ({
+				...prev,
+				company: firm?.id || undefined,
+			}),
+			replace: true,
+		});
 		setSelectedFirm(firm);
 		setFocusedPlaceId(null);
 		if (firm) {
@@ -195,10 +208,26 @@ function App() {
 				duration: 1200,
 			});
 		}
-	}, []);
+	}, [navigate]);
 
 	useEffect(() => {
-		if (!pendingFirmRef.current || !selectedFirm || !mapRef.current) return;
+		if (!search.company) {
+			pendingFirmRef.current = null;
+			setSelectedFirm(null);
+			setFocusedPlaceId(null);
+			return;
+		}
+
+		const firmFromSearch = firms.find((firm) => firm.id === search.company) ?? null;
+		pendingFirmRef.current = firmFromSearch?.id ?? null;
+		setSelectedFirm(firmFromSearch);
+		setFocusedPlaceId(null);
+	}, [search.company]);
+
+	useEffect(() => {
+		if (!pendingFirmRef.current || !selectedFirm || !mapRef.current || !isMapLoaded) {
+			return;
+		}
 		if (pendingFirmRef.current !== selectedFirm.id) return;
 		// Consume the pending flag so this only runs once per selection
 		pendingFirmRef.current = null;
@@ -214,12 +243,19 @@ function App() {
 			duration: 1200,
 			padding: getPanelPadding(),
 		});
-	}, [selectedFirm, results]);
+	}, [selectedFirm, results, isMapLoaded]);
 
 	const handleClear = useCallback(() => {
+		navigate({
+			search: (prev) => ({
+				...prev,
+				company: undefined,
+			}),
+			replace: true,
+		});
 		setSelectedFirm(null);
 		setFocusedPlaceId(null);
-	}, []);
+	}, [navigate]);
 
 	const handleFocusPlace = useCallback(
 		(result: NearestResult) => {
@@ -267,6 +303,7 @@ function App() {
 					route={route}
 					onFirmClick={handleSelect}
 					onFocusPlace={handleFocusPlace}
+					onMapLoad={() => setIsMapLoaded(true)}
 				/>
 			</Suspense>
 

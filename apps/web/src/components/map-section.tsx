@@ -17,6 +17,7 @@ type MapSectionProps = {
 	route: { coordinates: [number, number][] } | null;
 	onFirmClick: (firm: Firm) => void;
 	onFocusPlace: (result: NearestResult) => void;
+	onMapLoad?: () => void;
 };
 
 const MapSection = forwardRef<MapRef, MapSectionProps>(function MapSection(
@@ -32,6 +33,7 @@ const MapSection = forwardRef<MapRef, MapSectionProps>(function MapSection(
 		route,
 		onFirmClick,
 		onFocusPlace,
+		onMapLoad,
 	},
 	ref,
 ) {
@@ -42,6 +44,7 @@ const MapSection = forwardRef<MapRef, MapSectionProps>(function MapSection(
 			center={center}
 			zoom={zoom}
 			styles={{ dark: mapStyleUrl, light: mapStyleUrl }}
+			onMapLoad={onMapLoad}
 		>
 			{firms.map((firm) => (
 				<FirmMarker
